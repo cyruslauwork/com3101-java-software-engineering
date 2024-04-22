@@ -32,4 +32,13 @@ public class Controller {
     public void setView(View v) {
         this.view = v;
     }
+
+     public void setNumPlayers(int numPlayers) {
+        model.setPlayer(numPlayers);
+    }
+
+    public void setNumBots(int numBots) {
+        model.setBot(numBots);
+    }
+    
 }
