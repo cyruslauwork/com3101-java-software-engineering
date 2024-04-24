@@ -38,4 +38,5 @@ public class View {
     public void showBoard() throws IOException {
         board.showBoard(controller);
     }
+
 }

@@ -32,6 +32,7 @@ public class Board extends javax.swing.JFrame {
     private int player_three_pos = 1;
     private int player_four_pos = 1;
 
+
     public static Board getInstance() throws IOException {
         if (_instance == null) {
             _instance = new Board();
@@ -100,7 +101,7 @@ public class Board extends javax.swing.JFrame {
         jPanel_setting.setPreferredSize(labelDimension);
     }
 
-    private void moveToken(int player_no, int move) {
+    public void moveToken(int player_no, int move) {
         if (player_no == 1) {
             int oriPos = player_one_pos;
             player_one_pos = player_one_pos + move;
@@ -3567,6 +3568,7 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
+        dice_num = controller.rollDice();
         if (turn_of_player_no == 1) {
             moveToken(turn_of_player_no, controller.rollDice());
             turn_of_player_no++;
@@ -3586,8 +3588,9 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
         num_player = 0;
         num_bot = 0;
-        tf_num_player.setText("0");
-        tf_num_bot.setText("0");
+        tf_num_player.setText(String.valueOf(num_player));
+        tf_num_bot.setText(String.valueOf(num_bot));
+
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed

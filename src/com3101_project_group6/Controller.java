@@ -13,6 +13,11 @@ public class Controller {
     private static Controller _instance;
     private static View view;
     private Model model;
+    private Board board;
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
 
     private Controller() {
         // Private constructor to prevent direct instantiation
@@ -33,20 +38,17 @@ public class Controller {
         this.view = v;
     }
     
-    
-    public void startGame(String[] playerNameList,int[] playerToken, int numberOfBot){
-        int count = 0;
-        model.addToken();
-        model.addProperty();
-        model.setBot(numberOfBot);
-        for(String playerName:playerNameList){
-            model.addPlayer(playerName, playerToken[count]);
-            count++;
-        }
-    }
-    
     public int rollDice(){
         return model.rollDice();
     }
+
+    public void reset(){
+        model.reset();
+    }
+
+    public void moveToken(int player_no, int move){
+        board.moveToken(player_no,move);
+    }
+    
     
 }
