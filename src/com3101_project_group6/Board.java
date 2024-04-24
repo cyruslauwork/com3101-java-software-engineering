@@ -9,8 +9,6 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -22,7 +20,8 @@ import javax.swing.ImageIcon;
 public class Board extends javax.swing.JFrame {
 
     private static Board _instance;
-    
+    private static Controller controller;
+
     private int num_player = 0;
     private int num_bot = 0;
     private boolean playing = false;
@@ -38,9 +37,6 @@ public class Board extends javax.swing.JFrame {
             _instance = new Board();
         }
         return _instance;
-    }
-    public void setController(Controller c) {
-        this.controller = c;
     }
 
     // Get the screen dimensions
@@ -473,7 +469,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                if (oriPos == 2) {
+        if (oriPos == 2) {
             if (player_no == 1) {
                 img_token_one2.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -808,7 +804,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                        if (oriPos == 3) {
+        if (oriPos == 3) {
             if (player_no == 1) {
                 img_token_one3.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -1143,7 +1139,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                                if (oriPos == 4) {
+        if (oriPos == 4) {
             if (player_no == 1) {
                 img_token_one4.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -1478,7 +1474,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                                        if (oriPos == 5) {
+        if (oriPos == 5) {
             if (player_no == 1) {
                 img_token_one5.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -1813,7 +1809,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                                                if (oriPos == 6) {
+        if (oriPos == 6) {
             if (player_no == 1) {
                 img_token_one6.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -2148,7 +2144,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                                                        if (oriPos == 7) {
+        if (oriPos == 7) {
             if (player_no == 1) {
                 img_token_on7.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -2482,7 +2478,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 8) {
+        }
+        if (oriPos == 8) {
             if (player_no == 1) {
                 img_token_one8.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -2817,7 +2814,7 @@ public class Board extends javax.swing.JFrame {
                 }
             }
         }
-                if (oriPos == 9) {
+        if (oriPos == 9) {
             if (player_no == 1) {
                 img_token_one9.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -3151,7 +3148,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 10) {
+        }
+        if (oriPos == 10) {
             if (player_no == 1) {
                 img_token_one10.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -3485,7 +3483,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 11) {
+        }
+        if (oriPos == 11) {
             if (player_no == 1) {
                 img_token_one11.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -3819,7 +3818,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 12) {
+        }
+        if (oriPos == 12) {
             if (player_no == 1) {
                 img_token_one13.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -4153,7 +4153,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 13) {
+        }
+        if (oriPos == 13) {
             if (player_no == 1) {
                 img_token_one14.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -4487,7 +4488,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 14) {
+        }
+        if (oriPos == 14) {
             if (player_no == 1) {
                 img_token_one15.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -4821,7 +4823,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 15) {
+        }
+        if (oriPos == 15) {
             if (player_no == 1) {
                 img_token_one17.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -5155,7 +5158,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 16) {
+        }
+        if (oriPos == 16) {
             if (player_no == 1) {
                 img_token_one18.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -5489,7 +5493,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 17) {
+        }
+        if (oriPos == 17) {
             if (player_no == 1) {
                 img_token_one19.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -5823,7 +5828,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 18) {
+        }
+        if (oriPos == 18) {
             if (player_no == 1) {
                 img_token_one21.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -6157,7 +6163,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 19) {
+        }
+        if (oriPos == 19) {
             if (player_no == 1) {
                 img_token_one22.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -6491,7 +6498,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 20) {
+        }
+        if (oriPos == 20) {
             if (player_no == 1) {
                 img_token_one23.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -6825,7 +6833,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 21) {
+        }
+        if (oriPos == 21) {
             if (player_no == 1) {
                 img_token_one24.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -7159,7 +7168,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 22) {
+        }
+        if (oriPos == 22) {
             if (player_no == 1) {
                 img_token_one25.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -7493,7 +7503,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 23) {
+        }
+        if (oriPos == 23) {
             if (player_no == 1) {
                 img_token_one26.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -7827,7 +7838,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 24) {
+        }
+        if (oriPos == 24) {
             if (player_no == 1) {
                 img_token_one27.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -8161,7 +8173,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 25) {
+        }
+        if (oriPos == 25) {
             if (player_no == 1) {
                 img_token_one28.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -8495,7 +8508,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 26) {
+        }
+        if (oriPos == 26) {
             if (player_no == 1) {
                 img_token_one29.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -8829,7 +8843,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 27) {
+        }
+        if (oriPos == 27) {
             if (player_no == 1) {
                 img_token_one30.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -9163,7 +9178,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 28) {
+        }
+        if (oriPos == 28) {
             if (player_no == 1) {
                 img_token_one31.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -9497,7 +9513,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 29) {
+        }
+        if (oriPos == 29) {
             if (player_no == 1) {
                 img_token_one32.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -9831,7 +9848,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 30) {
+        }
+        if (oriPos == 30) {
             if (player_no == 1) {
                 img_token_one33.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -10165,7 +10183,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 31) {
+        }
+        if (oriPos == 31) {
             if (player_no == 1) {
                 img_token_one7.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -10499,7 +10518,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 32) {
+        }
+        if (oriPos == 32) {
             if (player_no == 1) {
                 img_token_one34.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -10833,7 +10853,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 33) {
+        }
+        if (oriPos == 33) {
             if (player_no == 1) {
                 img_token_one35.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -11167,7 +11188,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 34) {
+        }
+        if (oriPos == 34) {
             if (player_no == 1) {
                 img_token_one36.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -11501,7 +11523,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 35) {
+        }
+        if (oriPos == 35) {
             if (player_no == 1) {
                 img_token_one37.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -11835,7 +11858,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 36) {
+        }
+        if (oriPos == 36) {
             if (player_no == 1) {
                 img_token_one38.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -12169,7 +12193,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 37) {
+        }
+        if (oriPos == 37) {
             if (player_no == 1) {
                 img_token_one39.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -12503,7 +12528,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 38) {
+        }
+        if (oriPos == 38) {
             if (player_no == 1) {
                 img_token_one40.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -12837,7 +12863,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 39) {
+        }
+        if (oriPos == 39) {
             if (player_no == 1) {
                 img_token_one41.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -13171,7 +13198,8 @@ public class Board extends javax.swing.JFrame {
                     img_token_four43.setIcon(new ImageIcon(this.getClass().getResource("images/token_four_small.png")));
                 }
             }
-        }        if (oriPos == 40) {
+        }
+        if (oriPos == 40) {
             if (player_no == 1) {
                 img_token_one42.setIcon(new ImageIcon(this.getClass().getResource("images/token_none.png")));
                 if (newPos == 1) {
@@ -16886,7 +16914,7 @@ public class Board extends javax.swing.JFrame {
 
     private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token13ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_tf_token13ActionPerformed
 
     private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token12ActionPerformed
@@ -16939,6 +16967,19 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
+        if (turn_of_player_no == 1) {
+            moveToken(turn_of_player_no, controller.rollDice());
+            turn_of_player_no++;
+        } else if (turn_of_player_no == 2) {
+            moveToken(turn_of_player_no, controller.rollDice());
+            turn_of_player_no++;
+        } else if (turn_of_player_no == 3) {
+            moveToken(turn_of_player_no, controller.rollDice());
+            turn_of_player_no++;
+        } else {
+            moveToken(turn_of_player_no, controller.rollDice());
+            turn_of_player_no = 1;
+        }
     }//GEN-LAST:event_btn_roll_diceActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
@@ -16953,12 +16994,6 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
         playing = true;
         lb_msg.setText("Game has started");
-        controller.addTokensToModel();
-        controller.addPlayerToModel("a", 0);
-        controller.addPlayerToModel("b", 1);
-        controller.addPlayerToModel("c", 2);
-        controller.addPlayerToModel("d", 3);
-        controller.setNumBots(num_bot);
     }//GEN-LAST:event_btn_newgameActionPerformed
 
     private void tf_token_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_oneActionPerformed
