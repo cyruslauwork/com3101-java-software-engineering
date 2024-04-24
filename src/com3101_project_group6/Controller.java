@@ -140,8 +140,8 @@ public class Controller {
         model.changeLocation(playerName, location);
     }
 
-    public void changeLocation(String playerName, boolean active) {
-        model.changeLocation(playerName, active);
+    public void playerStatusChange(String playerName, boolean active) {
+        model.playerStatusChange(playerName, active);
     }
     
 }

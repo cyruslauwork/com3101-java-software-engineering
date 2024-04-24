@@ -485,7 +485,7 @@ public class Model {
     }
     
     //Modify the status of a player (active or bankrupt) 
-    public void changeLocation(String playerName, boolean active){
+    public void playerStatusChange(String playerName, boolean active){
         for(Player player:playerList){
             if(player.getName().equals(playerName)){
                 player.setBankrupt(active);
