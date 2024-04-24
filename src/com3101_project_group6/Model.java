@@ -96,7 +96,7 @@ public class Model {
         playerList.add(player);
     }
     
-    // set the player to move
+    // Modify who's turn it is to move 
     public void move(String playerName){
         for(Player player:playerList){
             if(player.getName().equals(playerName)){
@@ -265,26 +265,106 @@ public class Model {
         }
     }
     
-    // who need to pay, and which canteen
-    void payRentforBusStop(){
-        
+    // who need to pay, and which busStop
+    public void payRentforBusStop(String playerName, String busStop){
+        int count = 0;
+        String busStopOwner = "";
+        for(Property property : properties){
+            if(property.getName().equals(busStop)){
+                busStopOwner = property.getOwner();
+            }
+        }
+        for(Property property : properties){
+            if(property.getPrice() == 200 && property.getRent() == 0 && property.getOwner().equals(busStopOwner)){
+                count++;
+            }
+        }
+        int cost = 0;
+        switch(count){
+            case 2:
+                cost = 50;
+                break;
+            case 3:
+                cost = 100;
+                break;
+            case 4:
+                cost = 200;
+                break;
+            default:
+                cost = 25;
+        }
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(player.getBalance() - cost);
+            }
+            if (player.getName().equals(busStopOwner)){
+                player.setBalance(player.getBalance() + cost);
+            }
+        }
     }
     
     // who need to pay, and which canteen
-    void payCanteen(String playerName, String Canteen){
-        for (Player player:playerList){
-            
+    public void payCanteen(String playerName, String canteen, int diceNumber){
+        int count = 0;
+        String canteenOwner = "";
+        for(Property property : properties){
+            if(property.getName().equals(canteen)){
+                canteenOwner = property.getOwner();
+            }
+        }
+        for(Property property : properties){
+            if(property.getPrice() == 150 && property.getRent() == 0 && property.getOwner().equals(canteenOwner)){
+                count++;
+            }
+        }
+    }
+    
+    //player need to pay special fee
+    public void payFees(String playerName){
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(player.getBalance() - 100);
+            }
         }
     }
     
     //by property
     public void tradePropertyByProperty(String playerName, String hisProperty, String onwer, String ownerProperty){
-        
+        //change owner ship player1 to player2
+        for(Property property : properties){
+            if(property.getName().equals(hisProperty) && property.getOwner().equals(playerName)){
+                property.setOwner(onwer);
+            }
+        }
+        //change owner ship player2 to player1
+        for(Property property : properties){
+            if(property.getName().equals(ownerProperty) && property.getOwner().equals(onwer)){
+                property.setOwner(playerName);
+            }
+        }
     }
     
     //by money
-    public void tradePropertyByMoney(String playerName, String targetProperty, String owner){
+    public void tradePropertyByMoney(String playerName, int money,String targetProperty, String owner){
+        // player reduce money
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(player.getBalance() - money);
+            }
+        }
+        // owner increase money
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(player.getBalance() + money);
+            }
+        }
         
+        // change owner ship
+        for(Property property : properties){
+            if(property.getName().equals(targetProperty) && property.getOwner().equals(owner)){
+                property.setOwner(playerName);
+            }
+        }
     }
     
     //Who stop, and who's next
@@ -373,6 +453,42 @@ public class Model {
                 player.setOnJail(false);
             }else if(player.getName().equals(playerName) && player.isOnJail() == true && player.getTurnOnJail() < 2){
                 player.setTurnOnJail(player.getTurnOnJail()+1);
+            }
+        }
+    }
+    
+    //Modify the ownership of a land slot 
+    public void changeOwnership(String propretyName, String newOwner){
+        for(Property property : properties){
+            if(property.getName().equals(propretyName)){
+                property.setOwner(newOwner);
+            }
+        }
+    }
+    
+    //Modify the balance of a player
+    public void changeBalance(String playerName, int balance){
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(balance);
+            }
+        }
+    }
+    
+    //Modify the location of a player  0-39, ref to proprety list id
+    public void changeLocation(String playerName, int location){
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBalance(location);
+            }
+        }
+    }
+    
+    //Modify the status of a player (active or bankrupt) 
+    public void changeLocation(String playerName, boolean active){
+        for(Player player:playerList){
+            if(player.getName().equals(playerName)){
+                player.setBankrupt(active);
             }
         }
     }
