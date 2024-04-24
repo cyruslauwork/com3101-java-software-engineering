@@ -11,8 +11,8 @@ package com3101_project_group6;
 public class Controller {
 
     private static Controller _instance;
+    private static View view;
     private Model model;
-    private Board view;
 
     private Controller() {
         // Private constructor to prevent direct instantiation
@@ -29,7 +29,7 @@ public class Controller {
         this.model = m;
     }
 
-    public void setView(Board v) {
+    public void setView(View v) {
         this.view = v;
     }
     

@@ -19,16 +19,16 @@ public class COM3101_Project_Group6 {
      */
     public static void main(String[] args) throws IOException {
         View view = View.getInstance();
-        Board board = Board.getInstance();
         Model model = Model.getInstance();
         Controller controller = Controller.getInstance();
-        
+        Board board = Board.getInstance();
+
         view.setController(controller);
         view.setBoard(board);
         model.setController(controller);
-        controller.setView(board);
+        controller.setView(view);
         controller.setModel(model);
-       
+
         view.showBoard();
     }
 
