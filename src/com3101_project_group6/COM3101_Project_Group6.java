@@ -4,6 +4,8 @@
  */
 package com3101_project_group6;
 
+import java.io.IOException;
+
 /**
  *
  * @author LAU Ka Pui (s226064)
@@ -15,7 +17,7 @@ public class COM3101_Project_Group6 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         View view = View.getInstance();
         Model model = Model.getInstance();
         Controller controller = Controller.getInstance();
