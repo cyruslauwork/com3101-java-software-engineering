@@ -55,9 +55,9 @@ public class Model {
         }
     }
     
-    // adding 10 token
+    // adding 4 token
     void addToken(){
-        for(int i = 0;i<10;i++){
+        for(int i = 0;i<4;i++){
             tokenList.add(i);
         }
     }
