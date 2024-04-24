@@ -22,6 +22,7 @@ import javax.swing.ImageIcon;
 public class Board extends javax.swing.JFrame {
 
     private static Board _instance;
+    private Controller controller;
     
     private int num_player = 0;
     private int num_bot = 0;
@@ -31,6 +32,9 @@ public class Board extends javax.swing.JFrame {
             _instance = new Board();
         }
         return _instance;
+    }
+    public void setController(Controller c) {
+        this.controller = c;
     }
 
     // Get the screen dimensions
@@ -3450,6 +3454,7 @@ public class Board extends javax.swing.JFrame {
 
     private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token13ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_tf_token13ActionPerformed
 
     private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token12ActionPerformed
@@ -3502,6 +3507,7 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_btn_roll_diceActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
@@ -3514,6 +3520,7 @@ public class Board extends javax.swing.JFrame {
 
     private void tf_token_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_oneActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_tf_token_oneActionPerformed
 
     private void tf_token_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_twoActionPerformed

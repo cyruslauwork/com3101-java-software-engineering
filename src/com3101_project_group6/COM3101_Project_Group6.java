@@ -18,15 +18,13 @@ public class COM3101_Project_Group6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
-        View view = View.getInstance();
+        Board board = Board.getInstance();
         Model model = Model.getInstance();
         Controller controller = Controller.getInstance();
-        Board board = Board.getInstance();
-
-        view.setController(controller);
-        view.setBoard(board);
+        
+        board.setController(controller);
         model.setController(controller);
-        controller.setView(view);
+        controller.setView(board);
         controller.setModel(model);
        
     }
