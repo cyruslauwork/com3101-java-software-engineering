@@ -6,7 +6,6 @@ package com3101_project_group6;
 
 import java.awt.Dimension;
 import java.awt.Image;
-import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -15,9 +14,6 @@ import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
 
 /**
  *
@@ -26,6 +22,9 @@ import javax.swing.JPanel;
 public class Board extends javax.swing.JFrame {
 
     private static Board _instance;
+    
+    private int num_player = 0;
+    private int num_bot = 0;
 
     public static Board getInstance() throws IOException {
         if (_instance == null) {
@@ -427,6 +426,11 @@ public class Board extends javax.swing.JFrame {
         jPanel_setting.setOpaque(false);
 
         btn_add_player.setText("+");
+        btn_add_player.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_add_playerActionPerformed(evt);
+            }
+        });
 
         btn_add_bot.setText("+");
 
@@ -529,6 +533,7 @@ public class Board extends javax.swing.JFrame {
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("2000");
+        jTextField1.setEnabled(false);
 
         img_token_one.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
 
@@ -592,12 +597,15 @@ public class Board extends javax.swing.JFrame {
 
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("2000");
+        jTextField5.setEnabled(false);
 
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("2000");
+        jTextField6.setEnabled(false);
 
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setText("2000");
+        jTextField7.setEnabled(false);
 
         img_token_two.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
 
@@ -3186,6 +3194,7 @@ public class Board extends javax.swing.JFrame {
         jPanel49.setOpaque(false);
 
         lb_system_msg.setText("Start a new game!");
+        lb_system_msg.setOpaque(true);
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
@@ -3354,7 +3363,7 @@ public class Board extends javax.swing.JFrame {
                                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
                         .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3619,6 +3628,10 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_token40ActionPerformed
 
+    private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_playerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_add_playerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3679,16 +3692,13 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel img_token_four10;
     private javax.swing.JLabel img_token_four11;
     private javax.swing.JLabel img_token_four11_jailed;
-    private javax.swing.JLabel img_token_four12;
     private javax.swing.JLabel img_token_four13;
     private javax.swing.JLabel img_token_four14;
     private javax.swing.JLabel img_token_four15;
-    private javax.swing.JLabel img_token_four16;
     private javax.swing.JLabel img_token_four17;
     private javax.swing.JLabel img_token_four18;
     private javax.swing.JLabel img_token_four19;
     private javax.swing.JLabel img_token_four2;
-    private javax.swing.JLabel img_token_four20;
     private javax.swing.JLabel img_token_four21;
     private javax.swing.JLabel img_token_four22;
     private javax.swing.JLabel img_token_four23;
@@ -3725,16 +3735,13 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel img_token_one10;
     private javax.swing.JLabel img_token_one11;
     private javax.swing.JLabel img_token_one11_jailed;
-    private javax.swing.JLabel img_token_one12;
     private javax.swing.JLabel img_token_one13;
     private javax.swing.JLabel img_token_one14;
     private javax.swing.JLabel img_token_one15;
-    private javax.swing.JLabel img_token_one16;
     private javax.swing.JLabel img_token_one17;
     private javax.swing.JLabel img_token_one18;
     private javax.swing.JLabel img_token_one19;
     private javax.swing.JLabel img_token_one2;
-    private javax.swing.JLabel img_token_one20;
     private javax.swing.JLabel img_token_one21;
     private javax.swing.JLabel img_token_one22;
     private javax.swing.JLabel img_token_one23;
@@ -3769,16 +3776,13 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel img_token_three10;
     private javax.swing.JLabel img_token_three11;
     private javax.swing.JLabel img_token_three11_jailed;
-    private javax.swing.JLabel img_token_three12;
     private javax.swing.JLabel img_token_three13;
     private javax.swing.JLabel img_token_three14;
     private javax.swing.JLabel img_token_three15;
-    private javax.swing.JLabel img_token_three16;
     private javax.swing.JLabel img_token_three17;
     private javax.swing.JLabel img_token_three18;
     private javax.swing.JLabel img_token_three19;
     private javax.swing.JLabel img_token_three2;
-    private javax.swing.JLabel img_token_three20;
     private javax.swing.JLabel img_token_three21;
     private javax.swing.JLabel img_token_three22;
     private javax.swing.JLabel img_token_three23;
@@ -3814,16 +3818,13 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel img_token_two10;
     private javax.swing.JLabel img_token_two11;
     private javax.swing.JLabel img_token_two11_jailed;
-    private javax.swing.JLabel img_token_two12;
     private javax.swing.JLabel img_token_two13;
     private javax.swing.JLabel img_token_two14;
     private javax.swing.JLabel img_token_two15;
-    private javax.swing.JLabel img_token_two16;
     private javax.swing.JLabel img_token_two17;
     private javax.swing.JLabel img_token_two18;
     private javax.swing.JLabel img_token_two19;
     private javax.swing.JLabel img_token_two2;
-    private javax.swing.JLabel img_token_two20;
     private javax.swing.JLabel img_token_two21;
     private javax.swing.JLabel img_token_two22;
     private javax.swing.JLabel img_token_two23;
@@ -3860,11 +3861,9 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -3876,7 +3875,6 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -3908,11 +3906,9 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
@@ -3942,7 +3938,6 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_setting;
     private javax.swing.JTextField jTextField1;
@@ -3961,11 +3956,9 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JTextField tf_token12;
     private javax.swing.JTextField tf_token13;
     private javax.swing.JTextField tf_token14;
-    private javax.swing.JTextField tf_token15;
     private javax.swing.JTextField tf_token16;
     private javax.swing.JTextField tf_token17;
     private javax.swing.JTextField tf_token18;
-    private javax.swing.JTextField tf_token19;
     private javax.swing.JTextField tf_token2;
     private javax.swing.JTextField tf_token20;
     private javax.swing.JTextField tf_token21;
@@ -3997,7 +3990,6 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JTextField tf_token9;
     private javax.swing.JTextField tf_token_four;
     private javax.swing.JTextField tf_token_one;
-    private javax.swing.JTextField tf_token_one2;
     private javax.swing.JTextField tf_token_three;
     private javax.swing.JTextField tf_token_two;
     private javax.swing.JTextField tf_trade_property;
