@@ -39,7 +39,9 @@ public class Controller {
     }
     
     public int rollDice(){
-        return model.rollDice();
+        int dice_num = model.rollDice();
+        board.changeDicePicture(dice_num);
+        return dice_num;
     }
 
     public void reset(){

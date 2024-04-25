@@ -101,6 +101,31 @@ public class Board extends javax.swing.JFrame {
         jPanel_setting.setPreferredSize(labelDimension);
     }
 
+    public void changeDicePicture(int dice_num){
+        if(dice_num == 1){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png"))); 
+        }
+        else if(dice_num ==2){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_two.png")));
+        }
+        else if(dice_num ==3){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_three.png")));
+        }
+        else if(dice_num ==4){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_four.png")));
+        }
+        else if(dice_num ==5){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_five.png")));
+        }
+        else if(dice_num ==6){
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_six.png")));
+        }
+        else{
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
+        }
+        
+    }
+
     public void moveToken(int player_no, int move) {
         if (player_no == 1) {
             int oriPos = player_one_pos;
