@@ -107,7 +107,31 @@ public class Board extends javax.swing.JFrame {
         jTextField5.setText(String.valueOf(controller.getPlayerBalance(2)));       
         jTextField6.setText(String.valueOf(controller.getPlayerBalance(3)));
         jTextField7.setText(String.valueOf(controller.getPlayerBalance(4)));
+        changeStatus();
+    }
 
+    public void changeStatus(){
+        if(controller.getPlayerTurn() == 1){
+            current_player_one.setText("↓");
+            current_player_two.setText("");
+            current_player_three.setText("");
+            current_player_four.setText("");
+        }else if (controller.getPlayerTurn() == 2){
+            current_player_one.setText("");
+            current_player_two.setText("↓");
+            current_player_three.setText("");
+            current_player_four.setText("");
+        }else if (controller.getPlayerTurn() == 3){
+            current_player_one.setText("");
+            current_player_two.setText("");
+            current_player_three.setText("↓");
+            current_player_four.setText("");
+        }else if (controller.getPlayerTurn() == 4){
+            current_player_one.setText("");
+            current_player_two.setText("");
+            current_player_three.setText("");
+            current_player_four.setText("↓");
+        }
     }
 
     public void changeDicePicture(int dice_num){
@@ -136,18 +160,22 @@ public class Board extends javax.swing.JFrame {
     }
 
     public void moveToken(int player_no, int move) {
+        changeBalance();
         if (player_no == 1) {
-            int oriPos = player_one_pos;
+            int oriPos = controller.getPlayerPos(player_no);
             player_one_pos = player_one_pos + move;
             if (player_one_pos > 40) {
                 player_one_pos = player_one_pos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
+            controller.setPlayerPos(player_no, oriPos);
             showHideIcon(player_no, oriPos, player_one_pos);
         } else if (player_no == 2) {
             int oriPos = player_two_pos;
             player_two_pos = player_two_pos + move;
             if (player_two_pos > 40) {
                 player_two_pos = player_two_pos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, player_two_pos);
         } else if (player_no == 3) {
@@ -155,7 +183,7 @@ public class Board extends javax.swing.JFrame {
             player_three_pos = player_three_pos + move;
             if (player_three_pos > 40) {
                 player_three_pos = player_three_pos - 40;
-                
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, player_three_pos);
         } else {
@@ -163,6 +191,7 @@ public class Board extends javax.swing.JFrame {
             player_four_pos = player_four_pos + move;
             if (player_four_pos > 40) {
                 player_four_pos = player_four_pos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, player_four_pos);
         }

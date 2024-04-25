@@ -50,9 +50,11 @@ public class Controller {
 
     public void statGame(){
         model.setPlaying(true);
+        model.reset();
         for(int i = 1; i <= 4; i++){
             model.modifyPlayerBalance(i, 2000);
         }
+        
     }
 
     public void reset(){
@@ -89,6 +91,22 @@ public class Controller {
 
     public void modifyPlayerPos(int player_no, int amount){
         model.modifyPlayerPos(player_no, amount);
+    }
+
+    public int getPlayerPos(int player_no){
+        return model.getPlayerPos(player_no);
+    }
+
+    public void setPlayerPos(int player_no,int pos){
+        model.setPlayerPos(player_no,pos);
+    }
+
+    public void modifyPlayerBalance(int player_no, int amount){
+        modifyPlayerBalance(player_no, amount);
+    }
+
+    public int getPlayerTurn(){
+        return model.getPlayerTurn();
     }
     
 }

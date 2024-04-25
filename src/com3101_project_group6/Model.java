@@ -55,6 +55,19 @@ public class Model {
     public void setController(Controller c) {
         this.controller = c;
     }
+
+    public int getPlayerPos(int player_no){ 
+        if(player_no == 2){
+            return player_two_pos;
+        }
+        else if(player_no == 3){
+            return player_three_pos;
+        }
+        else if(player_no == 4){
+            return player_four_pos;
+        }
+        return player_one_pos;
+    }
     
     
     // gen a random number
@@ -67,7 +80,7 @@ public class Model {
     public void reset(){
         num_player = 0;
         num_bot = 0;
-        playing = false;
+        playing = true;
         dice_num = 0;
         turn_of_player_no = 1;
         player_one_pos = 1;
@@ -160,6 +173,23 @@ public class Model {
 
 
         return player_one_balance;
+    }
+    public void setPlayerPos(int player_no, int pos) {
+        if(player_no == 1){
+            player_one_pos = pos;
+        }else if(player_no == 2){
+            player_two_pos = pos;
+        }else if(player_no == 3){
+            player_three_pos = pos;
+        }
+        else if(player_no ==4){
+            player_four_pos = pos;
+        }
+        
+    }
+
+    public int getPlayerTurn(){
+        return turn_of_player_no;
     }
 
     
