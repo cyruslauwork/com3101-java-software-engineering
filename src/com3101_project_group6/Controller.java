@@ -63,6 +63,7 @@ public class Controller {
 
     public void move(){
         model.move();
+
     }
 
     public void moveToken(int player_no, int move){
@@ -106,13 +107,6 @@ public class Controller {
 
     public int getPlayerTurn(){
         return model.getPlayerTurn();
-    }
-    public boolean checkBankrupt(int player_no) {
-        return model.checkBankrupt(player_no);
-    }
- 
-    public int[][] getPropertyList() {
-        return model.getPropertyList();
     }
     
 }

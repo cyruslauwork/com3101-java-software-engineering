@@ -121,37 +121,6 @@ public class Board extends javax.swing.JFrame {
             current_player_three.setText("");
             current_player_four.setText("↓");
         }
-        if (controller.checkBankrupt(1)) {
-            current_player_one.setText("Bankrupt");
-        } else if (controller.checkBankrupt(2)) {
-            current_player_two.setText("Bankrupt");
-        } else if (controller.checkBankrupt(3)) {
-            current_player_three.setText("Bankrupt");
-        } else if (controller.checkBankrupt(4)) {
-            current_player_four.setText("Bankrupt");
-        }
-    }
-
-    public void payRent(int player_no) {
-        int[][] propertyList = controller.getPropertyList();
-        if (player_no == 1) {
-            int oriPos = controller.getPlayerPos(player_no);
-            int rent = propertyList[oriPos][2];
-            controller.modifyPlayerBalance(player_no, rent);
-        } else if (player_no == 2) {
-            int oriPos = controller.getPlayerPos(player_no);
-            int rent = propertyList[oriPos][2];
-            controller.modifyPlayerBalance(player_no, rent);
-        } else if (player_no == 3) {
-            int oriPos = controller.getPlayerPos(player_no);
-            int rent = propertyList[oriPos][2];
-            controller.modifyPlayerBalance(player_no, rent);
-        } else if (player_no == 4) {
-            int oriPos = controller.getPlayerPos(player_no);
-            int rent = propertyList[oriPos][2];
-            controller.modifyPlayerBalance(player_no, rent);
-        }
-        
     }
 
     public void changeDicePicture(int dice_num){
@@ -180,6 +149,7 @@ public class Board extends javax.swing.JFrame {
     }
 
     public void moveToken(int player_no, int move) {
+        changeBalance();
         if (player_no == 1) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
@@ -232,18 +202,14 @@ public class Board extends javax.swing.JFrame {
             }
             showHideIcon(player_no, oriPos, newPos);
         }
-        payRent(player_no);
-        changeBalance();
        
     }
 
     
 
     private void showHideIcon(int player_no, int oriPos, int newPos) {
-        System.out.println(oriPos);
-        System.out.println(newPos);
         controller.setPlayerPos(player_no, newPos);
-        System.out.println(controller.getPlayerPos(player_no));
+
         if(player_no == 1){
             if(newPos == 1){
                 img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
