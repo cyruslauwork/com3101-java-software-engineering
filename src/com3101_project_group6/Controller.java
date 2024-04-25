@@ -73,7 +73,7 @@ public class Controller {
     } 
 
     public void viewSetBalance(){
-
+        board.changeBalance();
     }
 
     public void endTurn(){
@@ -89,7 +89,6 @@ public class Controller {
 
     public void modifyPlayerPos(int player_no, int amount){
         model.modifyPlayerPos(player_no, amount);
-        board.changeBalance();
     }
     
 }

@@ -103,12 +103,10 @@ public class Board extends javax.swing.JFrame {
     }
 
     public void changeBalance(){
-        for(int i =1;i<=4;i++){        
-            jTextField1.setText(String.valueOf(controller.getPlayerBalance(i)));        
-            jTextField5.setText(String.valueOf(controller.getPlayerBalance(i)));       
-            jTextField6.setText(String.valueOf(controller.getPlayerBalance(i)));
-            jTextField7.setText(String.valueOf(controller.getPlayerBalance(i)));
-        }
+        jTextField1.setText(String.valueOf(controller.getPlayerBalance(1)));        
+        jTextField5.setText(String.valueOf(controller.getPlayerBalance(2)));       
+        jTextField6.setText(String.valueOf(controller.getPlayerBalance(3)));
+        jTextField7.setText(String.valueOf(controller.getPlayerBalance(4)));
 
     }
 

@@ -99,14 +99,15 @@ public class Model {
 
     public void modifyPlayerBalance(int player_no, int amount){
         if (player_no == 1) {
-            player_one_balance += amount;
+            player_one_balance = amount;
         } else if (player_no == 2) {
-            player_two_balance += amount;
+            player_two_balance = amount;
         } else if (player_no == 3) {
-            player_three_balance += amount;
+            player_three_balance = amount;
         } else {
-            player_four_balance += amount;
+            player_four_balance = amount;
         }
+        controller.viewSetBalance();
     }
 
     public void modifyPlayerPos(int player_no, int amount){
