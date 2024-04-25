@@ -4,15 +4,6 @@
  */
 package com3101_project_group6;
 
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-
 /**
  *
  * @author cyrus
@@ -20,21 +11,17 @@ import javax.swing.ImageIcon;
 public class Board extends javax.swing.JFrame {
 
     private static Board _instance;
-    private static Controller controller; 
+    private static Controller controller;
 
-    public static Board getInstance() throws IOException {
+    int num_player = 0;
+    int num_bot = 0;
+
+    public static Board getInstance() {
         if (_instance == null) {
             _instance = new Board();
         }
         return _instance;
     }
-
-    // Get the screen dimensions
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    // Calculate the desired width and height
-    int maxWidth = screenSize.width;
-    int maxHeight = screenSize.height;
-    int boardLength = Math.min(maxWidth, maxHeight);  // Set width and height to the minimum value
 
     /**
      * Creates new form Board
@@ -42,80 +29,42 @@ public class Board extends javax.swing.JFrame {
     private Board() {
     }
 
-    public void showBoard(Controller controller) throws IOException {
+    public void showBoard(Controller controller) {
         this.controller = controller;
         initComponents();
         setFrame();
-        setBoard();
     }
 
     private void setFrame() {
-        this.setSize(new Dimension(boardLength, boardLength + 50));
         this.setVisible(true);
         this.setResizable(false);
     }
 
-    private void setBoard() throws IOException {
-        //Dimension labelDimension = new Dimension(boardLength, boardLength); // Create a new size with the calculated dimensions
-        Dimension labelDimension = new Dimension(900, 900); // Create a new size with the calculated dimensions
-        // Set the size of background
-        jLayeredPane1.setPreferredSize(labelDimension);
-        jPanel1.setPreferredSize(labelDimension);
-        jLabel1.setPreferredSize(labelDimension);
-        try { // Code that may potentially throw an IOException
-            // Load the original image
-            BufferedImage originalImage = ImageIO.read(getClass().getResourceAsStream("images/hsu_board_final.png"));
-            // Set width and height to the minimum value
-            // Determine the scaling factors
-            double widthRatio = (double) boardLength / originalImage.getWidth();
-            double heightRatio = (double) boardLength / originalImage.getHeight();
-            double scaleFactor = Math.min(widthRatio, heightRatio);
-            // Calculate the new dimensions based on the aspect ratio
-            int scaledWidth = (int) (originalImage.getWidth() * scaleFactor);
-            int scaledHeight = (int) (originalImage.getHeight() * scaleFactor);
-            // Create a scaled version of the image
-            Image scaledImage = originalImage.getScaledInstance(scaledWidth, scaledHeight - 30, Image.SCALE_SMOOTH);
-            // Create a new ImageIcon with the scaled image
-            ImageIcon scaledIcon = new ImageIcon(scaledImage);
-            // Set the scaled image icon to the JLabel
-            jLabel1.setIcon(scaledIcon);
-        } catch (IOException e) {
-            ImageIcon originalIcon = new ImageIcon(this.getClass().getResource("images/hsu_board_final.png"));
-            Image originalImage = originalIcon.getImage();
-            Image scaledImage = originalImage.getScaledInstance(boardLength, boardLength, Image.SCALE_DEFAULT);
-            ImageIcon scaledIcon = new ImageIcon(scaledImage);
-            jLabel1.setIcon(scaledIcon);
-        }
-
-        // Set the size of palette
-        jPanel_setting.setPreferredSize(labelDimension);
-    }
-
-    public void changeBalance(){
-        jTextField1.setText(String.valueOf(controller.getPlayerBalance(1)));        
-        jTextField5.setText(String.valueOf(controller.getPlayerBalance(2)));       
+    public void changeBalance() {
+        jTextField1.setText(String.valueOf(controller.getPlayerBalance(1)));
+        jTextField5.setText(String.valueOf(controller.getPlayerBalance(2)));
         jTextField6.setText(String.valueOf(controller.getPlayerBalance(3)));
         jTextField7.setText(String.valueOf(controller.getPlayerBalance(4)));
         changeStatus();
     }
 
-    public void changeStatus(){
-        if(controller.getPlayerTurn() == 1){
+    public void changeStatus() {
+        if (controller.getPlayerTurn() == 1) {
             current_player_one.setText("↓");
             current_player_two.setText("");
             current_player_three.setText("");
             current_player_four.setText("");
-        }else if (controller.getPlayerTurn() == 2){
+        } else if (controller.getPlayerTurn() == 2) {
             current_player_one.setText("");
             current_player_two.setText("↓");
             current_player_three.setText("");
             current_player_four.setText("");
-        }else if (controller.getPlayerTurn() == 3){
+        } else if (controller.getPlayerTurn() == 3) {
             current_player_one.setText("");
             current_player_two.setText("");
             current_player_three.setText("↓");
             current_player_four.setText("");
-        }else if (controller.getPlayerTurn() == 4){
+        } else if (controller.getPlayerTurn() == 4) {
             current_player_one.setText("");
             current_player_two.setText("");
             current_player_three.setText("");
@@ -123,29 +72,23 @@ public class Board extends javax.swing.JFrame {
         }
     }
 
-    public void changeDicePicture(int dice_num){
-        if(dice_num == 1){
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png"))); 
-        }
-        else if(dice_num ==2){
+    public void changeDicePicture(int dice_num) {
+        if (dice_num == 1) {
+            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
+        } else if (dice_num == 2) {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_two.png")));
-        }
-        else if(dice_num ==3){
+        } else if (dice_num == 3) {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_three.png")));
-        }
-        else if(dice_num ==4){
+        } else if (dice_num == 4) {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_four.png")));
-        }
-        else if(dice_num ==5){
+        } else if (dice_num == 5) {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_five.png")));
-        }
-        else if(dice_num ==6){
+        } else if (dice_num == 6) {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_six.png")));
-        }
-        else{
+        } else {
             img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
         }
-        
+
     }
 
     public void moveToken(int player_no, int move) {
@@ -153,8 +96,8 @@ public class Board extends javax.swing.JFrame {
         if (player_no == 1) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34){
-                newPos =- 23;
+            if (newPos == 34) {
+                newPos = - 23;
 
             }
             if (newPos > 40) {
@@ -162,12 +105,11 @@ public class Board extends javax.swing.JFrame {
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, newPos);
-        }
-        else if (player_no == 2) {
+        } else if (player_no == 2) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34){
-                newPos =- 23;
+            if (newPos == 34) {
+                newPos = - 23;
 
             }
             if (newPos > 40) {
@@ -175,12 +117,11 @@ public class Board extends javax.swing.JFrame {
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, newPos);
-        }
-        else if (player_no == 3) {
+        } else if (player_no == 3) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34){
-                newPos =- 23;
+            if (newPos == 34) {
+                newPos = - 23;
 
             }
             if (newPos > 40) {
@@ -188,12 +129,11 @@ public class Board extends javax.swing.JFrame {
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, newPos);
-        }
-        else if (player_no == 4) {
+        } else if (player_no == 4) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34){
-                newPos =- 23;
+            if (newPos == 34) {
+                newPos = - 23;
 
             }
             if (newPos > 40) {
@@ -202,983 +142,981 @@ public class Board extends javax.swing.JFrame {
             }
             showHideIcon(player_no, oriPos, newPos);
         }
-       
+
     }
-
-    
 
     private void showHideIcon(int player_no, int oriPos, int newPos) {
         controller.setPlayerPos(player_no, newPos);
 
-        if(player_no == 1){
-            if(newPos == 1){
+        if (player_no == 1) {
+            if (newPos == 1) {
                 img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
-            if(oriPos == 1){
+            if (oriPos == 1) {
                 img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 2){
+            if (newPos == 2) {
                 img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 2){
+            if (oriPos == 2) {
                 img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 3){
+            if (newPos == 3) {
                 img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 3){
+            if (oriPos == 3) {
                 img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 4){
+            if (newPos == 4) {
                 img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 4){
+            if (oriPos == 4) {
                 img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 5){
+            if (newPos == 5) {
                 img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 5){
+            if (oriPos == 5) {
                 img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 6){
+            if (newPos == 6) {
                 img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 6){
+            if (oriPos == 6) {
                 img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 7){
+            if (newPos == 7) {
                 img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 7){
+            if (oriPos == 7) {
                 img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 8){
+            if (newPos == 8) {
                 img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 8){
+            if (oriPos == 8) {
                 img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 9){
+            if (newPos == 9) {
                 img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 9){
+            if (oriPos == 9) {
                 img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 10){
+            if (newPos == 10) {
                 img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 10){
+            if (oriPos == 10) {
                 img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 11){
+            if (newPos == 11) {
                 img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 11){
+            if (oriPos == 11) {
                 img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
                 img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 12){
+            if (newPos == 12) {
                 img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 12){
+            if (oriPos == 12) {
                 img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 13){
+            if (newPos == 13) {
                 img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 13){
+            if (oriPos == 13) {
                 img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(oriPos == 14){
+            if (oriPos == 14) {
                 img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 14){
+            if (newPos == 14) {
                 img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(newPos == 15){
+            if (newPos == 15) {
                 img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 15){
+            if (oriPos == 15) {
                 img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 16){
+            if (newPos == 16) {
                 img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 16){
+            if (oriPos == 16) {
                 img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 17){
+            if (newPos == 17) {
                 img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 17){
+            if (oriPos == 17) {
                 img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 18){
+            if (newPos == 18) {
                 img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 18){
+            if (oriPos == 18) {
                 img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 19){
+            if (newPos == 19) {
                 img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 19){
+            if (oriPos == 19) {
                 img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 20){
+            if (newPos == 20) {
                 img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 20){
+            if (oriPos == 20) {
                 img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 21){
+            if (newPos == 21) {
                 img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
-            if(oriPos == 21){
+            if (oriPos == 21) {
                 img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 22){
+            if (newPos == 22) {
                 img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 22){
+            if (oriPos == 22) {
                 img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 23){
+            if (newPos == 23) {
                 img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 23){
+            if (oriPos == 23) {
                 img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 24){
+            if (newPos == 24) {
                 img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 24){
+            if (oriPos == 24) {
                 img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 25){
+            if (newPos == 25) {
                 img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 25){
+            if (oriPos == 25) {
                 img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 26){
+            if (newPos == 26) {
                 img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 26){
+            if (oriPos == 26) {
                 img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 27){
+            if (newPos == 27) {
                 img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 27){
+            if (oriPos == 27) {
                 img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 28){
+            if (newPos == 28) {
                 img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 28){
+            if (oriPos == 28) {
                 img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 29){
+            if (newPos == 29) {
                 img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 29){
+            if (oriPos == 29) {
                 img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 30){
+            if (newPos == 30) {
                 img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 30){
+            if (oriPos == 30) {
                 img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 31){
+            if (newPos == 31) {
                 img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 31){
+            if (oriPos == 31) {
                 img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 32){
+            if (newPos == 32) {
                 img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 32){
+            if (oriPos == 32) {
                 img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 33){
+            if (newPos == 33) {
                 img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 33){
+            if (oriPos == 33) {
                 img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 34){
+            if (newPos == 34) {
                 img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 34){
+            if (oriPos == 34) {
                 img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 35){
+            if (newPos == 35) {
                 img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 35){
+            if (oriPos == 35) {
                 img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 36){
+            if (newPos == 36) {
                 img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 36){
+            if (oriPos == 36) {
                 img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 37){
+            if (newPos == 37) {
                 img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 37){
+            if (oriPos == 37) {
                 img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 38){
+            if (newPos == 38) {
                 img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 38){
+            if (oriPos == 38) {
                 img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 39){
+            if (newPos == 39) {
                 img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 39){
+            if (oriPos == 39) {
                 img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 40){
+            if (newPos == 40) {
                 img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
-            if(oriPos == 40){
+            if (oriPos == 40) {
                 img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if(player_no == 2){
-            if(newPos == 1){
+        if (player_no == 2) {
+            if (newPos == 1) {
                 img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
-            if(oriPos == 1){
+            if (oriPos == 1) {
                 img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 2){
+            if (newPos == 2) {
                 img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 2){
+            if (oriPos == 2) {
                 img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 3){
+            if (newPos == 3) {
                 img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 3){
+            if (oriPos == 3) {
                 img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 4){
+            if (newPos == 4) {
                 img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 4){
+            if (oriPos == 4) {
                 img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 5){
+            if (newPos == 5) {
                 img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 5){
+            if (oriPos == 5) {
                 img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 6){
+            if (newPos == 6) {
                 img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 6){
+            if (oriPos == 6) {
                 img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 7){
+            if (newPos == 7) {
                 img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 7){
+            if (oriPos == 7) {
                 img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 8){
+            if (newPos == 8) {
                 img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 8){
+            if (oriPos == 8) {
                 img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 9){
+            if (newPos == 9) {
                 img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 9){
+            if (oriPos == 9) {
                 img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 10){
+            if (newPos == 10) {
                 img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 10){
+            if (oriPos == 10) {
                 img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 11){
+            if (newPos == 11) {
                 img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 11){
+            if (oriPos == 11) {
                 img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
                 img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 12){
+            if (newPos == 12) {
                 img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 12){
+            if (oriPos == 12) {
                 img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 13){
+            if (newPos == 13) {
                 img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 13){
+            if (oriPos == 13) {
                 img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 14){
+            if (newPos == 14) {
                 img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 14){
+            if (oriPos == 14) {
                 img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 15){
+            if (newPos == 15) {
                 img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 15){
+            if (oriPos == 15) {
                 img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 16){
+            if (newPos == 16) {
                 img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 16){
+            if (oriPos == 16) {
                 img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 17){
+            if (newPos == 17) {
                 img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 17){
+            if (oriPos == 17) {
                 img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 18){
+            if (newPos == 18) {
                 img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 18){
+            if (oriPos == 18) {
                 img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 19){
+            if (newPos == 19) {
                 img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 19){
+            if (oriPos == 19) {
                 img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 20){
+            if (newPos == 20) {
                 img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 20){
+            if (oriPos == 20) {
                 img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 21){
+            if (newPos == 21) {
                 img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
-            if(oriPos == 21){
+            if (oriPos == 21) {
                 img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 22){
+            if (newPos == 22) {
                 img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 22){
+            if (oriPos == 22) {
                 img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 23){
+            if (newPos == 23) {
                 img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 23){
+            if (oriPos == 23) {
                 img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 24){
+            if (newPos == 24) {
                 img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 24){
+            if (oriPos == 24) {
                 img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 25){
+            if (newPos == 25) {
                 img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 25){
+            if (oriPos == 25) {
                 img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 26){
+            if (newPos == 26) {
                 img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 26){
+            if (oriPos == 26) {
                 img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 27){
+            if (newPos == 27) {
                 img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 27){
+            if (oriPos == 27) {
                 img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 28){
+            if (newPos == 28) {
                 img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 28){
+            if (oriPos == 28) {
                 img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 29){
+            if (newPos == 29) {
                 img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 29){
+            if (oriPos == 29) {
                 img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 30){
+            if (newPos == 30) {
                 img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 30){
+            if (oriPos == 30) {
                 img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 31){
+            if (newPos == 31) {
                 img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 31){
+            if (oriPos == 31) {
                 img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 32){
+            if (newPos == 32) {
                 img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 32){
+            if (oriPos == 32) {
                 img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 33){
+            if (newPos == 33) {
                 img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 33){
+            if (oriPos == 33) {
                 img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 34){
+            if (newPos == 34) {
                 img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 34){
+            if (oriPos == 34) {
                 img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 35){
+            if (newPos == 35) {
                 img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 35){
+            if (oriPos == 35) {
                 img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 36){
+            if (newPos == 36) {
                 img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_.png")));
             }
-            if(oriPos == 36){
+            if (oriPos == 36) {
                 img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 37){
+            if (newPos == 37) {
                 img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 37){
+            if (oriPos == 37) {
                 img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 38){
+            if (newPos == 38) {
                 img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 38){
+            if (oriPos == 38) {
                 img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 39){
+            if (newPos == 39) {
                 img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 39){
+            if (oriPos == 39) {
                 img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 40){
+            if (newPos == 40) {
                 img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
-            if(oriPos == 40){
+            if (oriPos == 40) {
                 img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if(player_no == 3){
-            if(newPos == 1){
+        if (player_no == 3) {
+            if (newPos == 1) {
                 img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
-            if(oriPos == 1){
+            if (oriPos == 1) {
                 img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 2){
+            if (newPos == 2) {
                 img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 2){
+            if (oriPos == 2) {
                 img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 3){
+            if (newPos == 3) {
                 img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 3){
+            if (oriPos == 3) {
                 img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 4){
+            if (newPos == 4) {
                 img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 4){
+            if (oriPos == 4) {
                 img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 5){
+            if (newPos == 5) {
                 img_token_three5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 5){
+            if (oriPos == 5) {
                 img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 6){
+            if (newPos == 6) {
                 img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 6){
+            if (oriPos == 6) {
                 img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 7){
+            if (newPos == 7) {
                 img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 7){
+            if (oriPos == 7) {
                 img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 8){
+            if (newPos == 8) {
                 img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 8){
+            if (oriPos == 8) {
                 img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 9){
+            if (newPos == 9) {
                 img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 9){
+            if (oriPos == 9) {
                 img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 10){
+            if (newPos == 10) {
                 img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 10){
+            if (oriPos == 10) {
                 img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 11){
+            if (newPos == 11) {
                 img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 11){
+            if (oriPos == 11) {
                 img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
                 img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 12){
+            if (newPos == 12) {
                 img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 12){
+            if (oriPos == 12) {
                 img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 13){
+            if (newPos == 13) {
                 img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 13){
+            if (oriPos == 13) {
                 img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 14){
+            if (newPos == 14) {
                 img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 14){
+            if (oriPos == 14) {
                 img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 15){
+            if (newPos == 15) {
                 img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 15){
+            if (oriPos == 15) {
                 img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 16){
+            if (newPos == 16) {
                 img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 16){
+            if (oriPos == 16) {
                 img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 17){
+            if (newPos == 17) {
                 img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 17){
+            if (oriPos == 17) {
                 img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 18){
+            if (newPos == 18) {
                 img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 18){
+            if (oriPos == 18) {
                 img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 19){
+            if (newPos == 19) {
                 img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 19){
+            if (oriPos == 19) {
                 img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 20){
+            if (newPos == 20) {
                 img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 20){
+            if (oriPos == 20) {
                 img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 21){
+            if (newPos == 21) {
                 img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
-            if(oriPos == 21){
+            if (oriPos == 21) {
                 img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 22){
+            if (newPos == 22) {
                 img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 22){
+            if (oriPos == 22) {
                 img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 23){
+            if (newPos == 23) {
                 img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 23){
+            if (oriPos == 23) {
                 img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 24){
+            if (newPos == 24) {
                 img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 24){
+            if (oriPos == 24) {
                 img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 25){
+            if (newPos == 25) {
                 img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 25){
+            if (oriPos == 25) {
                 img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 26){
+            if (newPos == 26) {
                 img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 26){
+            if (oriPos == 26) {
                 img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 27){
+            if (newPos == 27) {
                 img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 27){
+            if (oriPos == 27) {
                 img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 28){
+            if (newPos == 28) {
                 img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 28){
+            if (oriPos == 28) {
                 img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 29){
+            if (newPos == 29) {
                 img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 29){
+            if (oriPos == 29) {
                 img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 30){
+            if (newPos == 30) {
                 img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 30){
+            if (oriPos == 30) {
                 img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 31){
+            if (newPos == 31) {
                 img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 31){
+            if (oriPos == 31) {
                 img_token_three34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 32){
+            if (newPos == 32) {
                 img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 32){
+            if (oriPos == 32) {
                 img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 33){
+            if (newPos == 33) {
                 img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 33){
+            if (oriPos == 33) {
                 img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 34){
+            if (newPos == 34) {
                 img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 34){
+            if (oriPos == 34) {
                 img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 35){
+            if (newPos == 35) {
                 img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 35){
+            if (oriPos == 35) {
                 img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 36){
+            if (newPos == 36) {
                 img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 36){
+            if (oriPos == 36) {
                 img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 37){
+            if (newPos == 37) {
                 img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 37){
+            if (oriPos == 37) {
                 img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 38){
+            if (newPos == 38) {
                 img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 38){
+            if (oriPos == 38) {
                 img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 39){
+            if (newPos == 39) {
                 img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 39){
+            if (oriPos == 39) {
                 img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 40){
+            if (newPos == 40) {
                 img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
-            if(oriPos == 40){
+            if (oriPos == 40) {
                 img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if(player_no == 4){
-            if(newPos == 1){
+        if (player_no == 4) {
+            if (newPos == 1) {
                 img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
-            if(oriPos == 1){
+            if (oriPos == 1) {
                 img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 2){
+            if (newPos == 2) {
                 img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 2){
+            if (oriPos == 2) {
                 img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 3){
+            if (newPos == 3) {
                 img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 3){
+            if (oriPos == 3) {
                 img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 4){
+            if (newPos == 4) {
                 img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 4){
+            if (oriPos == 4) {
                 img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 5){
+            if (newPos == 5) {
                 img_token_four5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 5){
+            if (oriPos == 5) {
                 img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 6){
+            if (newPos == 6) {
                 img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 6){
+            if (oriPos == 6) {
                 img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 7){
+            if (newPos == 7) {
                 img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 7){
+            if (oriPos == 7) {
                 img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 8){
+            if (newPos == 8) {
                 img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 8){
+            if (oriPos == 8) {
                 img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 9){
+            if (newPos == 9) {
                 img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 9){
+            if (oriPos == 9) {
                 img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 10){
+            if (newPos == 10) {
                 img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 10){
+            if (oriPos == 10) {
                 img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 11){
+            if (newPos == 11) {
                 img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 11){
+            if (oriPos == 11) {
                 img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
                 img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 12){
+            if (newPos == 12) {
                 img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 12){
+            if (oriPos == 12) {
                 img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 13){
+            if (newPos == 13) {
                 img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 13){
+            if (oriPos == 13) {
                 img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 14){
+            if (newPos == 14) {
                 img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 14){
+            if (oriPos == 14) {
                 img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 15){
+            if (newPos == 15) {
                 img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 15){
+            if (oriPos == 15) {
                 img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 16){
+            if (newPos == 16) {
                 img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 16){
+            if (oriPos == 16) {
                 img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 17){
+            if (newPos == 17) {
                 img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 17){
+            if (oriPos == 17) {
                 img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 18){
+            if (newPos == 18) {
                 img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 18){
+            if (oriPos == 18) {
                 img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 19){
+            if (newPos == 19) {
                 img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 19){
+            if (oriPos == 19) {
                 img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 20){
+            if (newPos == 20) {
                 img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 20){
+            if (oriPos == 20) {
                 img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 21){
+            if (newPos == 21) {
                 img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
-            if(oriPos == 21){
+            if (oriPos == 21) {
                 img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
-            if(newPos == 22){
+            if (newPos == 22) {
                 img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 22){
+            if (oriPos == 22) {
                 img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 23){
+            if (newPos == 23) {
                 img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 23){
+            if (oriPos == 23) {
                 img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 24){
+            if (newPos == 24) {
                 img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 24){
+            if (oriPos == 24) {
                 img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 25){
+            if (newPos == 25) {
                 img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 25){
+            if (oriPos == 25) {
                 img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 26){
+            if (newPos == 26) {
                 img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 26){
+            if (oriPos == 26) {
                 img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 27){
+            if (newPos == 27) {
                 img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 27){
+            if (oriPos == 27) {
                 img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 28){
+            if (newPos == 28) {
                 img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 28){
+            if (oriPos == 28) {
                 img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 29){
+            if (newPos == 29) {
                 img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 29){
+            if (oriPos == 29) {
                 img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 30){
+            if (newPos == 30) {
                 img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 30){
+            if (oriPos == 30) {
                 img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 31){
+            if (newPos == 31) {
                 img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 31){
+            if (oriPos == 31) {
                 img_token_four34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 32){
+            if (newPos == 32) {
                 img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 32){
+            if (oriPos == 32) {
                 img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 33){
+            if (newPos == 33) {
                 img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 33){
+            if (oriPos == 33) {
                 img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 34){
+            if (newPos == 34) {
                 img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 34){
+            if (oriPos == 34) {
                 img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 35){
+            if (newPos == 35) {
                 img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 35){
+            if (oriPos == 35) {
                 img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 36){
+            if (newPos == 36) {
                 img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 36){
+            if (oriPos == 36) {
                 img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 37){
+            if (newPos == 37) {
                 img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 37){
+            if (oriPos == 37) {
                 img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 38){
+            if (newPos == 38) {
                 img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 38){
+            if (oriPos == 38) {
                 img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 39){
+            if (newPos == 39) {
                 img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 39){
+            if (oriPos == 39) {
                 img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
-            if(newPos == 40){
+            if (newPos == 40) {
                 img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
-            if(oriPos == 40){
+            if (oriPos == 40) {
                 img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
@@ -1516,9 +1454,19 @@ public class Board extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(850, 850));
+        setMinimumSize(new java.awt.Dimension(850, 850));
+        setPreferredSize(new java.awt.Dimension(850, 875));
+        setSize(new java.awt.Dimension(900, 900));
 
+        jLayeredPane1.setMaximumSize(new java.awt.Dimension(850, 850));
+        jLayeredPane1.setMinimumSize(new java.awt.Dimension(850, 850));
+
+        jPanel_setting.setMaximumSize(new java.awt.Dimension(850, 850));
+        jPanel_setting.setMinimumSize(new java.awt.Dimension(850, 850));
         jPanel_setting.setOpaque(false);
 
+        btn_add_player.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_add_player.setText("+");
         btn_add_player.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1526,6 +1474,7 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        btn_add_bot.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_add_bot.setText("+");
         btn_add_bot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1533,13 +1482,17 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        lb_players.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_players.setText("No. of Players:");
 
+        label_bots.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         label_bots.setText("No. of Bots:");
 
+        tf_num_bot.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_num_bot.setText("0");
         tf_num_bot.setEnabled(false);
 
+        tf_num_player.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_num_player.setText("0");
         tf_num_player.setEnabled(false);
         tf_num_player.addActionListener(new java.awt.event.ActionListener() {
@@ -1548,6 +1501,7 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        btn_del_player.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_del_player.setText("-");
         btn_del_player.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1555,6 +1509,7 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        btn_del_bot.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_del_bot.setText("-");
         btn_del_bot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1569,29 +1524,27 @@ public class Board extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(btn_add_player, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_del_player, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(lb_players)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btn_add_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn_add_player, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_del_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(label_bots, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(18, 18, 18))))
+                                .addComponent(btn_del_player, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(label_bots, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                        .addComponent(btn_add_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_del_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1615,8 +1568,9 @@ public class Board extends javax.swing.JFrame {
 
         img_2nd_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
 
-        img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png"))); // NOI18N
+        img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
 
+        btn_roll_dice.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         btn_roll_dice.setText("Roll Dice");
         btn_roll_dice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1629,14 +1583,14 @@ public class Board extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(img_1st_dice)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btn_roll_dice, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(img_1st_dice))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(img_2nd_dice)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btn_roll_dice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1651,23 +1605,31 @@ public class Board extends javax.swing.JFrame {
 
         jPanel3.setOpaque(false);
 
+        jTextField1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("2000");
 
         img_token_one.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
 
+        lb_bal.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_bal.setText("Balance:");
 
+        current_player_one.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         current_player_one.setText("↓");
 
+        current_player_two.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         current_player_two.setText(" ");
 
+        current_player_three.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         current_player_three.setText(" ");
 
+        current_player_four.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         current_player_four.setText(" ");
 
+        lb_msg.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_msg.setText("Start a new game!");
 
+        btn_newgame.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_newgame.setText("New Game");
         btn_newgame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1675,6 +1637,7 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        btn_reset.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_reset.setText("Reset");
         btn_reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1682,12 +1645,15 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        jTextField5.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setText("2000");
 
+        jTextField6.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setText("2000");
 
+        jTextField7.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setText("2000");
 
@@ -1697,12 +1663,14 @@ public class Board extends javax.swing.JFrame {
 
         img_token_four.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
 
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jTextField2.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("0");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -1711,12 +1679,15 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        jTextField8.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setText("0");
 
+        jTextField9.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setText("0");
 
+        jTextField10.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setText("0");
 
@@ -1729,49 +1700,57 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lb_bal)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(73, 73, 73))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(lb_bal)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(img_token_one)
-                                            .addComponent(current_player_one))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(img_token_one, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                                            .addComponent(current_player_one, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(img_token_two)
-                                            .addComponent(current_player_two))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(current_player_three)
-                                            .addComponent(img_token_three)))
+                                            .addComponent(current_player_two, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(img_token_three))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
                                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btn_newgame, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(current_player_three, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(img_token_four)
-                            .addComponent(current_player_four)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(lb_msg, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_newgame)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(img_token_four)
+                            .addComponent(current_player_four, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -1796,34 +1775,35 @@ public class Board extends javax.swing.JFrame {
                                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(img_token_three, javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(img_token_four))))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(22, 22, 22)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lb_bal))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lb_msg)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn_newgame)
-                        .addComponent(btn_reset)))
-                .addContainerGap())
+                        .addComponent(btn_reset)
+                        .addComponent(btn_newgame)))
+                .addGap(9, 9, 9))
         );
 
         jPanel5.setOpaque(false);
 
+        btn_buy.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_buy.setText("Buy");
         btn_buy.setEnabled(false);
         btn_buy.addActionListener(new java.awt.event.ActionListener() {
@@ -1832,8 +1812,12 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        tf_trade_property.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+
+        lb_avail_trade.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_avail_trade.setText("Now Available:");
 
+        btn_trade.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_trade.setText("Trade");
         btn_trade.setEnabled(false);
         btn_trade.addActionListener(new java.awt.event.ActionListener() {
@@ -1847,13 +1831,12 @@ public class Board extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(btn_buy, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_buy, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_trade, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE))
+                        .addComponent(btn_trade, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(lb_avail_trade)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1936,22 +1919,23 @@ public class Board extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(img_token_one10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two10))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(img_token_three10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four10)))
-                .addGap(17, 17, 17))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(img_token_one10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_two10))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(img_token_three10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_four10)))))
+                .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1994,35 +1978,37 @@ public class Board extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one11, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(img_token_two11))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(img_token_one11_jailed)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two11_jailed))
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(img_token_three11_jailed)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four11_jailed)))
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(img_token_three11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(img_token_four11)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(img_token_two11)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(img_token_three11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_four11)
+                                .addGap(0, 30, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                                .addComponent(img_token_one11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(img_token_one11_jailed)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(img_token_two11_jailed))
+                                    .addGroup(jPanel9Layout.createSequentialGroup()
+                                        .addComponent(img_token_three11_jailed)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(img_token_four11_jailed)))))
+                        .addContainerGap())))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(img_token_one11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(img_token_two11))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(img_token_one11_jailed)
                             .addComponent(img_token_two11_jailed))
@@ -2030,10 +2016,15 @@ public class Board extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(img_token_three11_jailed)
                             .addComponent(img_token_four11_jailed))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_four11)
-                            .addComponent(img_token_three11)))))
+                        .addGap(38, 38, 38)
+                        .addComponent(img_token_four11))
+                    .addComponent(img_token_three11, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(img_token_one11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(img_token_two11)))
+                .addContainerGap())
         );
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -2566,7 +2557,7 @@ public class Board extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap(87, Short.MAX_VALUE)
+                .addContainerGap(93, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_token12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -2583,7 +2574,7 @@ public class Board extends javax.swing.JFrame {
                             .addComponent(img_token_three13)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(img_token_four13)))
-                    .addContainerGap(33, Short.MAX_VALUE)))
+                    .addContainerGap(39, Short.MAX_VALUE)))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2592,7 +2583,7 @@ public class Board extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addGap(8, 8, 8)
                 .addComponent(tf_token12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel10Layout.createSequentialGroup()
                     .addGap(9, 9, 9)
@@ -2602,7 +2593,7 @@ public class Board extends javax.swing.JFrame {
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(img_token_three13)
-                        .addComponent(img_token_four13))
+                        .addComponent(img_token_four13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
@@ -2634,7 +2625,7 @@ public class Board extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
+                .addContainerGap(84, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_token13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
@@ -2651,7 +2642,7 @@ public class Board extends javax.swing.JFrame {
                             .addComponent(img_token_three14)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(img_token_four14)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
+                    .addContainerGap(30, Short.MAX_VALUE)))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2660,7 +2651,7 @@ public class Board extends javax.swing.JFrame {
                 .addComponent(jLabel13)
                 .addGap(8, 8, 8)
                 .addComponent(tf_token13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel19Layout.createSequentialGroup()
                     .addGap(9, 9, 9)
@@ -2671,7 +2662,7 @@ public class Board extends javax.swing.JFrame {
                     .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(img_token_three14)
                         .addComponent(img_token_four14))
-                    .addContainerGap(14, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         tf_token18.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -3024,11 +3015,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three25)
                     .addComponent(img_token_four25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel23)))
         );
 
         img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3083,11 +3073,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three26)
                     .addComponent(img_token_four26))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel24)))
         );
 
         img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3142,11 +3131,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three27)
                     .addComponent(img_token_four27))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel25)))
         );
 
         img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3201,11 +3189,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three28)
                     .addComponent(img_token_four28))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel26)))
         );
 
         img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3260,11 +3247,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three29)
                     .addComponent(img_token_four29))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel27)))
         );
 
         img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3319,11 +3305,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three30)
                     .addComponent(img_token_four30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel28)))
         );
 
         img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3378,11 +3363,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three31)
                     .addComponent(img_token_four31))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel29)))
         );
 
         img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3437,11 +3421,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three32)
                     .addComponent(img_token_four32))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel30)))
         );
 
         img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3496,11 +3479,10 @@ public class Board extends javax.swing.JFrame {
                 .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(img_token_three33)
                     .addComponent(img_token_four33))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tf_token31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(jLabel31)))
         );
 
         img_token_one7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
@@ -3576,7 +3558,7 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_three35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(img_token_four35)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3638,7 +3620,7 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_three36)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(img_token_four36)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3700,7 +3682,7 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_three37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(img_token_four37)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3762,7 +3744,7 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_three38)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(img_token_four38)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3781,7 +3763,7 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(jLabel35)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tf_token36.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -4310,198 +4292,198 @@ public class Board extends javax.swing.JFrame {
         jPanel_settingLayout.setHorizontalGroup(
             jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_settingLayout.createSequentialGroup()
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGap(246, 246, 246)
-                                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 6, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 0, Short.MAX_VALUE)
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel41, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel44, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel47, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel48, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel_settingLayout.createSequentialGroup()
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
                 .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout.createSequentialGroup()
+                        .addGap(197, 197, 197)
+                        .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
                         .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(12, 12, 12)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel_settingLayout.setVerticalGroup(
             jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                .addContainerGap(252, Short.MAX_VALUE)
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(85, 85, 85)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(8, 8, 8)
+                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGap(74, 74, 74)
-                                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 26, Short.MAX_VALUE)
-                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(92, 92, 92))
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel35, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                                .addGap(134, 134, 134)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9)
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(312, 312, 312)))
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                        .addGap(12, 12, 12)
-                                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addGap(48, 48, 48))
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/hsu_board_final.png"))); // NOI18N
+        jPanel1.setMaximumSize(new java.awt.Dimension(850, 850));
+        jPanel1.setMinimumSize(new java.awt.Dimension(850, 850));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/hsu_board_850x850.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -4513,9 +4495,7 @@ public class Board extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel1)
         );
 
         jLayeredPane1.setLayer(jPanel_setting, javax.swing.JLayeredPane.PALETTE_LAYER);
@@ -4553,65 +4533,52 @@ public class Board extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1006, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token13ActionPerformed
+    private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_playerActionPerformed
         // TODO add your handling code here:
+        int total_num = num_player + num_bot;
+        if (total_num < 4) {
+            num_player++;
+            tf_num_player.setText(String.valueOf(num_player));
+        }
+    }//GEN-LAST:event_btn_add_playerActionPerformed
 
-    }//GEN-LAST:event_tf_token13ActionPerformed
-
-    private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token12ActionPerformed
+    private void btn_add_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_botActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token12ActionPerformed
+        int total_num = num_player + num_bot;
+        if (total_num < 4) {
+            num_bot++;
+            tf_num_bot.setText(String.valueOf(num_bot));
+        }
+    }//GEN-LAST:event_btn_add_botActionPerformed
 
-    private void tf_token2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token2ActionPerformed
+    private void tf_num_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_num_playerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token2ActionPerformed
+    }//GEN-LAST:event_tf_num_playerActionPerformed
 
-    private void tf_token3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token3ActionPerformed
+    private void btn_del_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_playerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token3ActionPerformed
+        int total_num = num_player + num_bot;
+        if (total_num > 0 && num_player > 0) {
+            num_player--;
+            tf_num_player.setText(String.valueOf(num_player));
+        }
+    }//GEN-LAST:event_btn_del_playerActionPerformed
 
-    private void tf_token4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token4ActionPerformed
+    private void btn_del_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_botActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token4ActionPerformed
-
-    private void tf_token5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token5ActionPerformed
-
-    private void tf_token6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token6ActionPerformed
-
-    private void tf_token7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token7ActionPerformed
-
-    private void tf_token8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token8ActionPerformed
-
-    private void tf_token9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token9ActionPerformed
-
-    private void tf_token10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token10ActionPerformed
-
-    private void btn_tradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tradeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_tradeActionPerformed
-
-    private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn_buyActionPerformed
+        int total_num = num_player + num_bot;
+        if (total_num > 0 && num_bot > 0) {
+            num_bot--;
+            tf_num_bot.setText(String.valueOf(num_bot));
+        }
+    }//GEN-LAST:event_btn_del_botActionPerformed
 
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
@@ -4627,6 +4594,12 @@ public class Board extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_roll_diceActionPerformed
 
+    private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed
+        // TODO add your handling code here:
+        controller.statGame();
+        lb_msg.setText("Game has started");
+    }//GEN-LAST:event_btn_newgameActionPerformed
+
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
         int num_player = 0;
@@ -4635,39 +4608,74 @@ public class Board extends javax.swing.JFrame {
         tf_num_bot.setText(String.valueOf(num_bot));
     }//GEN-LAST:event_btn_resetActionPerformed
 
-    private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        controller.statGame();
-        lb_msg.setText("Game has started");
-    }//GEN-LAST:event_btn_newgameActionPerformed
+        controller.modifyPlayerPos(1, Integer.parseInt(jTextField2.getText()));
+        controller.modifyPlayerPos(2, Integer.parseInt(jTextField8.getText()));
+        controller.modifyPlayerPos(3, Integer.parseInt(jTextField9.getText()));
+        controller.modifyPlayerPos(4, Integer.parseInt(jTextField10.getText()));
 
-    private void tf_token_oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_oneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token_oneActionPerformed
+        controller.modifyPlayerBalance(1, Integer.parseInt(jTextField1.getText()));
+        controller.modifyPlayerBalance(2, Integer.parseInt(jTextField5.getText()));
+        controller.modifyPlayerBalance(3, Integer.parseInt(jTextField6.getText()));
+        controller.modifyPlayerBalance(4, Integer.parseInt(jTextField7.getText()));
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void tf_token_twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_twoActionPerformed
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token_twoActionPerformed
+    }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void tf_token_threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_threeActionPerformed
+    private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token_threeActionPerformed
+    }//GEN-LAST:event_btn_buyActionPerformed
 
-    private void tf_token_fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token_fourActionPerformed
+    private void btn_tradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tradeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token_fourActionPerformed
+    }//GEN-LAST:event_btn_tradeActionPerformed
 
-    private void tf_token14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token14ActionPerformed
+    private void tf_token10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token14ActionPerformed
+    }//GEN-LAST:event_tf_token10ActionPerformed
 
-    private void tf_token16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token16ActionPerformed
+    private void tf_token9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token16ActionPerformed
+    }//GEN-LAST:event_tf_token9ActionPerformed
 
-    private void tf_token17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token17ActionPerformed
+    private void tf_token8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token17ActionPerformed
+    }//GEN-LAST:event_tf_token8ActionPerformed
+
+    private void tf_token7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token7ActionPerformed
+
+    private void tf_token6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token6ActionPerformed
+
+    private void tf_token5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token5ActionPerformed
+
+    private void tf_token4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token4ActionPerformed
+
+    private void tf_token3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token3ActionPerformed
+
+    private void tf_token2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token2ActionPerformed
+
+    private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token12ActionPerformed
+
+    private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_token13ActionPerformed
 
     private void tf_token18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token18ActionPerformed
         // TODO add your handling code here:
@@ -4757,64 +4765,17 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_token40ActionPerformed
 
-    int num_player = 0;
-    int num_bot = 0;
-    private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_playerActionPerformed
+    private void tf_token14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token14ActionPerformed
         // TODO add your handling code here:
-        int total_num = num_player + num_bot;
-        if (total_num < 4) {
-            num_player++;
-            tf_num_player.setText(String.valueOf(num_player));
-        }
-    }//GEN-LAST:event_btn_add_playerActionPerformed
+    }//GEN-LAST:event_tf_token14ActionPerformed
 
-    private void btn_del_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_playerActionPerformed
+    private void tf_token16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token16ActionPerformed
         // TODO add your handling code here:
-        int total_num = num_player + num_bot;
-        if (total_num > 0 && num_player > 0) {
-            num_player--;
-            tf_num_player.setText(String.valueOf(num_player));
-        }
-    }//GEN-LAST:event_btn_del_playerActionPerformed
+    }//GEN-LAST:event_tf_token16ActionPerformed
 
-    private void tf_num_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_num_playerActionPerformed
+    private void tf_token17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token17ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_num_playerActionPerformed
-
-    private void btn_add_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_botActionPerformed
-        // TODO add your handling code here:
-        int total_num = num_player + num_bot;
-        if (total_num < 4) {
-            num_bot++;
-            tf_num_bot.setText(String.valueOf(num_bot));
-        }
-    }//GEN-LAST:event_btn_add_botActionPerformed
-
-    private void btn_del_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_botActionPerformed
-        // TODO add your handling code here:
-        int total_num = num_player + num_bot;
-        if (total_num > 0 && num_bot > 0) {
-            num_bot--;
-            tf_num_bot.setText(String.valueOf(num_bot));
-        }
-    }//GEN-LAST:event_btn_del_botActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        controller.modifyPlayerPos(1, Integer.parseInt(jTextField2.getText()));
-        controller.modifyPlayerPos(2, Integer.parseInt(jTextField8.getText()));
-        controller.modifyPlayerPos(3, Integer.parseInt(jTextField9.getText()));
-        controller.modifyPlayerPos(4, Integer.parseInt(jTextField10.getText()));
- 
-        controller.modifyPlayerBalance(1, Integer.parseInt(jTextField1.getText()));
-        controller.modifyPlayerBalance(2, Integer.parseInt(jTextField5.getText()));
-        controller.modifyPlayerBalance(3, Integer.parseInt(jTextField6.getText()));
-        controller.modifyPlayerBalance(4, Integer.parseInt(jTextField7.getText()));
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_tf_token17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -4842,17 +4803,14 @@ public class Board extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                try {
-//                    new Board().setVisible(true);
-//                } catch (IOException ex) {
-//                    Logger.getLogger(Board.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//            }
-//        });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Board().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

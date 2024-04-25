@@ -4,8 +4,6 @@
  */
 package com3101_project_group6;
 
-import java.io.IOException;
-
 /**
  *
  * @author cyrus
@@ -35,7 +33,7 @@ public class View {
         this.board = b;
     }
 
-    public void showBoard() throws IOException {
+    public void showBoard() {
         board.showBoard(controller);
     }
 

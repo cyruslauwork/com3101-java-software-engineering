@@ -17,7 +17,7 @@ public class COM3101_Project_Group6 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         View view = View.getInstance();
         Model model = Model.getInstance();
         Controller controller = Controller.getInstance();
