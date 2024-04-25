@@ -4,8 +4,6 @@
  */
 package com3101_project_group6;
 
-import java.io.IOException;
-
 /**
  *
  * @author LAU Ka Pui (s226064)

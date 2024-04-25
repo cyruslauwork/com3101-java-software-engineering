@@ -35,78 +35,78 @@ public class Controller {
     }
 
     public void setView(View v) {
-        this.view = v;
+        Controller.view = v;
     }
-    
-    public int rollDice(){
-        if(model.getPlaying()){
+
+    public int rollDice() {
+        if (model.getPlaying()) {
             int dice_num = model.rollDice();
             board.changeDicePicture(dice_num);
             return dice_num;
-        }else {
+        } else {
             return 0;
         }
     }
 
-    public void statGame(){
+    public void statGame() {
         model.setPlaying(true);
         model.reset();
-        for(int i = 1; i <= 4; i++){
+        for (int i = 1; i <= 4; i++) {
             model.modifyPlayerBalance(i, 2000);
         }
-        
+
     }
 
-    public void reset(){
+    public void reset() {
         model.reset();
     }
 
-    public void move(){
+    public void move() {
         model.move();
 
     }
 
-    public void moveToken(int player_no, int move){
-        board.moveToken(player_no,move);
+    public void moveToken(int player_no, int move) {
+        board.moveToken(player_no, move);
     }
 
-    public int getPlayerBalance(int player_no){
+    public int getPlayerBalance(int player_no) {
         return model.getPlayerBalance(player_no);
-    } 
+    }
 
-    public void viewSetBalance(){
+    public void viewSetBalance() {
         board.changeBalance();
     }
 
-    public void endTurn(){
+    public void endTurn() {
 
     }
 
-    public void EndGame(){
+    public void EndGame() {
         model.setPlaying(false);
     }
 
-    public void checkAvailableProperty(){
+    public void checkAvailableProperty() {
     }
 
-    public void modifyPlayerPos(int player_no, int amount){
+    public void modifyPlayerPos(int player_no, int amount) {
         model.modifyPlayerPos(player_no, amount);
     }
 
-    public int getPlayerPos(int player_no){
+    public int getPlayerPos(int player_no) {
         return model.getPlayerPos(player_no);
     }
 
-    public void setPlayerPos(int player_no,int pos){
-        model.setPlayerPos(player_no,pos);
+    public void setPlayerPos(int player_no, int pos) {
+        model.setPlayerPos(player_no, pos);
     }
 
-    public void modifyPlayerBalance(int player_no, int amount){
+    public void modifyPlayerBalance(int player_no, int amount) {
         model.modifyPlayerBalance(player_no, amount);
     }
 
-    public int getPlayerTurn(){
+    public int getPlayerTurn() {
         return model.getPlayerTurn();
     }
-    
+
 }

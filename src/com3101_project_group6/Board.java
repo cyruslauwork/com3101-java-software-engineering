@@ -30,7 +30,7 @@ public class Board extends javax.swing.JFrame {
     }
 
     public void showBoard(Controller controller) {
-        this.controller = controller;
+        Board.controller = controller;
         initComponents();
         setFrame();
     }
@@ -74,19 +74,26 @@ public class Board extends javax.swing.JFrame {
 
     public void changeDicePicture(int dice_num) {
         if (dice_num == 1) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
         } else if (dice_num == 2) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_two.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_two.png")));
         } else if (dice_num == 3) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_three.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_three.png")));
         } else if (dice_num == 4) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_four.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_four.png")));
         } else if (dice_num == 5) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_five.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_five.png")));
         } else if (dice_num == 6) {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_six.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_six.png")));
         } else {
-            img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
+            img_1st_dice.setIcon(
+                    new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
         }
 
     }
@@ -97,7 +104,7 @@ public class Board extends javax.swing.JFrame {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos == 34) {
-                newPos = - 23;
+                newPos = -23;
 
             }
             if (newPos > 40) {
@@ -109,7 +116,7 @@ public class Board extends javax.swing.JFrame {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos == 34) {
-                newPos = - 23;
+                newPos = -23;
 
             }
             if (newPos > 40) {
@@ -121,7 +128,7 @@ public class Board extends javax.swing.JFrame {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos == 34) {
-                newPos = - 23;
+                newPos = -23;
 
             }
             if (newPos > 40) {
@@ -133,7 +140,7 @@ public class Board extends javax.swing.JFrame {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos == 34) {
-                newPos = - 23;
+                newPos = -23;
 
             }
             if (newPos > 40) {
@@ -150,974 +157,1298 @@ public class Board extends javax.swing.JFrame {
 
         if (player_no == 1) {
             if (newPos == 1) {
-                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+                img_token_one1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
             if (oriPos == 1) {
-                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_one1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 2) {
-                img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 2) {
-                img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 3) {
-                img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 3) {
-                img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 4) {
-                img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 4) {
-                img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 5) {
-                img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 5) {
-                img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 6) {
-                img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 6) {
-                img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 7) {
-                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_on7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 7) {
-                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_on7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 8) {
-                img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 8) {
-                img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 9) {
-                img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 9) {
-                img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 10) {
-                img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 10) {
-                img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 11) {
-                img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 11) {
-                img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
-                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
-                img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 12) {
-                img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 13) {
-                img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 13) {
-                img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (oriPos == 14) {
-                img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 14) {
-                img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (newPos == 15) {
-                img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 15) {
-                img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 16) {
-                img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 16) {
-                img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 17) {
-                img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 17) {
-                img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 18) {
-                img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 18) {
-                img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 19) {
-                img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 19) {
-                img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 20) {
-                img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 20) {
-                img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 21) {
-                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+                img_token_one24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
             if (oriPos == 21) {
-                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_one24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 22) {
-                img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 22) {
-                img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 23) {
-                img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 23) {
-                img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 24) {
-                img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 24) {
-                img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 25) {
-                img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 25) {
-                img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 26) {
-                img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 26) {
-                img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 27) {
-                img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 27) {
-                img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 28) {
-                img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 28) {
-                img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 29) {
-                img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 29) {
-                img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 30) {
-                img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 30) {
-                img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 31) {
-                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 31) {
-                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_on7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 32) {
-                img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one34.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 32) {
-                img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one34.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 33) {
-                img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 33) {
-                img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 34) {
-                img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 34) {
-                img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 35) {
-                img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 35) {
-                img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 36) {
-                img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 36) {
-                img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 37) {
-                img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 37) {
-                img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 38) {
-                img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 38) {
-                img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 39) {
-                img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 39) {
-                img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 40) {
-                img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
             }
             if (oriPos == 40) {
-                img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
         if (player_no == 2) {
             if (newPos == 1) {
-                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+                img_token_two1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
             if (oriPos == 1) {
-                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_two1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 2) {
-                img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 2) {
-                img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 3) {
-                img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 3) {
-                img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 4) {
-                img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 4) {
-                img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 5) {
-                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 5) {
-                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 6) {
-                img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 6) {
-                img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 7) {
-                img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 7) {
-                img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 8) {
-                img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 8) {
-                img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 9) {
-                img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 9) {
-                img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 10) {
-                img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 10) {
-                img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 11) {
-                img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 11) {
-                img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
-                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
-                img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 12) {
-                img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 13) {
-                img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 13) {
-                img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 14) {
-                img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 14) {
-                img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 15) {
-                img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 15) {
-                img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 16) {
-                img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 16) {
-                img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 17) {
-                img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 17) {
-                img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 18) {
-                img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 18) {
-                img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 19) {
-                img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 19) {
-                img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 20) {
-                img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 20) {
-                img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 21) {
-                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+                img_token_two24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
             if (oriPos == 21) {
-                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_two24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 22) {
-                img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 22) {
-                img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 23) {
-                img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 23) {
-                img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 24) {
-                img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 24) {
-                img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 25) {
-                img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 25) {
-                img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 26) {
-                img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 26) {
-                img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 27) {
-                img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 27) {
-                img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 28) {
-                img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 28) {
-                img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 29) {
-                img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 29) {
-                img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 30) {
-                img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 30) {
-                img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 31) {
-                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 31) {
-                img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two34.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 32) {
-                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 32) {
-                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 33) {
-                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 33) {
-                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 34) {
-                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 34) {
-                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 35) {
-                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 35) {
-                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 36) {
-                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_.png")));
+                img_token_two39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small_.png")));
             }
             if (oriPos == 36) {
-                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 37) {
-                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 37) {
-                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 38) {
-                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 38) {
-                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 39) {
-                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 39) {
-                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 40) {
-                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 40) {
-                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
         if (player_no == 3) {
             if (newPos == 1) {
-                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+                img_token_three1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
             if (oriPos == 1) {
-                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_three1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 2) {
-                img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 2) {
-                img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 3) {
-                img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 3) {
-                img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 4) {
-                img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 4) {
-                img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 5) {
-                img_token_three5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 5) {
-                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 6) {
-                img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 6) {
-                img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 7) {
-                img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 7) {
-                img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 8) {
-                img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 8) {
-                img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 9) {
-                img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 9) {
-                img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 10) {
-                img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 10) {
-                img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 11) {
-                img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 11) {
-                img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
-                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
-                img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 12) {
-                img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 13) {
-                img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 13) {
-                img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 14) {
-                img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 14) {
-                img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 15) {
-                img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 15) {
-                img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 16) {
-                img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 16) {
-                img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 17) {
-                img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 17) {
-                img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 18) {
-                img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 18) {
-                img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 19) {
-                img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 19) {
-                img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 20) {
-                img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 20) {
-                img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 21) {
-                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+                img_token_three24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
             if (oriPos == 21) {
-                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_three24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 22) {
-                img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 22) {
-                img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 23) {
-                img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 23) {
-                img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 24) {
-                img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 24) {
-                img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 25) {
-                img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 25) {
-                img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 26) {
-                img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 26) {
-                img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 27) {
-                img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 27) {
-                img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 28) {
-                img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 28) {
-                img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 29) {
-                img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 29) {
-                img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 30) {
-                img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 30) {
-                img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 31) {
-                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 31) {
-                img_token_three34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three34.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 32) {
-                img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 32) {
-                img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 33) {
-                img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 33) {
-                img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 34) {
-                img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 34) {
-                img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 35) {
-                img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 35) {
-                img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 36) {
-                img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 36) {
-                img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 37) {
-                img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 37) {
-                img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 38) {
-                img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 38) {
-                img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 39) {
-                img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 39) {
-                img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 40) {
-                img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
             }
             if (oriPos == 40) {
-                img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
         if (player_no == 4) {
             if (newPos == 1) {
-                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+                img_token_four1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
             if (oriPos == 1) {
-                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_four1.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 2) {
-                img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 2) {
-                img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four2.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 3) {
-                img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 3) {
-                img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four3.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 4) {
-                img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 4) {
-                img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four4.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 5) {
-                img_token_four5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 5) {
-                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two5.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 6) {
-                img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 6) {
-                img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four6.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 7) {
-                img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 7) {
-                img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four7.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 8) {
-                img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 8) {
-                img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four8.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 9) {
-                img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 9) {
-                img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four9.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 10) {
-                img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 10) {
-                img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four10.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 11) {
-                img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 11) {
-                img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
-                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
-                img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 12) {
-                img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four13.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 13) {
-                img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 13) {
-                img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four14.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 14) {
-                img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 14) {
-                img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four15.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 15) {
-                img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 15) {
-                img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four17.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 16) {
-                img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 16) {
-                img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four18.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 17) {
-                img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 17) {
-                img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four19.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 18) {
-                img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 18) {
-                img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four21.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 19) {
-                img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 19) {
-                img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four22.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 20) {
-                img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 20) {
-                img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four23.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 21) {
-                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+                img_token_four24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
             if (oriPos == 21) {
-                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_four24.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 22) {
-                img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 22) {
-                img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four25.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 23) {
-                img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 23) {
-                img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four26.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 24) {
-                img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 24) {
-                img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four27.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 25) {
-                img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 25) {
-                img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four28.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 26) {
-                img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 26) {
-                img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four29.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 27) {
-                img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 27) {
-                img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four30.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 28) {
-                img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 28) {
-                img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four31.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 29) {
-                img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 29) {
-                img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four32.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 30) {
-                img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 30) {
-                img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four33.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 31) {
-                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 31) {
-                img_token_four34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four34.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 32) {
-                img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 32) {
-                img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four35.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 33) {
-                img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 33) {
-                img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four36.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 34) {
-                img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 34) {
-                img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four37.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 35) {
-                img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 35) {
-                img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four38.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 36) {
-                img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 36) {
-                img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four39.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 37) {
-                img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 37) {
-                img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four40.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 38) {
-                img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 38) {
-                img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four41.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 39) {
-                img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 39) {
-                img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four42.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 40) {
-                img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 40) {
-                img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four43.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
     }
@@ -1127,8 +1458,9 @@ public class Board extends javax.swing.JFrame {
      * WARNING: Do NOT modify this code. The content of this method is always
      * regenerated by the Form Editor.
      */
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLayeredPane1 = new javax.swing.JLayeredPane();
@@ -1520,55 +1852,86 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lb_players)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btn_add_player, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_del_player, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(label_bots, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(btn_add_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_del_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(lb_players)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addComponent(btn_add_player,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 17,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(tf_num_player,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 22,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(btn_del_player,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 15,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addGroup(jPanel2Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(label_bots,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                45,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                jPanel2Layout.createSequentialGroup()
+                                                                                        .addComponent(btn_add_bot,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                17,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(tf_num_bot,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                22,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(btn_del_bot,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 15,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        Short.MAX_VALUE)))));
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lb_players)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add_player)
-                    .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_del_player))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(label_bots)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add_bot)
-                    .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_del_bot))
-                .addContainerGap())
-        );
+                jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(lb_players)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn_add_player)
+                                        .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn_del_player))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(label_bots)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn_add_bot)
+                                        .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btn_del_bot))
+                                .addContainerGap()));
 
-        img_2nd_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
+        img_2nd_dice.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
 
-        img_1st_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
+        img_1st_dice.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
 
         btn_roll_dice.setFont(new java.awt.Font("Helvetica Neue", 0, 10)); // NOI18N
         btn_roll_dice.setText("Roll Dice");
@@ -1581,27 +1944,29 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn_roll_dice, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                    .addComponent(img_1st_dice))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_2nd_dice)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                jPanel4Layout.createSequentialGroup()
+                                                        .addContainerGap()
+                                                        .addComponent(btn_roll_dice,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 0,
+                                                                Short.MAX_VALUE))
+                                        .addComponent(img_1st_dice))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_2nd_dice)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_2nd_dice, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(img_1st_dice, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_roll_dice)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_2nd_dice, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(img_1st_dice, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_roll_dice)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         jPanel3.setOpaque(false);
 
@@ -1609,7 +1974,8 @@ public class Board extends javax.swing.JFrame {
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("2000");
 
-        img_token_one.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
+        img_token_one.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
 
         lb_bal.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_bal.setText("Balance:");
@@ -1657,11 +2023,14 @@ public class Board extends javax.swing.JFrame {
         jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setText("2000");
 
-        img_token_two.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
+        img_token_two.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
 
-        img_token_three.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png"))); // NOI18N
+        img_token_three.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png"))); // NOI18N
 
-        img_token_four.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
+        img_token_four.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1694,112 +2063,215 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(73, 73, 73))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(lb_bal)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(img_token_one, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                                            .addComponent(current_player_one, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(img_token_two)
-                                            .addComponent(current_player_two, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(img_token_three))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btn_newgame, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(current_player_three, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(lb_msg, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(img_token_four)
-                            .addComponent(current_player_four, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(current_player_two)
-                            .addComponent(current_player_one)
-                            .addComponent(current_player_three)
-                            .addComponent(current_player_four))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(img_token_two))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(35, 35, 35)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(img_token_one)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(img_token_three, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(img_token_four))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(22, 22, 22)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lb_bal))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lb_msg)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn_reset)
-                        .addComponent(btn_newgame)))
-                .addGap(9, 9, 9))
-        );
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addComponent(jButton1,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 10,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(73, 73, 73))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                jPanel3Layout.createSequentialGroup()
+                                                                        .addComponent(lb_bal)
+                                                                        .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addGroup(jPanel3Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                                .addGroup(jPanel3Layout
+                                                                                        .createParallelGroup(
+                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                false)
+                                                                                        .addComponent(img_token_one,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                62, Short.MAX_VALUE)
+                                                                                        .addComponent(
+                                                                                                current_player_one,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                Short.MAX_VALUE))
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addGroup(jPanel3Layout
+                                                                                        .createParallelGroup(
+                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                false)
+                                                                                        .addComponent(img_token_two)
+                                                                                        .addComponent(
+                                                                                                current_player_two,
+                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                56, Short.MAX_VALUE))
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                .addComponent(img_token_three))
+                                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                                .addComponent(jTextField2,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        62,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addGroup(jPanel3Layout
+                                                                                        .createParallelGroup(
+                                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                        .addComponent(btn_newgame,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                130,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addGroup(jPanel3Layout
+                                                                                                .createSequentialGroup()
+                                                                                                .addComponent(
+                                                                                                        jTextField8,
+                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                        62,
+                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                .addPreferredGap(
+                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                .addComponent(
+                                                                                                        jTextField9,
+                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                        62,
+                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        Short.MAX_VALUE))
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addGroup(jPanel3Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(current_player_three,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                62,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                jPanel3Layout.createSequentialGroup()
+                                                                                        .addComponent(jTextField1,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                62,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(jTextField5,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                62,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(jTextField6,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                62,
+                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                .addGap(0, 0, Short.MAX_VALUE))))
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(lb_msg, javax.swing.GroupLayout.PREFERRED_SIZE, 173,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                                Short.MAX_VALUE)
+                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
+                                                Short.MAX_VALUE)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                false)
+                                                        .addComponent(jTextField7,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 62,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(img_token_four)
+                                                        .addComponent(current_player_four,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap()));
+        jPanel3Layout.setVerticalGroup(
+                jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addContainerGap()
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(current_player_two)
+                                                        .addComponent(current_player_one)
+                                                        .addComponent(current_player_three)
+                                                        .addComponent(current_player_four))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(img_token_two))
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addGap(35, 35, 35)
+                                                                .addGroup(jPanel3Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(img_token_one)
+                                                                        .addGroup(jPanel3Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(img_token_three,
+                                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                                .addComponent(img_token_four))))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                jPanel3Layout.createSequentialGroup()
+                                                                        .addContainerGap()
+                                                                        .addComponent(jButton1,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                15,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGap(22, 22, 22)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel3Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jTextField1,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jTextField5,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jTextField6,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jTextField7,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(lb_bal))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lb_msg)
+                                        .addGroup(jPanel3Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                .addComponent(btn_reset)
+                                                .addComponent(btn_newgame)))
+                                .addGap(9, 9, 9)));
 
         jPanel5.setOpaque(false);
 
@@ -1829,68 +2301,73 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(btn_buy, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_trade, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(lb_avail_trade)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                                .addComponent(btn_buy, javax.swing.GroupLayout.PREFERRED_SIZE, 59,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(btn_trade, javax.swing.GroupLayout.PREFERRED_SIZE, 56,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                                .addComponent(lb_avail_trade)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
         jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lb_avail_trade)
-                    .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_buy)
-                    .addComponent(btn_trade))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(lb_avail_trade)
+                                        .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btn_buy)
+                                        .addComponent(btn_trade))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         jPanel6.setOpaque(false);
 
-        img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
+        img_token_one1.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png"))); // NOI18N
 
-        img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
+        img_token_two1.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
 
-        img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png"))); // NOI18N
+        img_token_three1.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png"))); // NOI18N
 
-        img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
+        img_token_four1.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(img_token_one1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_two1))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(img_token_three1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_four1))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(img_token_one1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_two1))
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(img_token_three1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_four1)));
         jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one1)
-                    .addComponent(img_token_two1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three1)
-                    .addComponent(img_token_four1)))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one1)
+                                        .addComponent(img_token_two1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three1)
+                                        .addComponent(img_token_four1))));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel2.setText("Owner:");
@@ -1905,127 +2382,164 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one10.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two10.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four10.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three10.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(img_token_one10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(img_token_two10))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(img_token_three10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(img_token_four10)))))
-                .addContainerGap())
-        );
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                .addComponent(jLabel2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout
+                                                .createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addGroup(jPanel7Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                                .addComponent(img_token_one10)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(img_token_two10))
+                                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                                                .addComponent(img_token_three10)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(img_token_four10)))))
+                                .addContainerGap()));
         jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one10)
-                    .addComponent(img_token_two10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three10)
-                    .addComponent(img_token_four10))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel2)
+                                        .addComponent(tf_token10, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one10)
+                                        .addComponent(img_token_two10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three10)
+                                        .addComponent(img_token_four10))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
-        img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one11.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three11.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four11.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two11.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(img_token_two11)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(img_token_three11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(img_token_four11)
-                                .addGap(0, 30, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                                .addComponent(img_token_one11, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addComponent(img_token_one11_jailed)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(img_token_two11_jailed))
-                                    .addGroup(jPanel9Layout.createSequentialGroup()
-                                        .addComponent(img_token_three11_jailed)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(img_token_four11_jailed)))))
-                        .addContainerGap())))
-        );
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addComponent(img_token_two11)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addGroup(jPanel9Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                                .addGap(26, 26, 26)
+                                                                .addComponent(img_token_three11)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(img_token_four11)
+                                                                .addGap(0, 30, Short.MAX_VALUE))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                jPanel9Layout.createSequentialGroup()
+                                                                        .addComponent(img_token_one11,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                20,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addPreferredGap(
+                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE)
+                                                                        .addGroup(jPanel9Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addGroup(jPanel9Layout
+                                                                                        .createSequentialGroup()
+                                                                                        .addComponent(
+                                                                                                img_token_one11_jailed)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(
+                                                                                                img_token_two11_jailed))
+                                                                                .addGroup(jPanel9Layout
+                                                                                        .createSequentialGroup()
+                                                                                        .addComponent(
+                                                                                                img_token_three11_jailed)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(
+                                                                                                img_token_four11_jailed)))))
+                                                .addContainerGap()))));
         jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one11_jailed)
-                            .addComponent(img_token_two11_jailed))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three11_jailed)
-                            .addComponent(img_token_four11_jailed))
-                        .addGap(38, 38, 38)
-                        .addComponent(img_token_four11))
-                    .addComponent(img_token_three11, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(img_token_one11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two11)))
-                .addContainerGap())
-        );
+                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout
+                                                .createSequentialGroup()
+                                                .addGroup(jPanel9Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one11_jailed)
+                                                        .addComponent(img_token_two11_jailed))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel9Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three11_jailed)
+                                                        .addComponent(img_token_four11_jailed))
+                                                .addGap(38, 38, 38)
+                                                .addComponent(img_token_four11))
+                                        .addComponent(img_token_three11, javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addGap(38, 38, 38)
+                                                .addComponent(img_token_one11)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two11)))
+                                .addContainerGap()));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel5.setText("Owner:");
@@ -2040,55 +2554,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one9.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two9.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four9.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three9.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(img_token_one9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two9))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(img_token_three9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four9))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token9, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                                .addComponent(img_token_one9)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two9))
+                                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                                .addComponent(img_token_three9)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four9))
+                                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token9, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel5)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(tf_token9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one9)
-                    .addComponent(img_token_two9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three9)
-                    .addComponent(img_token_four9))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel5)
+                                        .addComponent(tf_token9, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one9)
+                                        .addComponent(img_token_two9))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three9)
+                                        .addComponent(img_token_four9))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel6.setText("Owner:");
@@ -2103,55 +2622,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one8.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two8.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four8.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three8.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(img_token_one8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two8))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addComponent(img_token_three8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four8))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                                .addComponent(img_token_one8)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two8))
+                                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                                .addComponent(img_token_three8)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four8))
+                                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token8, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel6)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tf_token8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one8)
-                    .addComponent(img_token_two8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three8)
-                    .addComponent(img_token_four8))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel6)
+                                        .addComponent(tf_token8, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one8)
+                                        .addComponent(img_token_two8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three8)
+                                        .addComponent(img_token_four8))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel7.setText("Owner:");
@@ -2166,55 +2690,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_on7.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two7.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four7.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three7.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(img_token_on7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two7))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addComponent(img_token_three7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four7))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                                .addComponent(img_token_on7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two7))
+                                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                                .addComponent(img_token_three7)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four7))
+                                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token7, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel7)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(tf_token7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_on7)
-                    .addComponent(img_token_two7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three7)
-                    .addComponent(img_token_four7))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel7)
+                                        .addComponent(tf_token7, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_on7)
+                                        .addComponent(img_token_two7))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three7)
+                                        .addComponent(img_token_four7))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel8.setText("Owner:");
@@ -2229,55 +2758,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one6.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two6.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four6.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three6.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(img_token_one6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two6))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(img_token_three6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four6))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token6, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                                .addComponent(img_token_one6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two6))
+                                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                                .addComponent(img_token_three6)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four6))
+                                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token6, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel8)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(tf_token6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one6)
-                    .addComponent(img_token_two6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three6)
-                    .addComponent(img_token_four6))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel8)
+                                        .addComponent(tf_token6, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one6)
+                                        .addComponent(img_token_two6))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three6)
+                                        .addComponent(img_token_four6))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel9.setText("Owner:");
@@ -2292,55 +2826,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one5.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two5.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four5.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three5.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(img_token_one5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two5))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(img_token_three5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four5))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addComponent(img_token_one5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two5))
+                                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addComponent(img_token_three5)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four5))
+                                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token5, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel9)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(tf_token5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one5)
-                    .addComponent(img_token_two5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three5)
-                    .addComponent(img_token_four5))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel15Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel9)
+                                        .addComponent(tf_token5, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one5)
+                                        .addComponent(img_token_two5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three5)
+                                        .addComponent(img_token_four5))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel10.setText("Owner:");
@@ -2355,55 +2894,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one4.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two4.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four4.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three4.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(img_token_one4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two4))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(img_token_three4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four4))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel10)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                                .addComponent(img_token_one4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two4))
+                                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                                .addComponent(img_token_three4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four4))
+                                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token4, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel10)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(tf_token4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one4)
-                    .addComponent(img_token_two4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three4)
-                    .addComponent(img_token_four4))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel10)
+                                        .addComponent(tf_token4, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one4)
+                                        .addComponent(img_token_two4))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three4)
+                                        .addComponent(img_token_four4))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel11.setText("Owner:");
@@ -2418,55 +2962,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one3.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two3.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four3.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three3.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(img_token_one3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two3))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(img_token_three3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four3))
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                                .addComponent(img_token_one3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two3))
+                                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                                .addComponent(img_token_three3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four3))
+                                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token3, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel11)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(tf_token3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one3)
-                    .addComponent(img_token_two3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three3)
-                    .addComponent(img_token_four3))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel11)
+                                        .addComponent(tf_token3, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one3)
+                                        .addComponent(img_token_two3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three3)
+                                        .addComponent(img_token_four3))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         jLabel12.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel12.setText("Owner:");
@@ -2481,55 +3030,60 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one2.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two2.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four2.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three2.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(img_token_one2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two2))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addComponent(img_token_three2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four2))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(tf_token2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(12, 12, 12))
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                                .addComponent(img_token_one2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two2))
+                                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                                .addComponent(img_token_three2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four2))
+                                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                                .addGap(26, 26, 26)
+                                                .addComponent(tf_token2, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12))
+                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel12)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(tf_token2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one2)
-                    .addComponent(img_token_two2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three2)
-                    .addComponent(img_token_four2))
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+                jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel18Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel12)
+                                        .addComponent(tf_token2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one2)
+                                        .addComponent(img_token_two2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three2)
+                                        .addComponent(img_token_four2))
+                                .addContainerGap(21, Short.MAX_VALUE)));
 
         tf_token12.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2544,58 +3098,69 @@ public class Board extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel4.setText("Owner:");
 
-        img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two13.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one13.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three13.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four13.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel10Layout.createSequentialGroup()
-                            .addComponent(img_token_one13)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two13))
-                        .addGroup(jPanel10Layout.createSequentialGroup()
-                            .addComponent(img_token_three13)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four13)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token12, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel10Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel10Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one13)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two13))
+                                                .addGroup(jPanel10Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three13)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four13)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one13)
-                        .addComponent(img_token_two13))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three13)
-                        .addComponent(img_token_four13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel4)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token12, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel10Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one13)
+                                                .addComponent(img_token_two13))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel10Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three13)
+                                                .addComponent(img_token_four13, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
         jPanel19.setPreferredSize(new java.awt.Dimension(124, 80));
 
@@ -2612,58 +3177,68 @@ public class Board extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel13.setText("Owner:");
 
-        img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two14.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one14.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three14.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four14.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(84, Short.MAX_VALUE)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel19Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel19Layout.createSequentialGroup()
-                            .addComponent(img_token_one14)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two14))
-                        .addGroup(jPanel19Layout.createSequentialGroup()
-                            .addComponent(img_token_three14)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four14)))
-                    .addContainerGap(30, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(84, Short.MAX_VALUE)
+                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token13, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel19Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel19Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel19Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one14)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two14))
+                                                .addGroup(jPanel19Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three14)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four14)))
+                                        .addContainerGap(30, Short.MAX_VALUE))));
         jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel13)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel19Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one14)
-                        .addComponent(img_token_two14))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three14)
-                        .addComponent(img_token_four14))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel13)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token13, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel19Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel19Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one14)
+                                                .addComponent(img_token_two14))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel19Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three14)
+                                                .addComponent(img_token_four14))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
         tf_token18.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2678,58 +3253,68 @@ public class Board extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel18.setText("Owner:");
 
-        img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two19.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one19.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three19.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four19.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel24Layout.createSequentialGroup()
-                            .addComponent(img_token_one19)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two19))
-                        .addGroup(jPanel24Layout.createSequentialGroup()
-                            .addComponent(img_token_three19)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four19)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token18, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel24Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one19)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two19))
+                                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three19)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four19)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel18)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one19)
-                        .addComponent(img_token_two19))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three19)
-                        .addComponent(img_token_four19))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel24Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel18)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token18, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel24Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel24Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one19)
+                                                .addComponent(img_token_two19))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel24Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three19)
+                                                .addComponent(img_token_four19))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
         tf_token20.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2744,58 +3329,68 @@ public class Board extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel20.setText("Owner:");
 
-        img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two21.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one21.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three21.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four21.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
         jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token20, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel26Layout.createSequentialGroup()
-                            .addComponent(img_token_one21)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two21))
-                        .addGroup(jPanel26Layout.createSequentialGroup()
-                            .addComponent(img_token_three21)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four21)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token20, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel26Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one21)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two21))
+                                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three21)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four21)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel26Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one21)
-                        .addComponent(img_token_two21))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three21)
-                        .addComponent(img_token_four21))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel26Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel20)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token20, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel26Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel26Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one21)
+                                                .addComponent(img_token_two21))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel26Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three21)
+                                                .addComponent(img_token_four21))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
         tf_token21.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2810,58 +3405,68 @@ public class Board extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel21.setText("Owner:");
 
-        img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two22.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one22.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three22.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four22.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel27Layout.createSequentialGroup()
-                            .addComponent(img_token_one22)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two22))
-                        .addGroup(jPanel27Layout.createSequentialGroup()
-                            .addComponent(img_token_three22)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four22)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token21, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel27Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one22)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two22))
+                                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three22)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four22)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel21)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one22)
-                        .addComponent(img_token_two22))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three22)
-                        .addComponent(img_token_four22))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel27Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel21)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token21, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel27Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel27Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one22)
+                                                .addComponent(img_token_two22))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel27Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three22)
+                                                .addComponent(img_token_four22))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
         tf_token22.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2876,99 +3481,115 @@ public class Board extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel22.setText("Owner:");
 
-        img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two23.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one23.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three23.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four23.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
         jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel28Layout.createSequentialGroup()
-                            .addComponent(img_token_one23)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two23))
-                        .addGroup(jPanel28Layout.createSequentialGroup()
-                            .addComponent(img_token_three23)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four23)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token22, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel28Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one23)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two23))
+                                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three23)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four23)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel28Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel22)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one23)
-                        .addComponent(img_token_two23))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three23)
-                        .addComponent(img_token_four23))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+                jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel28Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel22)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token22, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel28Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel28Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one23)
+                                                .addComponent(img_token_two23))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel28Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three23)
+                                                .addComponent(img_token_four23))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))));
 
-        img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_one24.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_two24.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_three24.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_four24.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addComponent(img_token_one24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_two24))
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addComponent(img_token_three24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_four24))
-        );
+                jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel29Layout.createSequentialGroup()
+                                .addComponent(img_token_one24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_two24))
+                        .addGroup(jPanel29Layout.createSequentialGroup()
+                                .addComponent(img_token_three24)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_four24)));
         jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one24)
-                    .addComponent(img_token_two24))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three24)
-                    .addComponent(img_token_four24)))
-        );
+                jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel29Layout.createSequentialGroup()
+                                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one24)
+                                        .addComponent(img_token_two24))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three24)
+                                        .addComponent(img_token_four24))));
 
-        img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two25.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one25.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three25.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four25.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel23.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel23.setText("Owner:");
@@ -2986,48 +3607,54 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
         jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel30Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel30Layout.createSequentialGroup()
-                        .addComponent(img_token_one25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two25))
-                    .addGroup(jPanel30Layout.createSequentialGroup()
-                        .addComponent(img_token_three25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four25))
-                    .addGroup(jPanel30Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token23, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(11, Short.MAX_VALUE))
-        );
+                jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel30Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel30Layout.createSequentialGroup()
+                                                .addComponent(img_token_one25)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two25))
+                                        .addGroup(jPanel30Layout.createSequentialGroup()
+                                                .addComponent(img_token_three25)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four25))
+                                        .addGroup(jPanel30Layout.createSequentialGroup()
+                                                .addComponent(jLabel23)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token23, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(11, Short.MAX_VALUE)));
         jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel30Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one25)
-                    .addComponent(img_token_two25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three25)
-                    .addComponent(img_token_four25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel23)))
-        );
+                jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel30Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one25)
+                                        .addComponent(img_token_two25))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three25)
+                                        .addComponent(img_token_four25))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token23, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel23))));
 
-        img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two26.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one26.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three26.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four26.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel24.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel24.setText("Owner:");
@@ -3045,47 +3672,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel31Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(img_token_one26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two26))
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(img_token_three26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four26))
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel31Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel31Layout.createSequentialGroup()
+                                                .addComponent(img_token_one26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two26))
+                                        .addGroup(jPanel31Layout.createSequentialGroup()
+                                                .addComponent(img_token_three26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four26))
+                                        .addGroup(jPanel31Layout.createSequentialGroup()
+                                                .addComponent(jLabel24)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel31Layout.setVerticalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel31Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one26)
-                    .addComponent(img_token_two26))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three26)
-                    .addComponent(img_token_four26))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel24)))
-        );
+                jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel31Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one26)
+                                        .addComponent(img_token_two26))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three26)
+                                        .addComponent(img_token_four26))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel24))));
 
-        img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two27.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one27.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three27.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four27.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel25.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel25.setText("Owner:");
@@ -3103,47 +3736,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
         jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel32Layout.createSequentialGroup()
-                        .addComponent(img_token_one27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two27))
-                    .addGroup(jPanel32Layout.createSequentialGroup()
-                        .addComponent(img_token_three27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four27))
-                    .addGroup(jPanel32Layout.createSequentialGroup()
-                        .addComponent(jLabel25)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token25, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel32Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel32Layout.createSequentialGroup()
+                                                .addComponent(img_token_one27)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two27))
+                                        .addGroup(jPanel32Layout.createSequentialGroup()
+                                                .addComponent(img_token_three27)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four27))
+                                        .addGroup(jPanel32Layout.createSequentialGroup()
+                                                .addComponent(jLabel25)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token25, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one27)
-                    .addComponent(img_token_two27))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three27)
-                    .addComponent(img_token_four27))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25)))
-        );
+                jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel32Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one27)
+                                        .addComponent(img_token_two27))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three27)
+                                        .addComponent(img_token_four27))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token25, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel25))));
 
-        img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two28.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one28.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three28.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four28.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel26.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel26.setText("Owner:");
@@ -3161,47 +3800,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addComponent(img_token_one28)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two28))
-                    .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addComponent(img_token_three28)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four28))
-                    .addGroup(jPanel33Layout.createSequentialGroup()
-                        .addComponent(jLabel26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel33Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel33Layout.createSequentialGroup()
+                                                .addComponent(img_token_one28)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two28))
+                                        .addGroup(jPanel33Layout.createSequentialGroup()
+                                                .addComponent(img_token_three28)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four28))
+                                        .addGroup(jPanel33Layout.createSequentialGroup()
+                                                .addComponent(jLabel26)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel33Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one28)
-                    .addComponent(img_token_two28))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three28)
-                    .addComponent(img_token_four28))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel26)))
-        );
+                jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel33Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one28)
+                                        .addComponent(img_token_two28))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three28)
+                                        .addComponent(img_token_four28))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel26))));
 
-        img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two29.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one29.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three29.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four29.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel27.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel27.setText("Owner:");
@@ -3219,47 +3864,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
         jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel34Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel34Layout.createSequentialGroup()
-                        .addComponent(img_token_one29)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two29))
-                    .addGroup(jPanel34Layout.createSequentialGroup()
-                        .addComponent(img_token_three29)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four29))
-                    .addGroup(jPanel34Layout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token27, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel34Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel34Layout.createSequentialGroup()
+                                                .addComponent(img_token_one29)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two29))
+                                        .addGroup(jPanel34Layout.createSequentialGroup()
+                                                .addComponent(img_token_three29)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four29))
+                                        .addGroup(jPanel34Layout.createSequentialGroup()
+                                                .addComponent(jLabel27)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token27, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel34Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one29)
-                    .addComponent(img_token_two29))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three29)
-                    .addComponent(img_token_four29))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel27)))
-        );
+                jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel34Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one29)
+                                        .addComponent(img_token_two29))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three29)
+                                        .addComponent(img_token_four29))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token27, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel27))));
 
-        img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two30.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one30.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three30.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four30.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel28.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel28.setText("Owner:");
@@ -3277,47 +3928,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel35Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(img_token_one30)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two30))
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(img_token_three30)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four30))
-                    .addGroup(jPanel35Layout.createSequentialGroup()
-                        .addComponent(jLabel28)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel35Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel35Layout.createSequentialGroup()
+                                                .addComponent(img_token_one30)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two30))
+                                        .addGroup(jPanel35Layout.createSequentialGroup()
+                                                .addComponent(img_token_three30)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four30))
+                                        .addGroup(jPanel35Layout.createSequentialGroup()
+                                                .addComponent(jLabel28)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel35Layout.setVerticalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel35Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one30)
-                    .addComponent(img_token_two30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three30)
-                    .addComponent(img_token_four30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28)))
-        );
+                jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel35Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one30)
+                                        .addComponent(img_token_two30))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three30)
+                                        .addComponent(img_token_four30))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel28))));
 
-        img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two31.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one31.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three31.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four31.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel29.setText("Owner:");
@@ -3335,47 +3992,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
         jPanel36Layout.setHorizontalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel36Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel36Layout.createSequentialGroup()
-                        .addComponent(img_token_one31)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two31))
-                    .addGroup(jPanel36Layout.createSequentialGroup()
-                        .addComponent(img_token_three31)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four31))
-                    .addGroup(jPanel36Layout.createSequentialGroup()
-                        .addComponent(jLabel29)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token29, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel36Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel36Layout.createSequentialGroup()
+                                                .addComponent(img_token_one31)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two31))
+                                        .addGroup(jPanel36Layout.createSequentialGroup()
+                                                .addComponent(img_token_three31)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four31))
+                                        .addGroup(jPanel36Layout.createSequentialGroup()
+                                                .addComponent(jLabel29)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token29, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel36Layout.setVerticalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel36Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one31)
-                    .addComponent(img_token_two31))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three31)
-                    .addComponent(img_token_four31))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel29)))
-        );
+                jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel36Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one31)
+                                        .addComponent(img_token_two31))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three31)
+                                        .addComponent(img_token_four31))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token29, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel29))));
 
-        img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two32.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one32.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three32.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four32.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel30.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel30.setText("Owner:");
@@ -3393,47 +4056,53 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel37Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel37Layout.createSequentialGroup()
-                        .addComponent(img_token_one32)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two32))
-                    .addGroup(jPanel37Layout.createSequentialGroup()
-                        .addComponent(img_token_three32)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four32))
-                    .addGroup(jPanel37Layout.createSequentialGroup()
-                        .addComponent(jLabel30)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token30, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel37Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel37Layout.createSequentialGroup()
+                                                .addComponent(img_token_one32)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two32))
+                                        .addGroup(jPanel37Layout.createSequentialGroup()
+                                                .addComponent(img_token_three32)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four32))
+                                        .addGroup(jPanel37Layout.createSequentialGroup()
+                                                .addComponent(jLabel30)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token30, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel37Layout.setVerticalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel37Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one32)
-                    .addComponent(img_token_two32))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three32)
-                    .addComponent(img_token_four32))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30)))
-        );
+                jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel37Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one32)
+                                        .addComponent(img_token_two32))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three32)
+                                        .addComponent(img_token_four32))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token30, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel30))));
 
-        img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two33.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one33.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three33.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four33.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel31.setText("Owner:");
@@ -3451,72 +4120,76 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
         jPanel38Layout.setHorizontalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel38Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel38Layout.createSequentialGroup()
-                        .addComponent(img_token_one33)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two33))
-                    .addGroup(jPanel38Layout.createSequentialGroup()
-                        .addComponent(img_token_three33)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four33))
-                    .addGroup(jPanel38Layout.createSequentialGroup()
-                        .addComponent(jLabel31)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token31, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        );
+                jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel38Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel38Layout.createSequentialGroup()
+                                                .addComponent(img_token_one33)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two33))
+                                        .addGroup(jPanel38Layout.createSequentialGroup()
+                                                .addComponent(img_token_three33)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four33))
+                                        .addGroup(jPanel38Layout.createSequentialGroup()
+                                                .addComponent(jLabel31)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token31, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))));
         jPanel38Layout.setVerticalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel38Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one33)
-                    .addComponent(img_token_two33))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three33)
-                    .addComponent(img_token_four33))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tf_token31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31)))
-        );
+                jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel38Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one33)
+                                        .addComponent(img_token_two33))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three33)
+                                        .addComponent(img_token_four33))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(tf_token31, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel31))));
 
-        img_token_one7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_one7.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_two34.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_three34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_three34.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
-        img_token_four34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
+        img_token_four34.setIcon(
+                new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel39Layout.createSequentialGroup()
-                .addComponent(img_token_one7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_two34))
-            .addGroup(jPanel39Layout.createSequentialGroup()
-                .addComponent(img_token_three34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(img_token_four34))
-        );
+                jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel39Layout.createSequentialGroup()
+                                .addComponent(img_token_one7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_two34))
+                        .addGroup(jPanel39Layout.createSequentialGroup()
+                                .addComponent(img_token_three34)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_four34)));
         jPanel39Layout.setVerticalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel39Layout.createSequentialGroup()
-                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_one7)
-                    .addComponent(img_token_two34))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(img_token_three34)
-                    .addComponent(img_token_four34)))
-        );
+                jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel39Layout.createSequentialGroup()
+                                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one7)
+                                        .addComponent(img_token_two34))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_three34)
+                                        .addComponent(img_token_four34))));
 
         tf_token32.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3531,54 +4204,61 @@ public class Board extends javax.swing.JFrame {
         jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel32.setText("Owner:");
 
-        img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one34.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three35.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four35.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two35.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
         jPanel40Layout.setHorizontalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel40Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32)
-                    .addComponent(tf_token32, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel40Layout.createSequentialGroup()
-                        .addComponent(img_token_one34)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two35))
-                    .addGroup(jPanel40Layout.createSequentialGroup()
-                        .addComponent(img_token_three35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four35)))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+                jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel32)
+                                        .addComponent(tf_token32, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                                .addComponent(img_token_one34)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two35))
+                                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                                .addComponent(img_token_three35)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four35)))
+                                .addContainerGap(17, Short.MAX_VALUE)));
         jPanel40Layout.setVerticalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel40Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel40Layout.createSequentialGroup()
-                        .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one34)
-                            .addComponent(img_token_two35))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three35)
-                            .addComponent(img_token_four35)))
-                    .addGroup(jPanel40Layout.createSequentialGroup()
-                        .addComponent(jLabel32)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                                .addGroup(jPanel40Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one34)
+                                                        .addComponent(img_token_two35))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel40Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three35)
+                                                        .addComponent(img_token_four35)))
+                                        .addGroup(jPanel40Layout.createSequentialGroup()
+                                                .addComponent(jLabel32)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token32, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token33.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3593,54 +4273,61 @@ public class Board extends javax.swing.JFrame {
         jLabel33.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel33.setText("Owner:");
 
-        img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one35.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three36.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four36.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two36.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel33)
-                    .addComponent(tf_token33, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(img_token_one35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two36))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(img_token_three36)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four36)))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+                jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel33)
+                                        .addComponent(tf_token33, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                                .addComponent(img_token_one35)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two36))
+                                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                                .addComponent(img_token_three36)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four36)))
+                                .addContainerGap(17, Short.MAX_VALUE)));
         jPanel41Layout.setVerticalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one35)
-                            .addComponent(img_token_two36))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three36)
-                            .addComponent(img_token_four36)))
-                    .addGroup(jPanel41Layout.createSequentialGroup()
-                        .addComponent(jLabel33)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                                .addGroup(jPanel41Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one35)
+                                                        .addComponent(img_token_two36))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel41Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three36)
+                                                        .addComponent(img_token_four36)))
+                                        .addGroup(jPanel41Layout.createSequentialGroup()
+                                                .addComponent(jLabel33)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token33, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token34.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3655,54 +4342,61 @@ public class Board extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel34.setText("Owner:");
 
-        img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one36.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three37.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four37.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two37.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
         jPanel42Layout.setHorizontalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel42Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34)
-                    .addComponent(tf_token34, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel42Layout.createSequentialGroup()
-                        .addComponent(img_token_one36)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two37))
-                    .addGroup(jPanel42Layout.createSequentialGroup()
-                        .addComponent(img_token_three37)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four37)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel34)
+                                        .addComponent(tf_token34, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                                .addComponent(img_token_one36)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two37))
+                                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                                .addComponent(img_token_three37)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four37)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel42Layout.setVerticalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel42Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel42Layout.createSequentialGroup()
-                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one36)
-                            .addComponent(img_token_two37))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three37)
-                            .addComponent(img_token_four37)))
-                    .addGroup(jPanel42Layout.createSequentialGroup()
-                        .addComponent(jLabel34)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                                .addGroup(jPanel42Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one36)
+                                                        .addComponent(img_token_two37))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel42Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three37)
+                                                        .addComponent(img_token_four37)))
+                                        .addGroup(jPanel42Layout.createSequentialGroup()
+                                                .addComponent(jLabel34)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token34, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token35.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3717,54 +4411,61 @@ public class Board extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel35.setText("Owner:");
 
-        img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one37.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three38.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four38.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two38.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel43Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35)
-                    .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(img_token_one37)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two38))
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(img_token_three38)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four38)))
-                .addContainerGap(17, Short.MAX_VALUE))
-        );
+                jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel35)
+                                        .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                                .addComponent(img_token_one37)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two38))
+                                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                                .addComponent(img_token_three38)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four38)))
+                                .addContainerGap(17, Short.MAX_VALUE)));
         jPanel43Layout.setVerticalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel43Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one37)
-                            .addComponent(img_token_two38))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three38)
-                            .addComponent(img_token_four38)))
-                    .addGroup(jPanel43Layout.createSequentialGroup()
-                        .addComponent(jLabel35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                                .addGroup(jPanel43Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one37)
+                                                        .addComponent(img_token_two38))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel43Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three38)
+                                                        .addComponent(img_token_four38)))
+                                        .addGroup(jPanel43Layout.createSequentialGroup()
+                                                .addComponent(jLabel35)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         tf_token36.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3779,54 +4480,61 @@ public class Board extends javax.swing.JFrame {
         jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel36.setText("Owner:");
 
-        img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one38.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three39.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four39.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two39.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
         jPanel44Layout.setHorizontalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel44Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel36)
-                    .addComponent(tf_token36, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel44Layout.createSequentialGroup()
-                        .addComponent(img_token_one38)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two39))
-                    .addGroup(jPanel44Layout.createSequentialGroup()
-                        .addComponent(img_token_three39)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four39)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel36)
+                                        .addComponent(tf_token36, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                                .addComponent(img_token_one38)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two39))
+                                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                                .addComponent(img_token_three39)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four39)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel44Layout.setVerticalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel44Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel44Layout.createSequentialGroup()
-                        .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one38)
-                            .addComponent(img_token_two39))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three39)
-                            .addComponent(img_token_four39)))
-                    .addGroup(jPanel44Layout.createSequentialGroup()
-                        .addComponent(jLabel36)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                                .addGroup(jPanel44Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one38)
+                                                        .addComponent(img_token_two39))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel44Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three39)
+                                                        .addComponent(img_token_four39)))
+                                        .addGroup(jPanel44Layout.createSequentialGroup()
+                                                .addComponent(jLabel36)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token36, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token37.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3841,54 +4549,61 @@ public class Board extends javax.swing.JFrame {
         jLabel37.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel37.setText("Owner:");
 
-        img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one39.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three40.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four40.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two40.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
         jPanel45.setLayout(jPanel45Layout);
         jPanel45Layout.setHorizontalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel45Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel37)
-                    .addComponent(tf_token37, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addComponent(img_token_one39)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two40))
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addComponent(img_token_three40)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four40)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel37)
+                                        .addComponent(tf_token37, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                                .addComponent(img_token_one39)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two40))
+                                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                                .addComponent(img_token_three40)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four40)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel45Layout.setVerticalGroup(
-            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel45Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one39)
-                            .addComponent(img_token_two40))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three40)
-                            .addComponent(img_token_four40)))
-                    .addGroup(jPanel45Layout.createSequentialGroup()
-                        .addComponent(jLabel37)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                                .addGroup(jPanel45Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one39)
+                                                        .addComponent(img_token_two40))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel45Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three40)
+                                                        .addComponent(img_token_four40)))
+                                        .addGroup(jPanel45Layout.createSequentialGroup()
+                                                .addComponent(jLabel37)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token37, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token38.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3903,54 +4618,61 @@ public class Board extends javax.swing.JFrame {
         jLabel38.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel38.setText("Owner:");
 
-        img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one40.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three41.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four41.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two41.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
         jPanel46.setLayout(jPanel46Layout);
         jPanel46Layout.setHorizontalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38)
-                    .addComponent(tf_token38, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addComponent(img_token_one40)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two41))
-                    .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addComponent(img_token_three41)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four41)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel38)
+                                        .addComponent(tf_token38, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                                .addComponent(img_token_one40)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two41))
+                                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                                .addComponent(img_token_three41)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four41)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel46Layout.setVerticalGroup(
-            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel46Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one40)
-                            .addComponent(img_token_two41))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three41)
-                            .addComponent(img_token_four41)))
-                    .addGroup(jPanel46Layout.createSequentialGroup()
-                        .addComponent(jLabel38)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                                .addGroup(jPanel46Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one40)
+                                                        .addComponent(img_token_two41))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel46Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three41)
+                                                        .addComponent(img_token_four41)))
+                                        .addGroup(jPanel46Layout.createSequentialGroup()
+                                                .addComponent(jLabel38)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token38, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token39.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3965,54 +4687,61 @@ public class Board extends javax.swing.JFrame {
         jLabel39.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel39.setText("Owner:");
 
-        img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one41.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three42.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four42.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two42.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
         jPanel47.setLayout(jPanel47Layout);
         jPanel47Layout.setHorizontalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel47Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel39)
-                    .addComponent(tf_token39, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addComponent(img_token_one41)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two42))
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addComponent(img_token_three42)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four42)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel39)
+                                        .addComponent(tf_token39, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                                .addComponent(img_token_one41)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two42))
+                                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                                .addComponent(img_token_three42)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four42)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel47Layout.setVerticalGroup(
-            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel47Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one41)
-                            .addComponent(img_token_two42))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three42)
-                            .addComponent(img_token_four42)))
-                    .addGroup(jPanel47Layout.createSequentialGroup()
-                        .addComponent(jLabel39)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                                .addGroup(jPanel47Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one41)
+                                                        .addComponent(img_token_two42))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel47Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three42)
+                                                        .addComponent(img_token_four42)))
+                                        .addGroup(jPanel47Layout.createSequentialGroup()
+                                                .addComponent(jLabel39)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token39, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         tf_token40.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4027,67 +4756,72 @@ public class Board extends javax.swing.JFrame {
         jLabel40.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel40.setText("Owner:");
 
-        img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one42.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three43.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four43.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two43.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
         jPanel48.setLayout(jPanel48Layout);
         jPanel48Layout.setHorizontalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel48Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40)
-                    .addComponent(tf_token40, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel48Layout.createSequentialGroup()
-                        .addComponent(img_token_one42)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_two43))
-                    .addGroup(jPanel48Layout.createSequentialGroup()
-                        .addComponent(img_token_three43)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(img_token_four43)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel40)
+                                        .addComponent(tf_token40, javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                                .addComponent(img_token_one42)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two43))
+                                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                                .addComponent(img_token_three43)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four43)))
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         jPanel48Layout.setVerticalGroup(
-            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel48Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel48Layout.createSequentialGroup()
-                        .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_one42)
-                            .addComponent(img_token_two43))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(img_token_three43)
-                            .addComponent(img_token_four43)))
-                    .addGroup(jPanel48Layout.createSequentialGroup()
-                        .addComponent(jLabel40)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_token40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(9, Short.MAX_VALUE))
-        );
+                jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                                .addGroup(jPanel48Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_one42)
+                                                        .addComponent(img_token_two43))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addGroup(jPanel48Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_three43)
+                                                        .addComponent(img_token_four43)))
+                                        .addGroup(jPanel48Layout.createSequentialGroup()
+                                                .addComponent(jLabel40)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_token40, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(9, Short.MAX_VALUE)));
 
         jPanel49.setOpaque(false);
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
         jPanel49Layout.setHorizontalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 168, Short.MAX_VALUE)
-        );
+                jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 168, Short.MAX_VALUE));
         jPanel49Layout.setVerticalGroup(
-            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 29, Short.MAX_VALUE)
-        );
+                jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 29, Short.MAX_VALUE));
 
         tf_token14.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4102,58 +4836,68 @@ public class Board extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel14.setText("Owner:");
 
-        img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two15.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one15.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three15.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four15.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel20Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel20Layout.createSequentialGroup()
-                            .addComponent(img_token_one15)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two15))
-                        .addGroup(jPanel20Layout.createSequentialGroup()
-                            .addComponent(img_token_three15)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four15)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token14, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel20Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel20Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel20Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one15)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two15))
+                                                .addGroup(jPanel20Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three15)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four15)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel14)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
-            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel20Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one15)
-                        .addComponent(img_token_two15))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three15)
-                        .addComponent(img_token_four15))
-                    .addContainerGap(9, Short.MAX_VALUE)))
-        );
+                jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel14)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token14, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel20Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel20Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one15)
+                                                .addComponent(img_token_two15))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel20Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three15)
+                                                .addComponent(img_token_four15))
+                                        .addContainerGap(9, Short.MAX_VALUE))));
 
         tf_token16.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4168,58 +4912,68 @@ public class Board extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel16.setText("Owner:");
 
-        img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two17.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one17.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three17.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four17.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel22Layout.createSequentialGroup()
-                            .addComponent(img_token_one17)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two17))
-                        .addGroup(jPanel22Layout.createSequentialGroup()
-                            .addComponent(img_token_three17)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four17)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token16, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel22Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel22Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel22Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one17)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two17))
+                                                .addGroup(jPanel22Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three17)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four17)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel16)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one17)
-                        .addComponent(img_token_two17))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three17)
-                        .addComponent(img_token_four17))
-                    .addContainerGap(9, Short.MAX_VALUE)))
-        );
+                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel22Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel16)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token16, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel22Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel22Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one17)
+                                                .addComponent(img_token_two17))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel22Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three17)
+                                                .addComponent(img_token_four17))
+                                        .addContainerGap(9, Short.MAX_VALUE))));
 
         tf_token17.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4234,269 +4988,523 @@ public class Board extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel17.setText("Owner:");
 
-        img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two18.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one18.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three18.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
-        img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four18.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addContainerGap(93, Short.MAX_VALUE)
-                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_token17, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel23Layout.createSequentialGroup()
-                            .addComponent(img_token_one18)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_two18))
-                        .addGroup(jPanel23Layout.createSequentialGroup()
-                            .addComponent(img_token_three18)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(img_token_four18)))
-                    .addContainerGap(39, Short.MAX_VALUE)))
-        );
+                                .addContainerGap(93, Short.MAX_VALUE)
+                                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(tf_token17, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE, 25,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addContainerGap())
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGap(39, 39, 39)
+                                        .addGroup(jPanel23Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(jPanel23Layout.createSequentialGroup()
+                                                        .addComponent(img_token_one18)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_two18))
+                                                .addGroup(jPanel23Layout.createSequentialGroup()
+                                                        .addComponent(img_token_three18)
+                                                        .addPreferredGap(
+                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(img_token_four18)))
+                                        .addContainerGap(39, Short.MAX_VALUE))));
         jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel17)
-                .addGap(8, 8, 8)
-                .addComponent(tf_token17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(9, 9, 9)
-                    .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_one18)
-                        .addComponent(img_token_two18))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(img_token_three18)
-                        .addComponent(img_token_four18))
-                    .addContainerGap(9, Short.MAX_VALUE)))
-        );
+                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel23Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel17)
+                                .addGap(8, 8, 8)
+                                .addComponent(tf_token17, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addGroup(jPanel23Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_one18)
+                                                .addComponent(img_token_two18))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jPanel23Layout
+                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(img_token_three18)
+                                                .addComponent(img_token_four18))
+                                        .addContainerGap(9, Short.MAX_VALUE))));
 
         javax.swing.GroupLayout jPanel_settingLayout = new javax.swing.GroupLayout(jPanel_setting);
         jPanel_setting.setLayout(jPanel_settingLayout);
         jPanel_settingLayout.setHorizontalGroup(
-            jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGroup(jPanel_settingLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel_settingLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout
+                                                .createSequentialGroup()
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel_settingLayout
+                                                .createSequentialGroup()
+                                                .addGap(197, 197, 197)
+                                                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 54,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, 54,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        Short.MAX_VALUE))))
+                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                .addGroup(jPanel_settingLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGap(4, 4, 4)
+                                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 56,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(12, 12, 12)
+                                                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 57,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 63,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(12, 12, 12)
+                                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jPanel28,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel27,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel26,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel24,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel22,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel19,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                115,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        Short.MAX_VALUE)
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(jPanel3,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(jPanel_settingLayout
+                                                                                .createSequentialGroup()
+                                                                                .addComponent(jPanel2,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(jPanel4,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                                .addComponent(jPanel5,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(26, 26, 26)
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel_settingLayout
+                                                                .createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jPanel43,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING,
+                                                                        false)
+                                                                        .addComponent(jPanel41,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE)
+                                                                        .addComponent(jPanel42,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                Short.MAX_VALUE))
+                                                                .addComponent(jPanel44,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jPanel45,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jPanel46,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jPanel47,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addComponent(jPanel48,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 0, Short.MAX_VALUE)));
         jPanel_settingLayout.setVerticalGroup(
-            jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(8, 8, 8)
-                        .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(7, 7, 7)
-                        .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel35, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(312, 312, 312)))
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
+                jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_settingLayout
+                                .createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel_settingLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                                                false)
+                                                        .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel37, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addGap(8, 8, 8)
+                                                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(7, 7, 7)
+                                                .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                                                                false)
+                                                        .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel32,
+                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel33,
+                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel34,
+                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel35,
+                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel36,
+                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 57,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, 55,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 55,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel_settingLayout
+                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addComponent(jPanel43,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(9, 9, 9)
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jPanel49,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(jPanel_settingLayout
+                                                                                .createSequentialGroup()
+                                                                                .addComponent(jPanel44,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                .addComponent(jPanel45,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                                .addComponent(jPanel46,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(jPanel47,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addPreferredGap(
+                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                .addComponent(jPanel48,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addComponent(jPanel5,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(312, 312, 312)))
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addGap(3, 3, 3)
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jPanel11,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel7,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel12,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel13,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel14,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel15,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel16,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel17,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel18,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                .addGap(5, 5, 5)
+                                                .addGroup(jPanel_settingLayout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addGroup(jPanel_settingLayout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addComponent(jPanel4,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(jPanel2,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel3,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addComponent(jPanel24,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 55,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jPanel23,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jPanel22,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel20,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel19,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 57,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel10,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 60,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap()));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(850, 850));
         jPanel1.setMinimumSize(new java.awt.Dimension(850, 850));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/hsu_board_850x850.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/hsu_board_850x850.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1));
 
         jLayeredPane1.setLayer(jPanel_setting, javax.swing.JLayeredPane.PALETTE_LAYER);
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -4504,83 +5512,87 @@ public class Board extends javax.swing.JFrame {
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                    .addComponent(jPanel_setting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+                jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addComponent(jPanel_setting, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))));
         jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                    .addComponent(jPanel_setting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+                jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addComponent(jPanel_setting, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_playerActionPerformed
+    private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_add_playerActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
         if (total_num < 4) {
             num_player++;
             tf_num_player.setText(String.valueOf(num_player));
         }
-    }//GEN-LAST:event_btn_add_playerActionPerformed
+    }// GEN-LAST:event_btn_add_playerActionPerformed
 
-    private void btn_add_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_botActionPerformed
+    private void btn_add_botActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_add_botActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
         if (total_num < 4) {
             num_bot++;
             tf_num_bot.setText(String.valueOf(num_bot));
         }
-    }//GEN-LAST:event_btn_add_botActionPerformed
+    }// GEN-LAST:event_btn_add_botActionPerformed
 
-    private void tf_num_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_num_playerActionPerformed
+    private void tf_num_playerActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_num_playerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_num_playerActionPerformed
+    }// GEN-LAST:event_tf_num_playerActionPerformed
 
-    private void btn_del_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_playerActionPerformed
+    private void btn_del_playerActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_del_playerActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
         if (total_num > 0 && num_player > 0) {
             num_player--;
             tf_num_player.setText(String.valueOf(num_player));
         }
-    }//GEN-LAST:event_btn_del_playerActionPerformed
+    }// GEN-LAST:event_btn_del_playerActionPerformed
 
-    private void btn_del_botActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_del_botActionPerformed
+    private void btn_del_botActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_del_botActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
         if (total_num > 0 && num_bot > 0) {
             num_bot--;
             tf_num_bot.setText(String.valueOf(num_bot));
         }
-    }//GEN-LAST:event_btn_del_botActionPerformed
+    }// GEN-LAST:event_btn_del_botActionPerformed
 
-    private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
+    private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
         int turn_of_player_no = controller.getPlayerTurn();
         if (turn_of_player_no == 1) {
@@ -4592,23 +5604,23 @@ public class Board extends javax.swing.JFrame {
         } else {
             controller.move();
         }
-    }//GEN-LAST:event_btn_roll_diceActionPerformed
+    }// GEN-LAST:event_btn_roll_diceActionPerformed
 
-    private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed
+    private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_newgameActionPerformed
         // TODO add your handling code here:
         controller.statGame();
         lb_msg.setText("Game has started");
-    }//GEN-LAST:event_btn_newgameActionPerformed
+    }// GEN-LAST:event_btn_newgameActionPerformed
 
-    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
+    private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
         int num_player = 0;
         int num_bot = 0;
         tf_num_player.setText(String.valueOf(num_player));
         tf_num_bot.setText(String.valueOf(num_bot));
-    }//GEN-LAST:event_btn_resetActionPerformed
+    }// GEN-LAST:event_btn_resetActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         controller.modifyPlayerPos(1, Integer.parseInt(jTextField2.getText()));
         controller.modifyPlayerPos(2, Integer.parseInt(jTextField8.getText()));
@@ -4619,172 +5631,176 @@ public class Board extends javax.swing.JFrame {
         controller.modifyPlayerBalance(2, Integer.parseInt(jTextField5.getText()));
         controller.modifyPlayerBalance(3, Integer.parseInt(jTextField6.getText()));
         controller.modifyPlayerBalance(4, Integer.parseInt(jTextField7.getText()));
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }// GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }// GEN-LAST:event_jTextField2ActionPerformed
 
-    private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_buyActionPerformed
+    private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_buyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_buyActionPerformed
+    }// GEN-LAST:event_btn_buyActionPerformed
 
-    private void btn_tradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tradeActionPerformed
+    private void btn_tradeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_tradeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_tradeActionPerformed
+    }// GEN-LAST:event_btn_tradeActionPerformed
 
-    private void tf_token10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token10ActionPerformed
+    private void tf_token10ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token10ActionPerformed
+    }// GEN-LAST:event_tf_token10ActionPerformed
 
-    private void tf_token9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token9ActionPerformed
+    private void tf_token9ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token9ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token9ActionPerformed
+    }// GEN-LAST:event_tf_token9ActionPerformed
 
-    private void tf_token8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token8ActionPerformed
+    private void tf_token8ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token8ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token8ActionPerformed
+    }// GEN-LAST:event_tf_token8ActionPerformed
 
-    private void tf_token7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token7ActionPerformed
+    private void tf_token7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token7ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token7ActionPerformed
+    }// GEN-LAST:event_tf_token7ActionPerformed
 
-    private void tf_token6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token6ActionPerformed
+    private void tf_token6ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token6ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token6ActionPerformed
+    }// GEN-LAST:event_tf_token6ActionPerformed
 
-    private void tf_token5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token5ActionPerformed
+    private void tf_token5ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token5ActionPerformed
+    }// GEN-LAST:event_tf_token5ActionPerformed
 
-    private void tf_token4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token4ActionPerformed
+    private void tf_token4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token4ActionPerformed
+    }// GEN-LAST:event_tf_token4ActionPerformed
 
-    private void tf_token3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token3ActionPerformed
+    private void tf_token3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token3ActionPerformed
+    }// GEN-LAST:event_tf_token3ActionPerformed
 
-    private void tf_token2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token2ActionPerformed
+    private void tf_token2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token2ActionPerformed
+    }// GEN-LAST:event_tf_token2ActionPerformed
 
-    private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token12ActionPerformed
+    private void tf_token12ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token12ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token12ActionPerformed
+    }// GEN-LAST:event_tf_token12ActionPerformed
 
-    private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token13ActionPerformed
+    private void tf_token13ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token13ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token13ActionPerformed
+    }// GEN-LAST:event_tf_token13ActionPerformed
 
-    private void tf_token18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token18ActionPerformed
+    private void tf_token18ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token18ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token18ActionPerformed
+    }// GEN-LAST:event_tf_token18ActionPerformed
 
-    private void tf_token20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token20ActionPerformed
+    private void tf_token20ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token20ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token20ActionPerformed
+    }// GEN-LAST:event_tf_token20ActionPerformed
 
-    private void tf_token21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token21ActionPerformed
+    private void tf_token21ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token21ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token21ActionPerformed
+    }// GEN-LAST:event_tf_token21ActionPerformed
 
-    private void tf_token22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token22ActionPerformed
+    private void tf_token22ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token22ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token22ActionPerformed
+    }// GEN-LAST:event_tf_token22ActionPerformed
 
-    private void tf_token23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token23ActionPerformed
+    private void tf_token23ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token23ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token23ActionPerformed
+    }// GEN-LAST:event_tf_token23ActionPerformed
 
-    private void tf_token24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token24ActionPerformed
+    private void tf_token24ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token24ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token24ActionPerformed
+    }// GEN-LAST:event_tf_token24ActionPerformed
 
-    private void tf_token25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token25ActionPerformed
+    private void tf_token25ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token25ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token25ActionPerformed
+    }// GEN-LAST:event_tf_token25ActionPerformed
 
-    private void tf_token26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token26ActionPerformed
+    private void tf_token26ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token26ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token26ActionPerformed
+    }// GEN-LAST:event_tf_token26ActionPerformed
 
-    private void tf_token27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token27ActionPerformed
+    private void tf_token27ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token27ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token27ActionPerformed
+    }// GEN-LAST:event_tf_token27ActionPerformed
 
-    private void tf_token28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token28ActionPerformed
+    private void tf_token28ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token28ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token28ActionPerformed
+    }// GEN-LAST:event_tf_token28ActionPerformed
 
-    private void tf_token29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token29ActionPerformed
+    private void tf_token29ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token29ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token29ActionPerformed
+    }// GEN-LAST:event_tf_token29ActionPerformed
 
-    private void tf_token30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token30ActionPerformed
+    private void tf_token30ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token30ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token30ActionPerformed
+    }// GEN-LAST:event_tf_token30ActionPerformed
 
-    private void tf_token31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token31ActionPerformed
+    private void tf_token31ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token31ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token31ActionPerformed
+    }// GEN-LAST:event_tf_token31ActionPerformed
 
-    private void tf_token32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token32ActionPerformed
+    private void tf_token32ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token32ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token32ActionPerformed
+    }// GEN-LAST:event_tf_token32ActionPerformed
 
-    private void tf_token33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token33ActionPerformed
+    private void tf_token33ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token33ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token33ActionPerformed
+    }// GEN-LAST:event_tf_token33ActionPerformed
 
-    private void tf_token34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token34ActionPerformed
+    private void tf_token34ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token34ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token34ActionPerformed
+    }// GEN-LAST:event_tf_token34ActionPerformed
 
-    private void tf_token35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token35ActionPerformed
+    private void tf_token35ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token35ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token35ActionPerformed
+    }// GEN-LAST:event_tf_token35ActionPerformed
 
-    private void tf_token36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token36ActionPerformed
+    private void tf_token36ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token36ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token36ActionPerformed
+    }// GEN-LAST:event_tf_token36ActionPerformed
 
-    private void tf_token37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token37ActionPerformed
+    private void tf_token37ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token37ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token37ActionPerformed
+    }// GEN-LAST:event_tf_token37ActionPerformed
 
-    private void tf_token38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token38ActionPerformed
+    private void tf_token38ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token38ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token38ActionPerformed
+    }// GEN-LAST:event_tf_token38ActionPerformed
 
-    private void tf_token39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token39ActionPerformed
+    private void tf_token39ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token39ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token39ActionPerformed
+    }// GEN-LAST:event_tf_token39ActionPerformed
 
-    private void tf_token40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token40ActionPerformed
+    private void tf_token40ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token40ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token40ActionPerformed
+    }// GEN-LAST:event_tf_token40ActionPerformed
 
-    private void tf_token14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token14ActionPerformed
+    private void tf_token14ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token14ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token14ActionPerformed
+    }// GEN-LAST:event_tf_token14ActionPerformed
 
-    private void tf_token16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token16ActionPerformed
+    private void tf_token16ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token16ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token16ActionPerformed
+    }// GEN-LAST:event_tf_token16ActionPerformed
 
-    private void tf_token17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_token17ActionPerformed
+    private void tf_token17ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_token17ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tf_token17ActionPerformed
+    }// GEN-LAST:event_tf_token17ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -4802,8 +5818,8 @@ public class Board extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Board.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
+        // </editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -12,11 +12,11 @@ class CareTaker {
 
     public Memento removeMemento() {
 
-        if (!undoList.isEmpty()) {            
+        if (!undoList.isEmpty()) {
             Memento m = undoList.remove(0);
             return m;
         } else {
             return null;
         }
-    }    
+    }
 }
