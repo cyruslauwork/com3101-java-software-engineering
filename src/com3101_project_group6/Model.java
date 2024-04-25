@@ -18,6 +18,10 @@ public class Model {
     private int num_player = 0;
     private int num_bot = 0;
     private boolean playing = false;
+    public void setPlaying(boolean playing) {
+        this.playing = playing;
+    }
+
     private int dice_num = 0;
     private int turn_of_player_no = 1;
     private int player_one_pos = 1;

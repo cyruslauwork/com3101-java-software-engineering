@@ -44,6 +44,10 @@ public class Controller {
         return dice_num;
     }
 
+    public void statGame(){
+        model.setPlaying(true);
+    }
+
     public void reset(){
         model.reset();
     }
@@ -70,9 +74,8 @@ public class Controller {
     }
 
     public void EndGame(){
-        
+        model.setPlaying(false);
     }
-
     
     
 }
