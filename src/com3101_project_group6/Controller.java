@@ -50,11 +50,29 @@ public class Controller {
 
     public void move(){
         model.move();
+        model.checkLocation();
     }
 
     public void moveToken(int player_no, int move){
         board.moveToken(player_no,move);
     }
+
+    public int getPlayerBalance(int player_no){
+        return model.getPlayerBalance(player_no);
+    } 
+
+    public void viewSetBalance(){
+
+    }
+
+    public void endTurn(){
+
+    }
+
+    public void EndGame(){
+        
+    }
+
     
     
 }

@@ -109,5 +109,30 @@ public class Model {
         }
     }
 
+    public void checkLocation() {
+        // TODO a swtich check player position and modify player balance
+        if(turn_of_player_no == 1){
+            if(player_one_pos == 1){
+                modifyPlayerBalance(turn_of_player_no, player_one_balance + 200);
+                
+            }
+        }
+    }
+
+    public int getPlayerBalance(int player_no){
+        if(player_no == 1){
+            return player_one_balance;
+        }else if(player_no == 2){
+            return player_two_balance;
+        }else if(player_no == 3){
+            return player_three_balance;
+        }else if(player_no ==4){
+            return player_four_balance;
+        }
+
+
+        return player_one_balance;
+    }
+
     
 }
