@@ -56,7 +56,8 @@ public class Board extends javax.swing.JFrame {
     }
 
     private void setBoard() throws IOException {
-        Dimension labelDimension = new Dimension(boardLength, boardLength); // Create a new size with the calculated dimensions
+        //Dimension labelDimension = new Dimension(boardLength, boardLength); // Create a new size with the calculated dimensions
+        Dimension labelDimension = new Dimension(900, 900); // Create a new size with the calculated dimensions
         // Set the size of background
         jLayeredPane1.setPreferredSize(labelDimension);
         jPanel1.setPreferredSize(labelDimension);
@@ -120,6 +121,37 @@ public class Board extends javax.swing.JFrame {
             current_player_three.setText("");
             current_player_four.setText("↓");
         }
+        if (controller.checkBankrupt(1)) {
+            current_player_one.setText("Bankrupt");
+        } else if (controller.checkBankrupt(2)) {
+            current_player_two.setText("Bankrupt");
+        } else if (controller.checkBankrupt(3)) {
+            current_player_three.setText("Bankrupt");
+        } else if (controller.checkBankrupt(4)) {
+            current_player_four.setText("Bankrupt");
+        }
+    }
+
+    public void payRent(int player_no) {
+        int[][] propertyList = controller.getPropertyList();
+        if (player_no == 1) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int rent = propertyList[oriPos][2];
+            controller.modifyPlayerBalance(player_no, rent);
+        } else if (player_no == 2) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int rent = propertyList[oriPos][2];
+            controller.modifyPlayerBalance(player_no, rent);
+        } else if (player_no == 3) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int rent = propertyList[oriPos][2];
+            controller.modifyPlayerBalance(player_no, rent);
+        } else if (player_no == 4) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int rent = propertyList[oriPos][2];
+            controller.modifyPlayerBalance(player_no, rent);
+        }
+        
     }
 
     public void changeDicePicture(int dice_num){
@@ -148,21 +180,68 @@ public class Board extends javax.swing.JFrame {
     }
 
     public void moveToken(int player_no, int move) {
-        changeBalance();
         if (player_no == 1) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
+            if (newPos == 34){
+                newPos =- 23;
+
+            }
             if (newPos > 40) {
                 newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
             showHideIcon(player_no, oriPos, newPos);
         }
+        else if (player_no == 2) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int newPos = oriPos + move;
+            if (newPos == 34){
+                newPos =- 23;
+
+            }
+            if (newPos > 40) {
+                newPos = newPos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+            }
+            showHideIcon(player_no, oriPos, newPos);
+        }
+        else if (player_no == 3) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int newPos = oriPos + move;
+            if (newPos == 34){
+                newPos =- 23;
+
+            }
+            if (newPos > 40) {
+                newPos = newPos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+            }
+            showHideIcon(player_no, oriPos, newPos);
+        }
+        else if (player_no == 4) {
+            int oriPos = controller.getPlayerPos(player_no);
+            int newPos = oriPos + move;
+            if (newPos == 34){
+                newPos =- 23;
+
+            }
+            if (newPos > 40) {
+                newPos = newPos - 40;
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+            }
+            showHideIcon(player_no, oriPos, newPos);
+        }
+        payRent(player_no);
+        changeBalance();
+       
     }
 
     
 
     private void showHideIcon(int player_no, int oriPos, int newPos) {
+        System.out.println(oriPos);
+        System.out.println(newPos);
         controller.setPlayerPos(player_no, newPos);
         System.out.println(controller.getPlayerPos(player_no));
         if(player_no == 1){
@@ -4756,6 +4835,15 @@ public class Board extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        controller.modifyPlayerPos(1, Integer.parseInt(jTextField2.getText()));
+        controller.modifyPlayerPos(2, Integer.parseInt(jTextField8.getText()));
+        controller.modifyPlayerPos(3, Integer.parseInt(jTextField9.getText()));
+        controller.modifyPlayerPos(4, Integer.parseInt(jTextField10.getText()));
+ 
+        controller.modifyPlayerBalance(1, Integer.parseInt(jTextField1.getText()));
+        controller.modifyPlayerBalance(2, Integer.parseInt(jTextField5.getText()));
+        controller.modifyPlayerBalance(3, Integer.parseInt(jTextField6.getText()));
+        controller.modifyPlayerBalance(4, Integer.parseInt(jTextField7.getText()));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed

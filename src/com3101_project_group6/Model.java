@@ -33,6 +33,47 @@ public class Model {
     private int player_two_balance = 1;
     private int player_three_balance = 1;
     private int player_four_balance = 1;
+    private boolean player_one_bankrupt = false;
+    private boolean player_two_bankrupt = false;
+    private boolean player_three_bankrupt = false;
+    private boolean player_four_bankrupt = false;
+    public void bankrupt() {
+        if (player_one_balance < 0) {
+            player_one_bankrupt = true;
+        } else if (player_two_balance < 0) {
+            player_two_bankrupt = true;
+        } else if (player_three_balance < 0) {
+            player_three_bankrupt = true;
+        } else if (player_four_balance < 0) {
+            player_four_bankrupt = true;
+        }
+    }
+
+ 
+    public boolean checkBankrupt(int player_no) {
+        if (player_no == 1) {
+            if (player_one_bankrupt) {
+                return true;
+            }
+        } else if (player_no == 2) {
+            if (player_two_bankrupt) {
+                return true;
+            }
+        } else if (player_no == 3) {
+            if (player_three_bankrupt) {
+                return true;
+            }
+        } else if (player_no == 4) {
+            if (player_four_bankrupt) {
+                return true;
+            }
+        }
+        return false;
+    }
+ 
+    public int[][] getPropertyList() {
+        return propertyList;
+    }
     // onwer and price and rent
     private int[][] propertyList = {{5,0,0},{0,60,2},{0,100,4},{0,200,0},{5,0,100},{0,60,4},{0,200,0},{0,100,6},{0,100,6},{0,100,6},{5,0,0},{0,200,0},{0,150,0},{0,120,8},{0,200,0},
     {0,150,0},{0,120,8},{0,200,0},{0,350,35},{0,400,50},{0,150,0},{0,260,22},{0,140,10},{5,0,0},{0,140,10},{0,150,0}
@@ -87,22 +128,17 @@ public class Model {
 
     public void move(){
         int dice_num = controller.rollDice();
-        System.out.println(dice_num);
         if (turn_of_player_no == 1) {
             controller.moveToken(turn_of_player_no, dice_num);
-            player_one_pos += dice_num;
             turn_of_player_no++;
         } else if (turn_of_player_no == 2) {
             controller.moveToken(turn_of_player_no, dice_num);
-            player_two_pos += dice_num;
             turn_of_player_no++;
         } else if (turn_of_player_no == 3) {
             controller.moveToken(turn_of_player_no, dice_num);
-            player_three_pos += dice_num;
             turn_of_player_no++;
         } else {
             controller.moveToken(turn_of_player_no, dice_num);
-            player_four_pos += dice_num;
             turn_of_player_no = 1;
         }
     }
@@ -148,10 +184,9 @@ public class Model {
         }
     }
 
-    public void checkLocation() {
-    }
 
     public int getPlayerBalance(int player_no){
+        bankrupt();
         if(player_no == 1){
             return player_one_balance;
         }else if(player_no == 2){
@@ -161,8 +196,6 @@ public class Model {
         }else if(player_no ==4){
             return player_four_balance;
         }
-
-
         return player_one_balance;
     }
     public void setPlayerPos(int player_no, int pos) {
