@@ -39,9 +39,13 @@ public class Controller {
     }
     
     public int rollDice(){
-        int dice_num = model.rollDice();
-        board.changeDicePicture(dice_num);
-        return dice_num;
+        if(model.getPlaying()){
+            int dice_num = model.rollDice();
+            board.changeDicePicture(dice_num);
+            return dice_num;
+        }else {
+            return 0;
+        }
     }
 
     public void statGame(){
@@ -79,6 +83,9 @@ public class Controller {
 
     public void checkAvailableProperty(){
     }
-    
+
+    public void modifyPlayerPos(int player_no, int amount){
+        model.modifyPlayerPos(player_no, amount);
+    }
     
 }
