@@ -26,7 +26,7 @@ public class Board extends javax.swing.JFrame {
     private int num_bot = 0;
     private boolean playing = false;
     private int dice_num = 0;
-    private int turn_of_player_no = 1;playing
+    private int turn_of_player_no = 1;
     private int player_one_pos = 1;
     private int player_two_pos = 1;
     private int player_three_pos = 1;
@@ -161,6 +161,7 @@ public class Board extends javax.swing.JFrame {
             player_three_pos = player_three_pos + move;
             if (player_three_pos > 40) {
                 player_three_pos = player_three_pos - 40;
+                
             }
             showHideIcon(player_no, oriPos, player_three_pos);
         } else {

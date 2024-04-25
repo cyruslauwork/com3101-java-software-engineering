@@ -32,7 +32,9 @@ public class Model {
     private int player_two_balance = 1;
     private int player_three_balance = 1;
     private int player_four_balance = 1;
-    
+    // onwer and price and rent
+    private int[][] property = {[5,0,0],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],};
+
     private Model() {
         // Private constructor to prevent direct instantiation
     }
@@ -104,12 +106,28 @@ public class Model {
     public void modifyPlayerPos(int player_no, int amount){
         if (player_no == 1) {
             player_one_pos = amount;
+            controller.moveToken(turn_of_player_no, dice_num);
         } else if (player_no == 2) {
             player_two_pos = amount;
+            controller.moveToken(turn_of_player_no, dice_num);
         } else if (player_no == 3) {
             player_three_pos = amount;
+            controller.moveToken(turn_of_player_no, dice_num);
         } else {
             player_four_pos = amount;
+            controller.moveToken(turn_of_player_no, dice_num);
+        }
+    }
+
+    public void modifyPlayerTurn(int player_no){
+        if (player_no == 1) {
+            turn_of_player_no = 1;
+        } else if (player_no == 2) {
+            turn_of_player_no = 2;
+        } else if (player_no == 3) {
+            turn_of_player_no = 3;
+        } else {
+            turn_of_player_no = 4;
         }
     }
 
@@ -117,7 +135,6 @@ public class Model {
         // TODO a swtich check player position and modify player balance
         if(turn_of_player_no == 1){
             if(player_one_pos == 1){
-                modifyPlayerBalance(turn_of_player_no, player_one_balance + 200);
                 
             }
         }

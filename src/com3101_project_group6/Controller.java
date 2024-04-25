@@ -76,6 +76,9 @@ public class Controller {
     public void EndGame(){
         model.setPlaying(false);
     }
+
+    public void checkAvailableProperty(){
+    }
     
     
 }
