@@ -4569,17 +4569,13 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
         dice_num = controller.rollDice();
         if (turn_of_player_no == 1) {
-            moveToken(turn_of_player_no, controller.rollDice());
-            turn_of_player_no++;
+            controller.move();
         } else if (turn_of_player_no == 2) {
-            moveToken(turn_of_player_no, controller.rollDice());
-            turn_of_player_no++;
+            controller.move();
         } else if (turn_of_player_no == 3) {
-            moveToken(turn_of_player_no, controller.rollDice());
-            turn_of_player_no++;
+            controller.move();
         } else {
-            moveToken(turn_of_player_no, controller.rollDice());
-            turn_of_player_no = 1;
+            controller.move();
         }
     }//GEN-LAST:event_btn_roll_diceActionPerformed
 
