@@ -4602,6 +4602,7 @@ public class Board extends javax.swing.JFrame {
     private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed
         // TODO add your handling code here:
         playing = true;
+        controller.statGame();
         lb_msg.setText("Game has started");
     }//GEN-LAST:event_btn_newgameActionPerformed
 
