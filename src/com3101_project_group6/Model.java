@@ -15,8 +15,6 @@ public class Model {
     private Controller controller;
     private CareTaker caretaker = new CareTaker();
 
-    private int num_player = 0;
-    private int num_bot = 0;
     private boolean playing = false;
     public void setPlaying(boolean playing) {
         this.playing = playing;
@@ -78,8 +76,6 @@ public class Model {
     }
 
     public void reset(){
-        num_player = 0;
-        num_bot = 0;
         playing = true;
         dice_num = 0;
         turn_of_player_no = 1;
@@ -91,6 +87,7 @@ public class Model {
 
     public void move(){
         int dice_num = controller.rollDice();
+        System.out.println(dice_num);
         if (turn_of_player_no == 1) {
             controller.moveToken(turn_of_player_no, dice_num);
             player_one_pos += dice_num;

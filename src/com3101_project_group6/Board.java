@@ -20,19 +20,7 @@ import javax.swing.ImageIcon;
 public class Board extends javax.swing.JFrame {
 
     private static Board _instance;
-    private static Controller controller;
-
-    private int num_player = 0;
-    private int num_bot = 0;
-    private boolean playing = false;
-    private int dice_num = 0;
-    private int turn_of_player_no = 1;
-    private int player_one_pos = 1;
-    private int player_two_pos = 1;
-    private int player_three_pos = 1;
-    private int player_four_pos = 1;
-    
-
+    private static Controller controller; 
 
     public static Board getInstance() throws IOException {
         if (_instance == null) {
@@ -163,44 +151,20 @@ public class Board extends javax.swing.JFrame {
         changeBalance();
         if (player_no == 1) {
             int oriPos = controller.getPlayerPos(player_no);
-            player_one_pos = player_one_pos + move;
-            if (player_one_pos > 40) {
-                player_one_pos = player_one_pos - 40;
+            int newPos = oriPos + move;
+            if (newPos > 40) {
+                newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
             }
-            controller.setPlayerPos(player_no, oriPos);
-            showHideIcon(player_no, oriPos, player_one_pos);
-        } else if (player_no == 2) {
-            int oriPos = player_two_pos;
-            player_two_pos = player_two_pos + move;
-            if (player_two_pos > 40) {
-                player_two_pos = player_two_pos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
-            }
-            showHideIcon(player_no, oriPos, player_two_pos);
-        } else if (player_no == 3) {
-            int oriPos = player_three_pos;
-            player_three_pos = player_three_pos + move;
-            if (player_three_pos > 40) {
-                player_three_pos = player_three_pos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
-            }
-            showHideIcon(player_no, oriPos, player_three_pos);
-        } else {
-            int oriPos = player_four_pos;
-            player_four_pos = player_four_pos + move;
-            if (player_four_pos > 40) {
-                player_four_pos = player_four_pos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
-            }
-            showHideIcon(player_no, oriPos, player_four_pos);
+            showHideIcon(player_no, oriPos, newPos);
         }
-
     }
 
     
 
     private void showHideIcon(int player_no, int oriPos, int newPos) {
+        controller.setPlayerPos(player_no, newPos);
+        System.out.println(controller.getPlayerPos(player_no));
         if(player_no == 1){
             if(newPos == 1){
                 img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
@@ -324,10 +288,10 @@ public class Board extends javax.swing.JFrame {
                 img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 21){
-                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
             if(oriPos == 21){
-                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 22){
                 img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
@@ -567,10 +531,10 @@ public class Board extends javax.swing.JFrame {
                 img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 21){
-                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
             if(oriPos == 21){
-                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 22){
                 img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
@@ -810,10 +774,10 @@ public class Board extends javax.swing.JFrame {
                 img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 21){
-                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
             if(oriPos == 21){
-                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 22){
                 img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
@@ -1053,10 +1017,10 @@ public class Board extends javax.swing.JFrame {
                 img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 21){
-                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
             if(oriPos == 21){
-                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 22){
                 img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
@@ -4606,7 +4570,7 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
-        dice_num = controller.rollDice();
+        int turn_of_player_no = controller.getPlayerTurn();
         if (turn_of_player_no == 1) {
             controller.move();
         } else if (turn_of_player_no == 2) {
@@ -4620,15 +4584,14 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_resetActionPerformed
         // TODO add your handling code here:
-        num_player = 0;
-        num_bot = 0;
+        int num_player = 0;
+        int num_bot = 0;
         tf_num_player.setText(String.valueOf(num_player));
         tf_num_bot.setText(String.valueOf(num_bot));
     }//GEN-LAST:event_btn_resetActionPerformed
 
     private void btn_newgameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_newgameActionPerformed
         // TODO add your handling code here:
-        playing = true;
         controller.statGame();
         lb_msg.setText("Game has started");
     }//GEN-LAST:event_btn_newgameActionPerformed
@@ -4749,6 +4712,8 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_token40ActionPerformed
 
+    int num_player = 0;
+    int num_bot = 0;
     private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_add_playerActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
