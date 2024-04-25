@@ -49,20 +49,15 @@ public class Controller {
     }
 
     public void statGame() {
+        model.resetGame();
         model.setPlaying(true);
-        model.reset();
         for (int i = 1; i <= 4; i++) {
             model.modifyPlayerBalance(i, board.getPlayerBalance(i));
         }
-
     }
 
     public boolean getPlaying() {
         return model.getPlaying();
-    }
-
-    public void reset() {
-        model.reset();
     }
 
     public void move() {

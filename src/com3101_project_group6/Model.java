@@ -121,8 +121,8 @@ public class Model {
         return diceRoll;
     }
 
-    public void reset() {
-        playing = true;
+    public void resetGame() {
+        playing = false;
         dice_num = 0;
         turn_of_player_no = 1;
         player_one_pos = 1;
@@ -197,10 +197,9 @@ public class Model {
             return player_two_balance;
         } else if (player_no == 3) {
             return player_three_balance;
-        } else if (player_no == 4) {
+        } else {
             return player_four_balance;
         }
-        return player_one_balance;
     }
 
     public void setPlayerPos(int player_no, int pos) {

@@ -42,13 +42,21 @@ public class Board extends javax.swing.JFrame {
 
     public int getPlayerBalance(int player_no) {
         if (player_no == 1) {
-            return Integer.valueOf(tf_bal_one.getText());
+            int bal = Integer.valueOf(tf_bal_one.getText());
+            // System.out.println(bal);
+            return bal;
         } else if (player_no == 2) {
-            return Integer.valueOf(tf_bal_two.getText());
+            int bal = Integer.valueOf(tf_bal_two.getText());
+            // System.out.println(bal);
+            return bal;
         } else if (player_no == 3) {
-            return Integer.valueOf(tf_bal_three.getText());
+            int bal = Integer.valueOf(tf_bal_three.getText());
+            // System.out.println(bal);
+            return bal;
         } else {
-            return Integer.valueOf(tf_bal_four.getText());
+            int bal = Integer.valueOf(tf_bal_four.getText());
+            // System.out.println(bal);
+            return bal;
         }
     }
 
@@ -119,10 +127,6 @@ public class Board extends javax.swing.JFrame {
         if (player_no == 1) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34) {
-                newPos = -23;
-
-            }
             if (newPos > 40) {
                 newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
@@ -131,10 +135,6 @@ public class Board extends javax.swing.JFrame {
         } else if (player_no == 2) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34) {
-                newPos = -23;
-
-            }
             if (newPos > 40) {
                 newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
@@ -143,10 +143,6 @@ public class Board extends javax.swing.JFrame {
         } else if (player_no == 3) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34) {
-                newPos = -23;
-
-            }
             if (newPos > 40) {
                 newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
@@ -155,10 +151,6 @@ public class Board extends javax.swing.JFrame {
         } else if (player_no == 4) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
-            if (newPos == 34) {
-                newPos = -23;
-
-            }
             if (newPos > 40) {
                 newPos = newPos - 40;
                 controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
@@ -416,11 +408,11 @@ public class Board extends javax.swing.JFrame {
                 img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
                 img_token_one31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
             if (oriPos == 31) {
                 img_token_one31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 32) {
                 img_token_one32.setIcon(new javax.swing.ImageIcon(
@@ -740,11 +732,11 @@ public class Board extends javax.swing.JFrame {
                 img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
                 img_token_two31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
             if (oriPos == 31) {
                 img_token_two31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 32) {
                 img_token_two32.setIcon(new javax.swing.ImageIcon(
@@ -780,7 +772,7 @@ public class Board extends javax.swing.JFrame {
             }
             if (newPos == 36) {
                 img_token_two36.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_two_small_.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if (oriPos == 36) {
                 img_token_two36.setIcon(new javax.swing.ImageIcon(
@@ -1064,11 +1056,11 @@ public class Board extends javax.swing.JFrame {
                 img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
                 img_token_three31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
             if (oriPos == 31) {
                 img_token_three31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 32) {
                 img_token_three32.setIcon(new javax.swing.ImageIcon(
@@ -1181,7 +1173,7 @@ public class Board extends javax.swing.JFrame {
                         getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
             }
             if (oriPos == 5) {
-                img_token_two5.setIcon(new javax.swing.ImageIcon(
+                img_token_four5.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 6) {
@@ -1388,11 +1380,11 @@ public class Board extends javax.swing.JFrame {
                 img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
                 img_token_four31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
             if (oriPos == 31) {
                 img_token_four31.setIcon(new javax.swing.ImageIcon(
-                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if (newPos == 32) {
                 img_token_four32.setIcon(new javax.swing.ImageIcon(
@@ -1505,6 +1497,10 @@ public class Board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -1519,6 +1515,7 @@ public class Board extends javax.swing.JFrame {
         tf_num_player = new javax.swing.JTextField();
         btn_del_player = new javax.swing.JButton();
         btn_del_bot = new javax.swing.JButton();
+        btn_reset = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         img_2nd_dice = new javax.swing.JLabel();
         img_1st_dice = new javax.swing.JLabel();
@@ -1533,7 +1530,6 @@ public class Board extends javax.swing.JFrame {
         current_player_four = new javax.swing.JLabel();
         lb_msg = new javax.swing.JLabel();
         btn_newgame = new javax.swing.JButton();
-        btn_reset = new javax.swing.JButton();
         tf_bal_two = new javax.swing.JTextField();
         tf_bal_three = new javax.swing.JTextField();
         tf_bal_four = new javax.swing.JTextField();
@@ -1541,10 +1537,10 @@ public class Board extends javax.swing.JFrame {
         img_token_three = new javax.swing.JLabel();
         img_token_four = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        tf_pos_one = new javax.swing.JTextField();
+        tf_pos_two = new javax.swing.JTextField();
+        tf_pos_three = new javax.swing.JTextField();
+        tf_pos_four = new javax.swing.JTextField();
         lb_bal1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btn_buy = new javax.swing.JButton();
@@ -1895,6 +1891,14 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        btn_reset.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        btn_reset.setText("Reset");
+        btn_reset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_resetActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -1907,41 +1911,47 @@ public class Board extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 66, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btn_add_player, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_del_player, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(label_bots, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(btn_add_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(btn_add_player, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_del_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                        .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_del_player, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(label_bots, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(btn_add_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_del_bot, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lb_players)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add_player)
-                    .addComponent(tf_num_player, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_del_player))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tf_num_player)
+                    .addComponent(btn_del_player, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_add_player, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(label_bots)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_add_bot)
-                    .addComponent(tf_num_bot, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_num_bot, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_add_bot, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn_del_bot))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_reset)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         img_2nd_dice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_zero.png"))); // NOI18N
@@ -2017,14 +2027,6 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        btn_reset.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        btn_reset.setText("Reset");
-        btn_reset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_resetActionPerformed(evt);
-            }
-        });
-
         tf_bal_two.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_bal_two.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_bal_two.setText("2000");
@@ -2052,30 +2054,30 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        jTextField2.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("0");
-        jTextField2.setEnabled(false);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        tf_pos_one.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_pos_one.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_pos_one.setText("0");
+        tf_pos_one.setEnabled(false);
+        tf_pos_one.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                tf_pos_oneActionPerformed(evt);
             }
         });
 
-        jTextField8.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField8.setText("0");
-        jTextField8.setEnabled(false);
+        tf_pos_two.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_pos_two.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_pos_two.setText("0");
+        tf_pos_two.setEnabled(false);
 
-        jTextField9.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField9.setText("0");
-        jTextField9.setEnabled(false);
+        tf_pos_three.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_pos_three.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_pos_three.setText("0");
+        tf_pos_three.setEnabled(false);
 
-        jTextField10.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField10.setText("0");
-        jTextField10.setEnabled(false);
+        tf_pos_four.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_pos_four.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_pos_four.setText("0");
+        tf_pos_four.setEnabled(false);
 
         lb_bal1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_bal1.setText("Position:");
@@ -2111,14 +2113,11 @@ public class Board extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(img_token_three))
                                     .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addGap(32, 32, 32)
-                                        .addComponent(btn_newgame, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
+                                        .addComponent(tf_pos_one)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField8)
+                                        .addComponent(tf_pos_two)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField9)))
+                                        .addComponent(tf_pos_three)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                             .addComponent(current_player_three, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -2126,19 +2125,19 @@ public class Board extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(tf_bal_two)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(tf_bal_three))))
+                                .addComponent(tf_bal_three)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_pos_four, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tf_bal_four, javax.swing.GroupLayout.PREFERRED_SIZE, 62, Short.MAX_VALUE)
+                                    .addComponent(img_token_four)
+                                    .addComponent(current_player_four, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(lb_msg, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_reset, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tf_bal_four, javax.swing.GroupLayout.PREFERRED_SIZE, 62, Short.MAX_VALUE)
-                            .addComponent(img_token_four)
-                            .addComponent(current_player_four, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(lb_msg, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_newgame, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -2175,18 +2174,16 @@ public class Board extends javax.swing.JFrame {
                             .addComponent(lb_bal))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_pos_one, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_pos_two, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_pos_three, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_pos_four, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb_bal1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lb_msg)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn_reset)
-                        .addComponent(btn_newgame)))
-                .addGap(9, 9, 9))
+                    .addComponent(btn_newgame))
+                .addGap(10, 10, 10))
         );
 
         jPanel5.setOpaque(false);
@@ -2282,6 +2279,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_four1)))
         );
 
+        jPanel7.setOpaque(false);
+
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel2.setText("Owner:");
 
@@ -2345,13 +2344,19 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel9.setOpaque(false);
+
         img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_three11_jailed.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
 
         img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_one11_jailed.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
 
         img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_two11_jailed.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
 
         img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
+        img_token_four11_jailed.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 0)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0))));
 
         img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -2417,6 +2422,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel11.setOpaque(false);
+
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel5.setText("Owner:");
 
@@ -2479,6 +2486,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_four9))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jPanel12.setOpaque(false);
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel6.setText("Owner:");
@@ -2543,6 +2552,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel13.setOpaque(false);
+
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel7.setText("Owner:");
 
@@ -2605,6 +2616,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_four7))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jPanel14.setOpaque(false);
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel8.setText("Owner:");
@@ -2669,6 +2682,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel15.setOpaque(false);
+
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel9.setText("Owner:");
 
@@ -2731,6 +2746,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_four5))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jPanel16.setOpaque(false);
 
         jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel10.setText("Owner:");
@@ -2795,6 +2812,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel17.setOpaque(false);
+
         jLabel11.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel11.setText("Owner:");
 
@@ -2858,6 +2877,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        jPanel18.setOpaque(false);
+
         jLabel12.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         jLabel12.setText("Owner:");
 
@@ -2920,6 +2941,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_four2))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
+
+        jPanel10.setOpaque(false);
 
         tf_token12.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -2987,6 +3010,7 @@ public class Board extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel19.setOpaque(false);
         jPanel19.setPreferredSize(new java.awt.Dimension(124, 80));
 
         tf_token13.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
@@ -3055,6 +3079,8 @@ public class Board extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel24.setOpaque(false);
+
         tf_token17.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token17.setText("0");
@@ -3120,6 +3146,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_four17))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
+
+        jPanel26.setOpaque(false);
 
         tf_token18.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3187,6 +3215,8 @@ public class Board extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel27.setOpaque(false);
+
         tf_token19.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token19.setText("0");
@@ -3252,6 +3282,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_four19))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
+
+        jPanel28.setOpaque(false);
 
         tf_token20.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3319,6 +3351,8 @@ public class Board extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
+        jPanel29.setOpaque(false);
+
         img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
         img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
@@ -3351,6 +3385,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_three21)
                     .addComponent(img_token_four21)))
         );
+
+        jPanel30.setOpaque(false);
 
         img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -3410,6 +3446,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(tf_token22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22)))
         );
+
+        jPanel31.setOpaque(false);
 
         img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -3473,6 +3511,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(jLabel23)))
         );
 
+        jPanel32.setOpaque(false);
+
         img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3530,6 +3570,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(tf_token24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel24)))
         );
+
+        jPanel33.setOpaque(false);
 
         img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -3589,6 +3631,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(jLabel25)))
         );
 
+        jPanel34.setOpaque(false);
+
         img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3646,6 +3690,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(tf_token26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26)))
         );
+
+        jPanel35.setOpaque(false);
 
         img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -3705,6 +3751,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(jLabel27)))
         );
 
+        jPanel36.setOpaque(false);
+
         img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3762,6 +3810,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(tf_token28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel28)))
         );
+
+        jPanel37.setOpaque(false);
 
         img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
@@ -3821,6 +3871,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(jLabel29)))
         );
 
+        jPanel38.setOpaque(false);
+
         img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
 
         img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png"))); // NOI18N
@@ -3879,6 +3931,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(jLabel30)))
         );
 
+        jPanel39.setOpaque(false);
+
         img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
 
         img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png"))); // NOI18N
@@ -3911,6 +3965,8 @@ public class Board extends javax.swing.JFrame {
                     .addComponent(img_token_three31)
                     .addComponent(img_token_four31)))
         );
+
+        jPanel40.setOpaque(false);
 
         tf_token32.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -3974,6 +4030,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
+        jPanel41.setOpaque(false);
+
         tf_token33.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token33.setText("0");
@@ -4035,6 +4093,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(tf_token33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
+
+        jPanel42.setOpaque(false);
 
         tf_token34.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token34.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4098,6 +4158,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
+        jPanel43.setOpaque(false);
+
         tf_token35.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token35.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token35.setText("0");
@@ -4159,6 +4221,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(tf_token35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel44.setOpaque(false);
 
         tf_token36.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token36.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4222,6 +4286,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
+        jPanel45.setOpaque(false);
+
         tf_token37.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token37.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token37.setText("0");
@@ -4283,6 +4349,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(tf_token37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
+
+        jPanel46.setOpaque(false);
 
         tf_token38.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token38.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4346,6 +4414,8 @@ public class Board extends javax.swing.JFrame {
                 .addContainerGap(9, Short.MAX_VALUE))
         );
 
+        jPanel47.setOpaque(false);
+
         tf_token39.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token39.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token39.setText("0");
@@ -4407,6 +4477,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(tf_token39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(9, Short.MAX_VALUE))
         );
+
+        jPanel48.setOpaque(false);
 
         tf_token40.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token40.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4483,6 +4555,8 @@ public class Board extends javax.swing.JFrame {
             .addGap(0, 29, Short.MAX_VALUE)
         );
 
+        jPanel20.setOpaque(false);
+
         tf_token14.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token14.setText("0");
@@ -4549,6 +4623,8 @@ public class Board extends javax.swing.JFrame {
                     .addContainerGap(9, Short.MAX_VALUE)))
         );
 
+        jPanel22.setOpaque(false);
+
         tf_token15.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         tf_token15.setText("0");
@@ -4614,6 +4690,8 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(img_token_four15))
                     .addContainerGap(9, Short.MAX_VALUE)))
         );
+
+        jPanel23.setOpaque(false);
 
         tf_token16.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         tf_token16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -4733,19 +4811,18 @@ public class Board extends javax.swing.JFrame {
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPanel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
             .addGroup(jPanel_settingLayout.createSequentialGroup()
                 .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
@@ -4813,23 +4890,11 @@ public class Board extends javax.swing.JFrame {
                         .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(52, 52, 52)
                         .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)
-                                .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                        .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(312, 312, 312))
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(312, 312, 312)))
@@ -4849,27 +4914,42 @@ public class Board extends javax.swing.JFrame {
                             .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel_settingLayout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
                                 .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                        .addGroup(jPanel_settingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                        .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)
+                                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(7, 7, 7)
+                                .addComponent(jPanel44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
 
@@ -4908,7 +4988,7 @@ public class Board extends javax.swing.JFrame {
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane1Layout.createSequentialGroup()
                     .addComponent(jPanel_setting, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4995,6 +5075,16 @@ public class Board extends javax.swing.JFrame {
         // TODO add your handling code here:
         controller.statGame();
         lb_msg.setText("Game has started");
+
+        img_token_one1.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none.png")));
+        img_token_two1.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none.png")));
+        img_token_three1.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none.png")));
+        img_token_four1.setIcon(new javax.swing.ImageIcon(
+                getClass().getResource("/com3101_project_group6/images/token_none.png")));
+
     }// GEN-LAST:event_btn_newgameActionPerformed
 
     private void btn_resetActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_resetActionPerformed
@@ -5007,10 +5097,10 @@ public class Board extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        controller.modifyPlayerPos(1, Integer.parseInt(jTextField2.getText()));
-        controller.modifyPlayerPos(2, Integer.parseInt(jTextField8.getText()));
-        controller.modifyPlayerPos(3, Integer.parseInt(jTextField9.getText()));
-        controller.modifyPlayerPos(4, Integer.parseInt(jTextField10.getText()));
+        controller.modifyPlayerPos(1, Integer.parseInt(tf_pos_one.getText()));
+        controller.modifyPlayerPos(2, Integer.parseInt(tf_pos_two.getText()));
+        controller.modifyPlayerPos(3, Integer.parseInt(tf_pos_three.getText()));
+        controller.modifyPlayerPos(4, Integer.parseInt(tf_pos_four.getText()));
 
         controller.modifyPlayerBalance(1, Integer.parseInt(tf_bal_one.getText()));
         controller.modifyPlayerBalance(2, Integer.parseInt(tf_bal_two.getText()));
@@ -5018,9 +5108,9 @@ public class Board extends javax.swing.JFrame {
         controller.modifyPlayerBalance(4, Integer.parseInt(tf_bal_four.getText()));
     }// GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jTextField2ActionPerformed
+    private void tf_pos_oneActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_pos_oneActionPerformed
         // TODO add your handling code here:
-    }// GEN-LAST:event_jTextField2ActionPerformed
+    }// GEN-LAST:event_tf_pos_oneActionPerformed
 
     private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_buyActionPerformed
         // TODO add your handling code here:
@@ -5484,10 +5574,6 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_setting;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel label_bots;
     private javax.swing.JLabel lb_avail_trade;
     private javax.swing.JLabel lb_bal;
@@ -5500,6 +5586,10 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JTextField tf_bal_two;
     private javax.swing.JTextField tf_num_bot;
     private javax.swing.JTextField tf_num_player;
+    private javax.swing.JTextField tf_pos_four;
+    private javax.swing.JTextField tf_pos_one;
+    private javax.swing.JTextField tf_pos_three;
+    private javax.swing.JTextField tf_pos_two;
     private javax.swing.JTextField tf_token10;
     private javax.swing.JTextField tf_token12;
     private javax.swing.JTextField tf_token13;
