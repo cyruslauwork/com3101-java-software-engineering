@@ -33,7 +33,6 @@ public class Model {
     private int player_three_balance = 1;
     private int player_four_balance = 1;
     // onwer and price and rent
-    private int[][] property = {[5,0,0],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],};
 
     private Model() {
         // Private constructor to prevent direct instantiation
