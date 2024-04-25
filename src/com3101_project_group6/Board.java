@@ -102,17 +102,12 @@ public class Board extends javax.swing.JFrame {
         jPanel_setting.setPreferredSize(labelDimension);
     }
 
-    public void changeBalance(int player_no){
-        for (int i = 1; i <= 4; i++) {
-            if (player_no == 1) {
-                jTextField1.setText(String.valueOf(controller.getPlayerBalance(player_no)));
-            } else if (player_no == 2) {
-                jTextField5.setText(String.valueOf(controller.getPlayerBalance(player_no)));
-            } else if (player_no == 3) {
-                jTextField6.setText(String.valueOf(controller.getPlayerBalance(player_no)));
-            } else {
-                jTextField7.setText(String.valueOf(controller.getPlayerBalance(player_no)));
-            }
+    public void changeBalance(){
+        for(int i =1;i<=4;i++){        
+            jTextField1.setText(String.valueOf(controller.getPlayerBalance(i)));        
+            jTextField5.setText(String.valueOf(controller.getPlayerBalance(i)));       
+            jTextField6.setText(String.valueOf(controller.getPlayerBalance(i)));
+            jTextField7.setText(String.valueOf(controller.getPlayerBalance(i)));
         }
 
     }

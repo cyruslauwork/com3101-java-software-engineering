@@ -50,6 +50,9 @@ public class Controller {
 
     public void statGame(){
         model.setPlaying(true);
+        for(int i = 1; i <= 4; i++){
+            model.modifyPlayerBalance(i, 2000);
+        }
     }
 
     public void reset(){
@@ -86,6 +89,7 @@ public class Controller {
 
     public void modifyPlayerPos(int player_no, int amount){
         model.modifyPlayerPos(player_no, amount);
+        board.changeBalance();
     }
     
 }
