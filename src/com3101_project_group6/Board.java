@@ -134,7 +134,981 @@ public class Board extends javax.swing.JFrame {
 
     }
 
+    
+
     private void showHideIcon(int player_no, int oriPos, int newPos) {
+        if(player_no == 1){
+            if(newPos == 1){
+                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 1){
+                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 2){
+                img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 2){
+                img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 3){
+                img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 3){
+                img_token_one3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 4){
+                img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 4){
+                img_token_one4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 5){
+                img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 5){
+                img_token_one5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 6){
+                img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 6){
+                img_token_one6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 7){
+                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 7){
+                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 8){
+                img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 8){
+                img_token_one8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 9){
+                img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 9){
+                img_token_one9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 10){
+                img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 10){
+                img_token_one10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 11){
+                img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 11){
+                img_token_one11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 12){
+                img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 12){
+                img_token_one13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 13){
+                img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 13){
+                img_token_one14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(oriPos == 14){
+                img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 14){
+                img_token_one15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(newPos == 15){
+                img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 15){
+                img_token_one17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 16){
+                img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 16){
+                img_token_one18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 17){
+                img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 17){
+                img_token_one19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 18){
+                img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 18){
+                img_token_one21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 19){
+                img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 19){
+                img_token_one22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 20){
+                img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 20){
+                img_token_one23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 21){
+                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 21){
+                img_token_one24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 22){
+                img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 22){
+                img_token_one25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 23){
+                img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 23){
+                img_token_one26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 24){
+                img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 24){
+                img_token_one27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 25){
+                img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 25){
+                img_token_one28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 26){
+                img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 26){
+                img_token_one29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 27){
+                img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 27){
+                img_token_one30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 28){
+                img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 28){
+                img_token_one31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 29){
+                img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 29){
+                img_token_one32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 30){
+                img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 30){
+                img_token_one33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 31){
+                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 31){
+                img_token_on7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 32){
+                img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 32){
+                img_token_one34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 33){
+                img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 33){
+                img_token_one35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 34){
+                img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 34){
+                img_token_one36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 35){
+                img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 35){
+                img_token_one37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 36){
+                img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 36){
+                img_token_one38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 37){
+                img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 37){
+                img_token_one39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 38){
+                img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 38){
+                img_token_one40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 39){
+                img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 39){
+                img_token_one41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 40){
+                img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
+            }
+            if(oriPos == 40){
+                img_token_one42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+        }
+        if(player_no == 2){
+            if(newPos == 1){
+                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 1){
+                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 2){
+                img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 2){
+                img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 3){
+                img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 3){
+                img_token_two3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 4){
+                img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 4){
+                img_token_two4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 5){
+                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 5){
+                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 6){
+                img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 6){
+                img_token_two6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 7){
+                img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 7){
+                img_token_two7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 8){
+                img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 8){
+                img_token_two8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 9){
+                img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 9){
+                img_token_two9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 10){
+                img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 10){
+                img_token_two10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 11){
+                img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 11){
+                img_token_two11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 12){
+                img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 12){
+                img_token_two13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 13){
+                img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 13){
+                img_token_two14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 14){
+                img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 14){
+                img_token_two15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 15){
+                img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 15){
+                img_token_two17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 16){
+                img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 16){
+                img_token_two18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 17){
+                img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 17){
+                img_token_two19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 18){
+                img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 18){
+                img_token_two21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 19){
+                img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 19){
+                img_token_two22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 20){
+                img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 20){
+                img_token_two23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 21){
+                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 21){
+                img_token_two24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 22){
+                img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 22){
+                img_token_two25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 23){
+                img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 23){
+                img_token_two26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 24){
+                img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 24){
+                img_token_two27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 25){
+                img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 25){
+                img_token_two28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 26){
+                img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 26){
+                img_token_two29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 27){
+                img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 27){
+                img_token_two30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 28){
+                img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 28){
+                img_token_two31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 29){
+                img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 29){
+                img_token_two32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 30){
+                img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 30){
+                img_token_two33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 31){
+                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 31){
+                img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 32){
+                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 32){
+                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 33){
+                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 33){
+                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 34){
+                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 34){
+                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 35){
+                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 35){
+                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 36){
+                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 36){
+                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 37){
+                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 37){
+                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 38){
+                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 38){
+                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 39){
+                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 39){
+                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 40){
+                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
+            }
+            if(oriPos == 40){
+                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+        }
+        if(player_no == 3){
+            if(newPos == 1){
+                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 1){
+                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 2){
+                img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 2){
+                img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 3){
+                img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 3){
+                img_token_three3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 4){
+                img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 4){
+                img_token_three4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 5){
+                img_token_three5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 5){
+                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 6){
+                img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 6){
+                img_token_three6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 7){
+                img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 7){
+                img_token_three7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 8){
+                img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 8){
+                img_token_three8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 9){
+                img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 9){
+                img_token_three9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 10){
+                img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 10){
+                img_token_three10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 11){
+                img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 11){
+                img_token_three11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 12){
+                img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 12){
+                img_token_three13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 13){
+                img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 13){
+                img_token_three14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 14){
+                img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 14){
+                img_token_three15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 15){
+                img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 15){
+                img_token_three17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 16){
+                img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 16){
+                img_token_three18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 17){
+                img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 17){
+                img_token_three19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 18){
+                img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 18){
+                img_token_three21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 19){
+                img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 19){
+                img_token_three22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 20){
+                img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 20){
+                img_token_three23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 21){
+                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 21){
+                img_token_three24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 22){
+                img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 22){
+                img_token_three25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 23){
+                img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 23){
+                img_token_three26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 24){
+                img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 24){
+                img_token_three27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 25){
+                img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 25){
+                img_token_three28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 26){
+                img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 26){
+                img_token_three29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 27){
+                img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 27){
+                img_token_three30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 28){
+                img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 28){
+                img_token_three31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 29){
+                img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 29){
+                img_token_three32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 30){
+                img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 30){
+                img_token_three33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 31){
+                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 31){
+                img_token_three34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 32){
+                img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 32){
+                img_token_three35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 33){
+                img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 33){
+                img_token_three36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 34){
+                img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 34){
+                img_token_three37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 35){
+                img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 35){
+                img_token_three38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 36){
+                img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 36){
+                img_token_three39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 37){
+                img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 37){
+                img_token_three40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 38){
+                img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 38){
+                img_token_three41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 39){
+                img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 39){
+                img_token_three42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 40){
+                img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
+            }
+            if(oriPos == 40){
+                img_token_three43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+        }
+        if(player_no == 4){
+            if(newPos == 1){
+                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 1){
+                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 2){
+                img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 2){
+                img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 3){
+                img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 3){
+                img_token_four3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 4){
+                img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 4){
+                img_token_four4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 5){
+                img_token_four5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 5){
+                img_token_two5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 6){
+                img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 6){
+                img_token_four6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 7){
+                img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 7){
+                img_token_four7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 8){
+                img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 8){
+                img_token_four8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 9){
+                img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 9){
+                img_token_four9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 10){
+                img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 10){
+                img_token_four10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 11){
+                img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 11){
+                img_token_four11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 12){
+                img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 12){
+                img_token_four13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 13){
+                img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 13){
+                img_token_four14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 14){
+                img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 14){
+                img_token_four15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 15){
+                img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 15){
+                img_token_four17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 16){
+                img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 16){
+                img_token_four18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 17){
+                img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 17){
+                img_token_four19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 18){
+                img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 18){
+                img_token_four21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 19){
+                img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 19){
+                img_token_four22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 20){
+                img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 20){
+                img_token_four23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 21){
+                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 21){
+                img_token_four24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 22){
+                img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 22){
+                img_token_four25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 23){
+                img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 23){
+                img_token_four26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 24){
+                img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 24){
+                img_token_four27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 25){
+                img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 25){
+                img_token_four28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 26){
+                img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 26){
+                img_token_four29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 27){
+                img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 27){
+                img_token_four30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 28){
+                img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 28){
+                img_token_four31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 29){
+                img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 29){
+                img_token_four32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 30){
+                img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 30){
+                img_token_four33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 31){
+                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 31){
+                img_token_four34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 32){
+                img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 32){
+                img_token_four35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 33){
+                img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 33){
+                img_token_four36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 34){
+                img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 34){
+                img_token_four37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 35){
+                img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 35){
+                img_token_four38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 36){
+                img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 36){
+                img_token_four39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 37){
+                img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 37){
+                img_token_four40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 38){
+                img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 38){
+                img_token_four41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 39){
+                img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 39){
+                img_token_four42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+            if(newPos == 40){
+                img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
+            }
+            if(oriPos == 40){
+                img_token_four43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
+            }
+        }
     }
 
     /**

@@ -64,18 +64,23 @@ public class Model {
         player_four_pos = 1;
     }
 
-    public void move(int turn_of_player_no){
+    public void move(){
+        int dice_num = controller.rollDice();
         if (turn_of_player_no == 1) {
             controller.moveToken(turn_of_player_no, dice_num);
+            player_one_pos += dice_num;
             turn_of_player_no++;
         } else if (turn_of_player_no == 2) {
-            controller.moveToken(turn_of_player_no, controller.rollDice());
+            controller.moveToken(turn_of_player_no, dice_num);
+            player_two_pos += dice_num;
             turn_of_player_no++;
         } else if (turn_of_player_no == 3) {
-            controller.moveToken(turn_of_player_no, controller.rollDice());
+            controller.moveToken(turn_of_player_no, dice_num);
+            player_three_pos += dice_num;
             turn_of_player_no++;
         } else {
-            controller.moveToken(turn_of_player_no, controller.rollDice());
+            controller.moveToken(turn_of_player_no, dice_num);
+            player_four_pos += dice_num;
             turn_of_player_no = 1;
         }
     }

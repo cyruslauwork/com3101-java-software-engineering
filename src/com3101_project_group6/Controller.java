@@ -46,6 +46,10 @@ public class Controller {
         model.reset();
     }
 
+    public void move(){
+        model.move();
+    }
+
     public void moveToken(int player_no, int move){
         board.moveToken(player_no,move);
     }
