@@ -1238,7 +1238,8 @@ public class Board extends javax.swing.JFrame {
                 img_token_four11.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
                 img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
-                            getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+            }
             if (newPos == 12) {
                 img_token_four12.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
