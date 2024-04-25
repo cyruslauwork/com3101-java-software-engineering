@@ -52,9 +52,13 @@ public class Controller {
         model.setPlaying(true);
         model.reset();
         for (int i = 1; i <= 4; i++) {
-            model.modifyPlayerBalance(i, 2000);
+            model.modifyPlayerBalance(i, board.getPlayerBalance(i));
         }
 
+    }
+
+    public boolean getPlaying() {
+        return model.getPlaying();
     }
 
     public void reset() {
