@@ -31,6 +31,7 @@ public class Board extends javax.swing.JFrame {
     private int player_two_pos = 1;
     private int player_three_pos = 1;
     private int player_four_pos = 1;
+    
 
 
     public static Board getInstance() throws IOException {
@@ -180,10 +181,10 @@ public class Board extends javax.swing.JFrame {
     private void showHideIcon(int player_no, int oriPos, int newPos) {
         if(player_no == 1){
             if(newPos == 1){
-                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
+                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one.png")));
             }
             if(oriPos == 1){
-                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 2){
                 img_token_one2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_one_small.png")));
@@ -423,10 +424,10 @@ public class Board extends javax.swing.JFrame {
         }
         if(player_no == 2){
             if(newPos == 1){
-                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
+                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png")));
             }
             if(oriPos == 1){
-                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 2){
                 img_token_two2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
@@ -607,69 +608,69 @@ public class Board extends javax.swing.JFrame {
                 img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 31){
-                img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 32){
-                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 32){
-                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 33){
-                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 33){
-                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 34){
-                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 34){
-                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 35){
-                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 35){
-                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 36){
-                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_.png")));
             }
             if(oriPos == 36){
-                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 37){
-                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 37){
-                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 38){
-                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 38){
-                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 39){
-                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 39){
-                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if(newPos == 40){
-                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small_small.png")));
+                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two_small.png")));
             }
             if(oriPos == 40){
-                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small_small.png")));
+                img_token_two43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
         if(player_no == 3){
             if(newPos == 1){
-                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
+                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three.png")));
             }
             if(oriPos == 1){
-                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 2){
                 img_token_three2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_three_small.png")));
@@ -909,10 +910,10 @@ public class Board extends javax.swing.JFrame {
         }
         if(player_no == 4){
             if(newPos == 1){
-                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
+                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png")));
             }
             if(oriPos == 1){
-                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_none.png")));
             }
             if(newPos == 2){
                 img_token_four2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four_small.png")));
