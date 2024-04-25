@@ -251,6 +251,8 @@ public class Board extends javax.swing.JFrame {
             if (oriPos == 11) {
                 img_token_one11.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_one11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
                 img_token_one12.setIcon(new javax.swing.ImageIcon(
@@ -574,6 +576,8 @@ public class Board extends javax.swing.JFrame {
             }
             if (oriPos == 11) {
                 img_token_two11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_two11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
@@ -899,6 +903,8 @@ public class Board extends javax.swing.JFrame {
             if (oriPos == 11) {
                 img_token_three11.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_three11_jailed.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
                 img_token_three12.setIcon(new javax.swing.ImageIcon(
@@ -1222,6 +1228,8 @@ public class Board extends javax.swing.JFrame {
             }
             if (oriPos == 11) {
                 img_token_four11.setIcon(new javax.swing.ImageIcon(
+                        getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
+                img_token_four11_jailed.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
             if (newPos == 12) {
