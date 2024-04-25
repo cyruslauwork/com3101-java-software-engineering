@@ -102,7 +102,7 @@ public class Controller {
     }
 
     public void modifyPlayerBalance(int player_no, int amount){
-        modifyPlayerBalance(player_no, amount);
+        model.modifyPlayerBalance(player_no, amount);
     }
 
     public int getPlayerTurn(){

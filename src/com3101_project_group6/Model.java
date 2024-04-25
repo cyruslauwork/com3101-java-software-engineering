@@ -152,12 +152,6 @@ public class Model {
     }
 
     public void checkLocation() {
-        // TODO a swtich check player position and modify player balance
-        if(turn_of_player_no == 1){
-            if(player_one_pos == 1){
-                
-            }
-        }
     }
 
     public int getPlayerBalance(int player_no){
