@@ -44,12 +44,19 @@ public class Model {
     public void bankrupt() {
         if (player_one_balance < 0) {
             player_one_bankrupt = true;
-        } else if (player_two_balance < 0) {
+            // System.out.println("Player 1 is bankrupt");
+        }
+        if (player_two_balance < 0) {
             player_two_bankrupt = true;
-        } else if (player_three_balance < 0) {
+            // System.out.println("Player 2 is bankrupt");
+        }
+        if (player_three_balance < 0) {
             player_three_bankrupt = true;
-        } else if (player_four_balance < 0) {
+            // System.out.println("Player 3 is bankrupt");
+        }
+        if (player_four_balance < 0) {
             player_four_bankrupt = true;
+            // System.out.println("Player 4 is bankrupt");
         }
     }
 
@@ -125,10 +132,21 @@ public class Model {
         playing = false;
         dice_num = 0;
         turn_of_player_no = 1;
+
         player_one_pos = 1;
         player_two_pos = 1;
         player_three_pos = 1;
         player_four_pos = 1;
+
+        player_one_balance = 1;
+        player_two_balance = 1;
+        player_three_balance = 1;
+        player_four_balance = 1;
+
+        player_one_bankrupt = false;
+        player_two_bankrupt = false;
+        player_three_bankrupt = false;
+        player_four_bankrupt = false;
     }
 
     public void move() {
@@ -148,7 +166,7 @@ public class Model {
         }
     }
 
-    public void modifyPlayerBalance(int player_no, int amount) {
+    public void modifyPlayerBalance(int player_no, int amount, boolean editor) {
         if (player_no == 1) {
             player_one_balance = amount;
         } else if (player_no == 2) {
@@ -158,22 +176,8 @@ public class Model {
         } else {
             player_four_balance = amount;
         }
-        controller.viewSetBalance();
-    }
-
-    public void modifyPlayerPos(int player_no, int amount) {
-        if (player_no == 1) {
-            player_one_pos = amount;
-            controller.moveToken(turn_of_player_no, dice_num);
-        } else if (player_no == 2) {
-            player_two_pos = amount;
-            controller.moveToken(turn_of_player_no, dice_num);
-        } else if (player_no == 3) {
-            player_three_pos = amount;
-            controller.moveToken(turn_of_player_no, dice_num);
-        } else {
-            player_four_pos = amount;
-            controller.moveToken(turn_of_player_no, dice_num);
+        if (!editor) {
+            controller.viewSetBalance();
         }
     }
 

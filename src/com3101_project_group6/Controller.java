@@ -52,7 +52,7 @@ public class Controller {
         model.resetGame();
         model.setPlaying(true);
         for (int i = 1; i <= 4; i++) {
-            model.modifyPlayerBalance(i, board.getPlayerBalance(i));
+            model.modifyPlayerBalance(i, board.getPlayerBalance(i), false);
         }
     }
 
@@ -88,10 +88,6 @@ public class Controller {
     public void checkAvailableProperty() {
     }
 
-    public void modifyPlayerPos(int player_no, int amount) {
-        model.modifyPlayerPos(player_no, amount);
-    }
-
     public int getPlayerPos(int player_no) {
         return model.getPlayerPos(player_no);
     }
@@ -100,12 +96,16 @@ public class Controller {
         model.setPlayerPos(player_no, pos);
     }
 
-    public void modifyPlayerBalance(int player_no, int amount) {
-        model.modifyPlayerBalance(player_no, amount);
+    public void modifyPlayerBalance(int player_no, int amount, boolean editor) {
+        model.modifyPlayerBalance(player_no, amount, editor);
     }
 
     public int getPlayerTurn() {
         return model.getPlayerTurn();
+    }
+
+    public boolean checkBankrupt(int player_no) {
+        return model.checkBankrupt(player_no);
     }
 
 }

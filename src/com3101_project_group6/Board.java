@@ -94,6 +94,26 @@ public class Board extends javax.swing.JFrame {
             current_player_four.setText("↓");
             lb_msg.setText("Player 4's turn");
         }
+
+        if (controller.checkBankrupt(1)) {
+            current_player_one.setText("Bankrupted");
+        }
+        if (controller.checkBankrupt(2)) {
+            current_player_two.setText("Bankrupted");
+        }
+        if (controller.checkBankrupt(3)) {
+            current_player_three.setText("Bankrupted");
+        }
+        if (controller.checkBankrupt(4)) {
+            current_player_four.setText("Bankrupted");
+        }
+    }
+
+    public void changePos() {
+        tf_pos_one.setText(String.valueOf(controller.getPlayerPos(1)));
+        tf_pos_two.setText(String.valueOf(controller.getPlayerPos(2)));
+        tf_pos_three.setText(String.valueOf(controller.getPlayerPos(3)));
+        tf_pos_four.setText(String.valueOf(controller.getPlayerPos(4)));
     }
 
     public void changeDicePicture(int dice_num) {
@@ -124,36 +144,37 @@ public class Board extends javax.swing.JFrame {
 
     public void moveToken(int player_no, int move) {
         changeBalance();
-        if (player_no == 1) {
+        changePos();
+        if (player_no == 1 && !controller.checkBankrupt(player_no)) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200, false);
             }
             showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 2) {
+        } else if (player_no == 2 && !controller.checkBankrupt(player_no)) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200, false);
             }
             showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 3) {
+        } else if (player_no == 3 && !controller.checkBankrupt(player_no)) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200, false);
             }
             showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 4) {
+        } else if (player_no == 4 && !controller.checkBankrupt(player_no)) {
             int oriPos = controller.getPlayerPos(player_no);
             int newPos = oriPos + move;
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200);
+                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 200, false);
             }
             showHideIcon(player_no, oriPos, newPos);
         }
@@ -1510,6 +1531,8 @@ public class Board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -1545,12 +1568,13 @@ public class Board extends javax.swing.JFrame {
         img_token_two = new javax.swing.JLabel();
         img_token_three = new javax.swing.JLabel();
         img_token_four = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_editor = new javax.swing.JButton();
         tf_pos_one = new javax.swing.JTextField();
         tf_pos_two = new javax.swing.JTextField();
         tf_pos_three = new javax.swing.JTextField();
         tf_pos_four = new javax.swing.JTextField();
         lb_bal1 = new javax.swing.JLabel();
+        btn_enable_editor = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         btn_buy = new javax.swing.JButton();
         tf_trade_property = new javax.swing.JTextField();
@@ -2104,10 +2128,10 @@ public class Board extends javax.swing.JFrame {
         img_token_four.setIcon(
                 new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_four.png"))); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_editor.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        btn_editor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_editorActionPerformed(evt);
             }
         });
 
@@ -2139,18 +2163,27 @@ public class Board extends javax.swing.JFrame {
         lb_bal1.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         lb_bal1.setText("Position:");
 
+        btn_enable_editor.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        btn_enable_editor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_enable_editorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
                 jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addContainerGap()
+                                .addComponent(btn_enable_editor, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(jPanel3Layout.createSequentialGroup()
                                                 .addGroup(jPanel3Layout
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel3Layout.createSequentialGroup()
-                                                                .addComponent(jButton1,
+                                                                .addComponent(btn_editor,
                                                                         javax.swing.GroupLayout.PREFERRED_SIZE, 10,
                                                                         javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                 .addGap(73, 73, 73))
@@ -2271,10 +2304,16 @@ public class Board extends javax.swing.JFrame {
                                                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
                                                                 jPanel3Layout.createSequentialGroup()
                                                                         .addContainerGap()
-                                                                        .addComponent(jButton1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                15,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addGroup(jPanel3Layout.createParallelGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                .addComponent(btn_enable_editor,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        15,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                .addComponent(btn_editor,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                        15,
+                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
                                                                         .addGap(22, 22, 22)))
                                                 .addGroup(jPanel3Layout
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -5678,6 +5717,18 @@ public class Board extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn_enable_editorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_enable_editorActionPerformed
+        // TODO add your handling code here:
+        tf_bal_one.setEnabled(true);
+        tf_bal_two.setEnabled(true);
+        tf_bal_three.setEnabled(true);
+        tf_bal_four.setEnabled(true);
+        tf_pos_one.setEnabled(true);
+        tf_pos_two.setEnabled(true);
+        tf_pos_three.setEnabled(true);
+        tf_pos_four.setEnabled(true);
+    }// GEN-LAST:event_btn_enable_editorActionPerformed
+
     private void btn_add_playerActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_add_playerActionPerformed
         // TODO add your handling code here:
         int total_num = num_player + num_bot;
@@ -5721,16 +5772,7 @@ public class Board extends javax.swing.JFrame {
     private void btn_roll_diceActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_roll_diceActionPerformed
         // TODO add your handling code here:
         if (controller.getPlaying()) {
-            int turn_of_player_no = controller.getPlayerTurn();
-            if (turn_of_player_no == 1) {
-                controller.move();
-            } else if (turn_of_player_no == 2) {
-                controller.move();
-            } else if (turn_of_player_no == 3) {
-                controller.move();
-            } else {
-                controller.move();
-            }
+            controller.move();
         } else {
             lb_msg.setText("Game has not started");
         }
@@ -6122,18 +6164,39 @@ public class Board extends javax.swing.JFrame {
         tf_num_bot.setText(String.valueOf(num_bot));
     }// GEN-LAST:event_btn_resetActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_editorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_editorActionPerformed
         // TODO add your handling code here:
-        controller.modifyPlayerPos(1, Integer.parseInt(tf_pos_one.getText()));
-        controller.modifyPlayerPos(2, Integer.parseInt(tf_pos_two.getText()));
-        controller.modifyPlayerPos(3, Integer.parseInt(tf_pos_three.getText()));
-        controller.modifyPlayerPos(4, Integer.parseInt(tf_pos_four.getText()));
+        int playerOneNewPos = Integer.parseInt(tf_pos_one.getText());
+        if (playerOneNewPos != controller.getPlayerPos(1)) {
+            showHideIcon(1, controller.getPlayerPos(1), playerOneNewPos);
+        }
+        int playerTwoNewPos = Integer.parseInt(tf_pos_two.getText());
+        if (playerTwoNewPos != controller.getPlayerPos(2)) {
+            showHideIcon(2, controller.getPlayerPos(2), playerTwoNewPos);
+        }
+        int playerThreeNewPos = Integer.parseInt(tf_pos_three.getText());
+        if (playerThreeNewPos != controller.getPlayerPos(3)) {
+            showHideIcon(3, controller.getPlayerPos(3), playerThreeNewPos);
+        }
+        int playerFourNewPos = Integer.parseInt(tf_pos_four.getText());
+        if (playerFourNewPos != controller.getPlayerPos(4)) {
+            showHideIcon(4, controller.getPlayerPos(4), playerFourNewPos);
+        }
 
-        controller.modifyPlayerBalance(1, Integer.parseInt(tf_bal_one.getText()));
-        controller.modifyPlayerBalance(2, Integer.parseInt(tf_bal_two.getText()));
-        controller.modifyPlayerBalance(3, Integer.parseInt(tf_bal_three.getText()));
-        controller.modifyPlayerBalance(4, Integer.parseInt(tf_bal_four.getText()));
-    }// GEN-LAST:event_jButton1ActionPerformed
+        controller.modifyPlayerBalance(1, Integer.parseInt(tf_bal_one.getText()), true);
+        controller.modifyPlayerBalance(2, Integer.parseInt(tf_bal_two.getText()), true);
+        controller.modifyPlayerBalance(3, Integer.parseInt(tf_bal_three.getText()), true);
+        controller.modifyPlayerBalance(4, Integer.parseInt(tf_bal_four.getText()), true);
+
+        tf_bal_one.setEnabled(false);
+        tf_bal_two.setEnabled(false);
+        tf_bal_three.setEnabled(false);
+        tf_bal_four.setEnabled(false);
+        tf_pos_one.setEnabled(false);
+        tf_pos_two.setEnabled(false);
+        tf_pos_three.setEnabled(false);
+        tf_pos_four.setEnabled(false);
+    }// GEN-LAST:event_btn_editorActionPerformed
 
     private void tf_pos_oneActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_tf_pos_oneActionPerformed
         // TODO add your handling code here:
@@ -6337,6 +6400,8 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JButton btn_buy;
     private javax.swing.JButton btn_del_bot;
     private javax.swing.JButton btn_del_player;
+    private javax.swing.JButton btn_editor;
+    private javax.swing.JButton btn_enable_editor;
     private javax.swing.JButton btn_newgame;
     private javax.swing.JButton btn_reset;
     private javax.swing.JButton btn_roll_dice;
@@ -6515,7 +6580,6 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JLabel img_token_two7;
     private javax.swing.JLabel img_token_two8;
     private javax.swing.JLabel img_token_two9;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
