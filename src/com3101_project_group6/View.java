@@ -37,4 +37,8 @@ public class View {
         board.showBoard(controller);
     }
 
+    public Board board() {
+        return board;
+    }
+
 }

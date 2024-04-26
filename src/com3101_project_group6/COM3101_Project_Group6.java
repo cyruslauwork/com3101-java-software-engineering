@@ -26,7 +26,6 @@ public class COM3101_Project_Group6 {
         model.setController(controller);
         controller.setView(view);
         controller.setModel(model);
-        controller.setBoard(board);
 
         view.showBoard();
     }

@@ -11,13 +11,8 @@ package com3101_project_group6;
 public class Controller {
 
     private static Controller _instance;
-    private static View view;
+    private View view;
     private Model model;
-    private Board board;
-
-    public void setBoard(Board board) {
-        this.board = board;
-    }
 
     private Controller() {
         // Private constructor to prevent direct instantiation
@@ -35,13 +30,13 @@ public class Controller {
     }
 
     public void setView(View v) {
-        Controller.view = v;
+        this.view = v;
     }
 
     public int rollDice() {
         if (model.getPlaying()) {
             int dice_num = model.rollDice();
-            board.changeDicePicture(dice_num);
+            view.board().changeDicePicture(dice_num);
             return dice_num;
         } else {
             return 0;
@@ -50,9 +45,9 @@ public class Controller {
 
     public void startGame() {
         model.resetGame();
-        board.changeBalance();
-        board.changePos();
-        board.changeDicePicture(model.getDice());
+        view.board().changeBalance();
+        view.board().changePos();
+        view.board().changeDicePicture(model.getDice());
         model.setPlaying(true);
     }
 
@@ -62,11 +57,10 @@ public class Controller {
 
     public void move() {
         model.move();
-
     }
 
     public void viewMoveToken(int player_no, int move) {
-        board.moveToken(player_no, move);
+        view.board().moveToken(player_no, move);
     }
 
     public int getPlayerBalance(int player_no) {
@@ -74,7 +68,7 @@ public class Controller {
     }
 
     public void viewSetBalance() {
-        board.changeBalance();
+        view.board().changeBalance();
     }
 
     public void endTurn() {
@@ -109,7 +103,7 @@ public class Controller {
     }
 
     public void viewSetMsg(String msg) {
-        board.setMsg(msg);
+        view.board().setMsg(msg);
     }
 
 }

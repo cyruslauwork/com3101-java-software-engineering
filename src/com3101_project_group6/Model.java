@@ -14,7 +14,7 @@ public class Model {
 
     private static Model _instance;
     private Controller controller;
-    private CareTaker caretaker = new CareTaker();
+    // private CareTaker caretaker = new CareTaker();
 
     private boolean playing = false;
 
@@ -85,14 +85,13 @@ public class Model {
         return propertyList;
     }
 
-    // onwer and price and rent
     private int[][] propertyList = { { 5, 0, 0 }, { 0, 60, 2 }, { 0, 100, 4 }, { 0, 200, 0 }, { 5, 0, 100 },
             { 0, 60, 4 }, { 0, 200, 0 }, { 0, 100, 6 }, { 0, 100, 6 }, { 0, 100, 6 }, { 5, 0, 0 }, { 0, 200, 0 },
             { 0, 150, 0 }, { 0, 120, 8 }, { 0, 200, 0 }, { 0, 150, 0 }, { 0, 120, 8 }, { 0, 200, 0 }, { 0, 350, 35 },
             { 0, 400, 50 }, { 0, 150, 0 }, { 0, 260, 22 }, { 0, 140, 10 }, { 5, 0, 0 }, { 0, 140, 10 }, { 0, 150, 0 },
             { 0, 160, 12 }, { 0, 220, 18 }, { 0, 220, 18 }, { 0, 180, 14 }, { 0, 240, 20 }, { 0, 150, 0 },
             { 0, 260, 22 }, { 5, 0, 0 }, { 0, 280, 24 }, { 0, 300, 26 }, { 5, 0, 100 }, { 0, 180, 14 }, { 0, 200, 16 },
-            { 5, 0, 0 }, { 0, 300, 26 }, { 0, 60, 100 }, { 0, 320, 28 } };
+            { 5, 0, 0 }, { 0, 300, 26 }, { 0, 60, 100 }, { 0, 320, 28 } }; // Owner, price, and rent
 
     private Model() {
         // Private constructor to prevent direct instantiation
@@ -120,7 +119,6 @@ public class Model {
         return player_one_pos;
     }
 
-    // gen a random number
     public int rollDice() {
         Random random = new Random();
         int diceRoll = random.nextInt(6) + 1;
@@ -193,7 +191,7 @@ public class Model {
                     turn_of_player_no++;
                     if (player_two_bankrupt) {
                         playing = false;
-                        controller.viewSetMsg("Player two win!");
+                        controller.viewSetMsg("Player three win!");
                         return;
                     }
                 }
@@ -210,7 +208,7 @@ public class Model {
                     turn_of_player_no++;
                     if (player_three_bankrupt) {
                         playing = false;
-                        controller.viewSetMsg("Player two win!");
+                        controller.viewSetMsg("Player four win!");
                         return;
                     }
                 }
