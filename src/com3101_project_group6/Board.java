@@ -47,19 +47,23 @@ public class Board extends javax.swing.JFrame {
             int bal = Integer.valueOf(tf_bal_one.getText());
             // System.out.println(bal);
             return bal;
-        } else if (playerNo == 2) {
+        }
+        if (playerNo == 2) {
             int bal = Integer.valueOf(tf_bal_two.getText());
             // System.out.println(bal);
             return bal;
-        } else if (playerNo == 3) {
+        }
+        if (playerNo == 3) {
             int bal = Integer.valueOf(tf_bal_three.getText());
             // System.out.println(bal);
             return bal;
-        } else {
+        }
+        if (playerNo == 4) {
             int bal = Integer.valueOf(tf_bal_four.getText());
             // System.out.println(bal);
             return bal;
         }
+        return 0;
     }
 
     public void changeBalance(boolean changeStatus) {
