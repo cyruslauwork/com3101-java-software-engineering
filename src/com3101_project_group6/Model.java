@@ -262,7 +262,7 @@ public class Model {
         }
     }
 
-    public void modifyPlayerBalance(int playerNo, int amount) {
+    public void modifyPlayerBalance(int playerNo, int amount, boolean editor) {
         if (playerNo == 1) {
             playerOneBal = amount;
         } else if (playerNo == 2) {
@@ -272,7 +272,9 @@ public class Model {
         } else {
             playerFourBal = amount;
         }
-        controller.viewSetBalance(true);
+        if (!editor) {
+            controller.viewSetBalance(true);
+        }
     }
 
     public void modifyPlayerTurn(int playerNo) {

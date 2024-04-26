@@ -174,7 +174,7 @@ public class Board extends javax.swing.JFrame {
             // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100, false);
             }
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
@@ -186,7 +186,7 @@ public class Board extends javax.swing.JFrame {
             // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100, false);
             }
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
@@ -198,7 +198,7 @@ public class Board extends javax.swing.JFrame {
             // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100, false);
             }
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
@@ -210,7 +210,7 @@ public class Board extends javax.swing.JFrame {
             // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100, false);
             }
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
@@ -2051,6 +2051,9 @@ public class Board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -2080,9 +2083,6 @@ public class Board extends javax.swing.JFrame {
         current_player_four = new javax.swing.JLabel();
         lb_msg = new javax.swing.JLabel();
         btn_newgame = new javax.swing.JButton();
-        tf_bal_two = new javax.swing.JTextField();
-        tf_bal_three = new javax.swing.JTextField();
-        tf_bal_four = new javax.swing.JTextField();
         img_token_two = new javax.swing.JLabel();
         img_token_three = new javax.swing.JLabel();
         img_token_four = new javax.swing.JLabel();
@@ -2093,6 +2093,9 @@ public class Board extends javax.swing.JFrame {
         tf_pos_four = new javax.swing.JTextField();
         lb_bal1 = new javax.swing.JLabel();
         btn_enable_editor = new javax.swing.JButton();
+        tf_bal_two = new javax.swing.JTextField();
+        tf_bal_three = new javax.swing.JTextField();
+        tf_bal_four = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         btn_buy = new javax.swing.JButton();
         tf_property_price = new javax.swing.JTextField();
@@ -2619,21 +2622,6 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        tf_bal_two.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        tf_bal_two.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_bal_two.setText("100");
-        tf_bal_two.setEnabled(false);
-
-        tf_bal_three.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        tf_bal_three.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_bal_three.setText("100");
-        tf_bal_three.setEnabled(false);
-
-        tf_bal_four.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        tf_bal_four.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_bal_four.setText("100");
-        tf_bal_four.setEnabled(false);
-
         img_token_two.setIcon(
                 new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/token_two.png"))); // NOI18N
 
@@ -2686,6 +2674,21 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
+        tf_bal_two.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_bal_two.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_bal_two.setText("100");
+        tf_bal_two.setEnabled(false);
+
+        tf_bal_three.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_bal_three.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_bal_three.setText("100");
+        tf_bal_three.setEnabled(false);
+
+        tf_bal_four.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_bal_four.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_bal_four.setText("100");
+        tf_bal_four.setEnabled(false);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -2712,96 +2715,110 @@ public class Board extends javax.swing.JFrame {
                                                                         .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                                                 .addGroup(jPanel3Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(current_player_three,
-                                                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 62,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                jPanel3Layout.createSequentialGroup()
-                                                                        .addGroup(jPanel3Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                .addGroup(
-                                                                                        javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                        jPanel3Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addComponent(
-                                                                                                        tf_bal_one)
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(
-                                                                                                        tf_bal_two)
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(
-                                                                                                        tf_bal_three,
-                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                                        60,
-                                                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                .addGroup(
-                                                                                        javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                        jPanel3Layout
-                                                                                                .createSequentialGroup()
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addComponent(current_player_three,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 62,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGroup(jPanel3Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(img_token_four)
+                                                                        .addComponent(current_player_four,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                62,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                        .addComponent(tf_pos_four,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                59,
+                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                                                .addGroup(jPanel3Layout.createParallelGroup(
+                                                                        javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                        .addGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                jPanel3Layout.createSequentialGroup()
+                                                                                        .addComponent(tf_pos_one)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(tf_pos_two)
+                                                                                        .addPreferredGap(
+                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                        .addComponent(tf_pos_three))
+                                                                        .addGroup(
+                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                jPanel3Layout.createSequentialGroup()
+                                                                                        .addGroup(jPanel3Layout
+                                                                                                .createParallelGroup(
+                                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
                                                                                                 .addGroup(jPanel3Layout
-                                                                                                        .createParallelGroup(
-                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                false)
-                                                                                                        .addComponent(
-                                                                                                                img_token_one,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                                                62,
-                                                                                                                Short.MAX_VALUE)
-                                                                                                        .addComponent(
-                                                                                                                current_player_one,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                        .createSequentialGroup()
+                                                                                                        .addGroup(
+                                                                                                                jPanel3Layout
+                                                                                                                        .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                false)
+                                                                                                                        .addComponent(
+                                                                                                                                img_token_one,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                62,
+                                                                                                                                Short.MAX_VALUE)
+                                                                                                                        .addComponent(
+                                                                                                                                current_player_one,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                Short.MAX_VALUE))
+                                                                                                        .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
                                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                                 Short.MAX_VALUE))
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                                                 .addGroup(jPanel3Layout
-                                                                                                        .createParallelGroup(
-                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                                                false)
+                                                                                                        .createSequentialGroup()
                                                                                                         .addComponent(
-                                                                                                                img_token_two)
+                                                                                                                tf_bal_one)
+                                                                                                        .addGap(2, 2,
+                                                                                                                2)))
+                                                                                        .addGroup(jPanel3Layout
+                                                                                                .createParallelGroup(
+                                                                                                        javax.swing.GroupLayout.Alignment.LEADING)
+                                                                                                .addGroup(jPanel3Layout
+                                                                                                        .createSequentialGroup()
+                                                                                                        .addGroup(
+                                                                                                                jPanel3Layout
+                                                                                                                        .createParallelGroup(
+                                                                                                                                javax.swing.GroupLayout.Alignment.LEADING,
+                                                                                                                                false)
+                                                                                                                        .addComponent(
+                                                                                                                                img_token_two)
+                                                                                                                        .addComponent(
+                                                                                                                                current_player_two,
+                                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                                56,
+                                                                                                                                Short.MAX_VALUE))
+                                                                                                        .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                                                                         .addComponent(
-                                                                                                                current_player_two,
-                                                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                                                                img_token_three))
+                                                                                                .addGroup(jPanel3Layout
+                                                                                                        .createSequentialGroup()
+                                                                                                        .addComponent(
+                                                                                                                tf_bal_two,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                                                                64,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                                                        .addPreferredGap(
+                                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                                                        .addComponent(
+                                                                                                                tf_bal_three,
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                                 56,
-                                                                                                                Short.MAX_VALUE))
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                                                .addComponent(
-                                                                                                        img_token_three))
-                                                                                .addGroup(
-                                                                                        javax.swing.GroupLayout.Alignment.LEADING,
-                                                                                        jPanel3Layout
-                                                                                                .createSequentialGroup()
-                                                                                                .addComponent(
-                                                                                                        tf_pos_one)
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(
-                                                                                                        tf_pos_two)
-                                                                                                .addPreferredGap(
-                                                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                                .addComponent(
-                                                                                                        tf_pos_three)))
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                                                .addGroup(jPanel3Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING,
-                                                                false)
-                                                        .addComponent(tf_bal_four,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 62,
-                                                                Short.MAX_VALUE)
-                                                        .addComponent(img_token_four)
-                                                        .addComponent(current_player_four,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(tf_pos_four,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 59,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                        .addGap(9, 9, 9)))
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(tf_bal_four,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 52,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(12, 12, 12))))
                                         .addGroup(jPanel3Layout.createSequentialGroup()
                                                 .addComponent(lb_msg, javax.swing.GroupLayout.DEFAULT_SIZE, 213,
                                                         Short.MAX_VALUE)
@@ -2856,6 +2873,7 @@ public class Board extends javax.swing.JFrame {
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(lb_bal)
                                                         .addComponent(tf_bal_two,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -2867,8 +2885,7 @@ public class Board extends javax.swing.JFrame {
                                                         .addComponent(tf_bal_four,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(lb_bal))))
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -6327,10 +6344,10 @@ public class Board extends javax.swing.JFrame {
             showHideIcon(4, controller.getPlayerPos(4), playerFourNewPos);
         }
 
-        controller.modifyPlayerBalance(1, Integer.parseInt(tf_bal_one.getText()));
-        controller.modifyPlayerBalance(2, Integer.parseInt(tf_bal_two.getText()));
-        controller.modifyPlayerBalance(3, Integer.parseInt(tf_bal_three.getText()));
-        controller.modifyPlayerBalance(4, Integer.parseInt(tf_bal_four.getText()));
+        controller.modifyPlayerBalance(1, Integer.parseInt(tf_bal_one.getText()), true);
+        controller.modifyPlayerBalance(2, Integer.parseInt(tf_bal_two.getText()), true);
+        controller.modifyPlayerBalance(3, Integer.parseInt(tf_bal_three.getText()), true);
+        controller.modifyPlayerBalance(4, Integer.parseInt(tf_bal_four.getText()), true);
 
         tf_bal_one.setEnabled(false);
         tf_bal_two.setEnabled(false);

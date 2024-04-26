@@ -90,8 +90,8 @@ public class Controller {
         model.setPlayerPos(playerNo, pos);
     }
 
-    public void modifyPlayerBalance(int playerNo, int amount) {
-        model.modifyPlayerBalance(playerNo, amount);
+    public void modifyPlayerBalance(int playerNo, int amount, boolean editor) {
+        model.modifyPlayerBalance(playerNo, amount, editor);
     }
 
     public int getPlayerTurn() {
