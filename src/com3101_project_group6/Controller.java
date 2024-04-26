@@ -35,9 +35,9 @@ public class Controller {
 
     public int rollDice() {
         if (model.getPlaying()) {
-            int dice_num = model.rollDice();
-            view.board().changeDicePicture(dice_num);
-            return dice_num;
+            int diceNum = model.rollDice();
+            view.board().changeDicePicture(diceNum);
+            return diceNum;
         } else {
             return 0;
         }
@@ -59,12 +59,12 @@ public class Controller {
         model.move();
     }
 
-    public void viewMoveToken(int player_no, int move) {
-        view.board().moveToken(player_no, move);
+    public void viewMoveToken(int playerNo, int move) {
+        view.board().moveToken(playerNo, move);
     }
 
-    public int getPlayerBalance(int player_no) {
-        return model.getPlayerBalance(player_no);
+    public int getPlayerBalance(int playerNo) {
+        return model.getPlayerBalance(playerNo);
     }
 
     public void viewSetBalance() {
@@ -82,28 +82,40 @@ public class Controller {
     public void checkAvailableProperty() {
     }
 
-    public int getPlayerPos(int player_no) {
-        return model.getPlayerPos(player_no);
+    public int getPlayerPos(int playerNo) {
+        return model.getPlayerPos(playerNo);
     }
 
-    public void setPlayerPos(int player_no, int pos) {
-        model.setPlayerPos(player_no, pos);
+    public void setPlayerPos(int playerNo, int pos) {
+        model.setPlayerPos(playerNo, pos);
     }
 
-    public void modifyPlayerBalance(int player_no, int amount) {
-        model.modifyPlayerBalance(player_no, amount);
+    public void modifyPlayerBalance(int playerNo, int amount) {
+        model.modifyPlayerBalance(playerNo, amount);
     }
 
     public int getPlayerTurn() {
         return model.getPlayerTurn();
     }
 
-    public boolean checkBankrupt(int player_no) {
-        return model.checkBankrupt(player_no);
+    public boolean checkBankrupt(int playerNo) {
+        return model.checkBankrupt(playerNo);
     }
 
     public void viewSetMsg(String msg) {
         view.board().setMsg(msg);
+    }
+
+    public void playerBalanceDeduction(int playerNo, int newPos) {
+        model.playerBalanceDeduction(playerNo, newPos);
+    }
+
+    public void disableRollDice() {
+        view.board().disableRollDice();
+    }
+
+    public void enableRollDice() {
+        view.board().enableRollDice();
     }
 
 }

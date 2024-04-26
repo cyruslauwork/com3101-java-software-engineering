@@ -26,8 +26,8 @@ public class Model {
         return playing;
     }
 
-    private int dice_num = 0;
-    private int turn_of_player_no = 1;
+    private int diceNum = 0;
+    private int turn_of_playerNo = 1;
     private int player_one_pos = 1;
     private int player_two_pos = 1;
     private int player_three_pos = 1;
@@ -60,20 +60,20 @@ public class Model {
         }
     }
 
-    public boolean checkBankrupt(int player_no) {
-        if (player_no == 1) {
+    public boolean checkBankrupt(int playerNo) {
+        if (playerNo == 1) {
             if (player_one_bankrupt) {
                 return true;
             }
-        } else if (player_no == 2) {
+        } else if (playerNo == 2) {
             if (player_two_bankrupt) {
                 return true;
             }
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             if (player_three_bankrupt) {
                 return true;
             }
-        } else if (player_no == 4) {
+        } else if (playerNo == 4) {
             if (player_four_bankrupt) {
                 return true;
             }
@@ -81,17 +81,52 @@ public class Model {
         return false;
     }
 
-    public int[][] getPropertyList() {
+    public String[][] getPropertyList() {
         return propertyList;
     }
 
-    private int[][] propertyList = { { 5, 0, 0 }, { 0, 60, 2 }, { 0, 100, 4 }, { 0, 200, 0 }, { 5, 0, 100 },
-            { 0, 60, 4 }, { 0, 200, 0 }, { 0, 100, 6 }, { 0, 100, 6 }, { 0, 100, 6 }, { 5, 0, 0 }, { 0, 200, 0 },
-            { 0, 150, 0 }, { 0, 120, 8 }, { 0, 200, 0 }, { 0, 150, 0 }, { 0, 120, 8 }, { 0, 200, 0 }, { 0, 350, 35 },
-            { 0, 400, 50 }, { 0, 150, 0 }, { 0, 260, 22 }, { 0, 140, 10 }, { 5, 0, 0 }, { 0, 140, 10 }, { 0, 150, 0 },
-            { 0, 160, 12 }, { 0, 220, 18 }, { 0, 220, 18 }, { 0, 180, 14 }, { 0, 240, 20 }, { 0, 150, 0 },
-            { 0, 260, 22 }, { 5, 0, 0 }, { 0, 280, 24 }, { 0, 300, 26 }, { 5, 0, 100 }, { 0, 180, 14 }, { 0, 200, 16 },
-            { 5, 0, 0 }, { 0, 300, 26 }, { 0, 60, 100 }, { 0, 320, 28 } }; // Owner, price, and rent
+    private String[][] propertyList = {
+            { "Go", "0", "9999", "0" },
+            { "D Building", "0", "200", "10" },
+            { "M704", "0", "50", "5" },
+            { "KL to HSU", "0", "9999", "15" },
+            { "Tuition Fees", "5", "9999", "50" },
+            { "M705", "0", "50", "5" },
+            { "To KL", "0", "9999", "15" },
+            { "A Building", "0", "200", "10" },
+            { "B Building", "0", "150", "5" },
+            { "N Building", "0", "100", "5" },
+            { "Jail", "0", "9999", "0" },
+            { "ST to HSU", "0", "9999", "15" },
+            { "A Cafe", "0", "100", "30" },
+            { "College Hall", "0", "150", "10" },
+            { "To ST", "0", "9999", "15" },
+            { "M703", "0", "50", "5" },
+            { "M702", "0", "50", "5" },
+            { "M Can", "0", "200", "35" },
+            { "CR", "0", "200", "5" },
+            { "RC", "0", "400", "5" },
+            { "Free Parking", "0", "9999", "0" },
+            { "Old Hall", "0", "100", "10" },
+            { "D Can", "0", "100", "35" },
+            { "Staff Quarters", "0", "250", "50" },
+            { "Clock Tower", "0", "50", "5" },
+            { "The Way", "0", "50", "5" },
+            { "Wei Lun Square", "0", "50", "5" },
+            { "Outdoor pool", "0", "50", "5" },
+            { "Kwong Yuen", "0", "9999", "20" },
+            { "B. Court", "0", "50", "5" },
+            { "Go To Jail", "0", "9999", "50" },
+            { "Indoor pool", "0", "100", "10" },
+            { "B Build Hall", "0", "100", "10" },
+            { "Materials", "0", "9999", "50" },
+            { "Music Room", "0", "50", "10" },
+            { "Multi-purpose", "0", "50", "10" },
+            { "RC Fees", "0", "9999", "50" },
+            { "G/F Libra.", "0", "150", "5" },
+            { "SU Fee", "0", "9999", "10" },
+            { "1/F Libra.", "0", "150", "5" },
+    };// Property name, owner no., price, and rent
 
     private Model() {
         // Private constructor to prevent direct instantiation
@@ -108,12 +143,12 @@ public class Model {
         this.controller = c;
     }
 
-    public int getPlayerPos(int player_no) {
-        if (player_no == 2) {
+    public int getPlayerPos(int playerNo) {
+        if (playerNo == 2) {
             return player_two_pos;
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             return player_three_pos;
-        } else if (player_no == 4) {
+        } else if (playerNo == 4) {
             return player_four_pos;
         }
         return player_one_pos;
@@ -128,8 +163,8 @@ public class Model {
 
     public void resetGame() {
         playing = false;
-        dice_num = 0;
-        turn_of_player_no = 1;
+        diceNum = 0;
+        turn_of_playerNo = 1;
 
         player_one_pos = 1;
         player_two_pos = 1;
@@ -145,87 +180,93 @@ public class Model {
         player_two_bankrupt = false;
         player_three_bankrupt = false;
         player_four_bankrupt = false;
+
+        controller.enableRollDice();
     }
 
     public void move() {
-        int dice_num = controller.rollDice();
-        if (turn_of_player_no == 1) {
-            controller.viewMoveToken(turn_of_player_no, dice_num);
+        int diceNum = controller.rollDice();
+        if (turn_of_playerNo == 1) {
+            controller.viewMoveToken(turn_of_playerNo, diceNum);
             if (player_two_bankrupt) {
-                turn_of_player_no++;
+                turn_of_playerNo++;
                 if (player_three_bankrupt) {
-                    turn_of_player_no++;
+                    turn_of_playerNo++;
                     if (player_four_bankrupt) {
                         playing = false;
+                        controller.disableRollDice();
                         controller.viewSetMsg("Player one win!");
                         return;
                     }
                 }
             }
-            turn_of_player_no++;
-            if (turn_of_player_no > 4) {
-                turn_of_player_no -= 4;
+            turn_of_playerNo++;
+            if (turn_of_playerNo > 4) {
+                turn_of_playerNo -= 4;
             }
-        } else if (turn_of_player_no == 2) {
-            controller.viewMoveToken(turn_of_player_no, dice_num);
+        } else if (turn_of_playerNo == 2) {
+            controller.viewMoveToken(turn_of_playerNo, diceNum);
             if (player_three_bankrupt) {
-                turn_of_player_no++;
+                turn_of_playerNo++;
                 if (player_four_bankrupt) {
-                    turn_of_player_no++;
+                    turn_of_playerNo++;
                     if (player_one_bankrupt) {
                         playing = false;
                         controller.viewSetMsg("Player two win!");
+                        controller.disableRollDice();
                         return;
                     }
                 }
             }
-            turn_of_player_no++;
-            if (turn_of_player_no > 4) {
-                turn_of_player_no -= 4;
+            turn_of_playerNo++;
+            if (turn_of_playerNo > 4) {
+                turn_of_playerNo -= 4;
             }
-        } else if (turn_of_player_no == 3) {
-            controller.viewMoveToken(turn_of_player_no, dice_num);
+        } else if (turn_of_playerNo == 3) {
+            controller.viewMoveToken(turn_of_playerNo, diceNum);
             if (player_four_bankrupt) {
-                turn_of_player_no++;
+                turn_of_playerNo++;
                 if (player_one_bankrupt) {
-                    turn_of_player_no++;
+                    turn_of_playerNo++;
                     if (player_two_bankrupt) {
                         playing = false;
+                        controller.disableRollDice();
                         controller.viewSetMsg("Player three win!");
                         return;
                     }
                 }
             }
-            turn_of_player_no++;
-            if (turn_of_player_no > 4) {
-                turn_of_player_no -= 4;
+            turn_of_playerNo++;
+            if (turn_of_playerNo > 4) {
+                turn_of_playerNo -= 4;
             }
-        } else if (turn_of_player_no == 4) {
-            controller.viewMoveToken(turn_of_player_no, dice_num);
+        } else if (turn_of_playerNo == 4) {
+            controller.viewMoveToken(turn_of_playerNo, diceNum);
             if (player_one_bankrupt) {
-                turn_of_player_no++;
+                turn_of_playerNo++;
                 if (player_two_bankrupt) {
-                    turn_of_player_no++;
+                    turn_of_playerNo++;
                     if (player_three_bankrupt) {
                         playing = false;
+                        controller.disableRollDice();
                         controller.viewSetMsg("Player four win!");
                         return;
                     }
                 }
             }
-            turn_of_player_no++;
-            if (turn_of_player_no > 4) {
-                turn_of_player_no -= 4;
+            turn_of_playerNo++;
+            if (turn_of_playerNo > 4) {
+                turn_of_playerNo -= 4;
             }
         }
     }
 
-    public void modifyPlayerBalance(int player_no, int amount) {
-        if (player_no == 1) {
+    public void modifyPlayerBalance(int playerNo, int amount) {
+        if (playerNo == 1) {
             player_one_balance = amount;
-        } else if (player_no == 2) {
+        } else if (playerNo == 2) {
             player_two_balance = amount;
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             player_three_balance = amount;
         } else {
             player_four_balance = amount;
@@ -233,50 +274,61 @@ public class Model {
         controller.viewSetBalance();
     }
 
-    public void modifyPlayerTurn(int player_no) {
-        if (player_no == 1) {
-            turn_of_player_no = 1;
-        } else if (player_no == 2) {
-            turn_of_player_no = 2;
-        } else if (player_no == 3) {
-            turn_of_player_no = 3;
+    public void modifyPlayerTurn(int playerNo) {
+        if (playerNo == 1) {
+            turn_of_playerNo = 1;
+        } else if (playerNo == 2) {
+            turn_of_playerNo = 2;
+        } else if (playerNo == 3) {
+            turn_of_playerNo = 3;
         } else {
-            turn_of_player_no = 4;
+            turn_of_playerNo = 4;
         }
     }
 
-    public int getPlayerBalance(int player_no) {
+    public int getPlayerBalance(int playerNo) {
         bankrupt();
-        if (player_no == 1) {
+        if (playerNo == 1) {
             return player_one_balance;
-        } else if (player_no == 2) {
+        } else if (playerNo == 2) {
             return player_two_balance;
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             return player_three_balance;
         } else {
             return player_four_balance;
         }
     }
 
-    public void setPlayerPos(int player_no, int pos) {
-        if (player_no == 1) {
+    public void setPlayerPos(int playerNo, int pos) {
+        if (playerNo == 1) {
             player_one_pos = pos;
-        } else if (player_no == 2) {
+        } else if (playerNo == 2) {
             player_two_pos = pos;
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             player_three_pos = pos;
-        } else if (player_no == 4) {
+        } else if (playerNo == 4) {
             player_four_pos = pos;
         }
-
     }
 
     public int getPlayerTurn() {
-        return turn_of_player_no;
+        return turn_of_playerNo;
     }
 
     public int getDice() {
-        return dice_num;
+        return diceNum;
     }
 
+    public void playerBalanceDeduction(int playerNo, int newPos) {
+        int deduction = Integer.valueOf(propertyList[newPos - 1][3]);
+        if (playerNo == 1) {
+            player_one_balance -= deduction;
+        } else if (playerNo == 2) {
+            player_two_balance -= deduction;
+        } else if (playerNo == 3) {
+            player_three_balance -= deduction;
+        } else if (playerNo == 4) {
+            player_four_balance -= deduction;
+        }
+    }
 }

@@ -42,16 +42,16 @@ public class Board extends javax.swing.JFrame {
         this.setResizable(false);
     }
 
-    public int getPlayerBalance(int player_no) {
-        if (player_no == 1) {
+    public int getPlayerBalance(int playerNo) {
+        if (playerNo == 1) {
             int bal = Integer.valueOf(tf_bal_one.getText());
             // System.out.println(bal);
             return bal;
-        } else if (player_no == 2) {
+        } else if (playerNo == 2) {
             int bal = Integer.valueOf(tf_bal_two.getText());
             // System.out.println(bal);
             return bal;
-        } else if (player_no == 3) {
+        } else if (playerNo == 3) {
             int bal = Integer.valueOf(tf_bal_three.getText());
             // System.out.println(bal);
             return bal;
@@ -115,6 +115,14 @@ public class Board extends javax.swing.JFrame {
         lb_msg.setText(msg);
     }
 
+    public void disableRollDice() {
+        btn_roll_dice.setEnabled(false);
+    }
+
+    public void enableRollDice() {
+        btn_roll_dice.setEnabled(true);
+    }
+
     public void changePos() {
         tf_pos_one.setText(String.valueOf(controller.getPlayerPos(1)));
         tf_pos_two.setText(String.valueOf(controller.getPlayerPos(2)));
@@ -122,23 +130,23 @@ public class Board extends javax.swing.JFrame {
         tf_pos_four.setText(String.valueOf(controller.getPlayerPos(4)));
     }
 
-    public void changeDicePicture(int dice_num) {
-        if (dice_num == 1) {
+    public void changeDicePicture(int diceNum) {
+        if (diceNum == 1) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_one.png")));
-        } else if (dice_num == 2) {
+        } else if (diceNum == 2) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_two.png")));
-        } else if (dice_num == 3) {
+        } else if (diceNum == 3) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_three.png")));
-        } else if (dice_num == 4) {
+        } else if (diceNum == 4) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_four.png")));
-        } else if (dice_num == 5) {
+        } else if (diceNum == 5) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_five.png")));
-        } else if (dice_num == 6) {
+        } else if (diceNum == 6) {
             img_1st_dice.setIcon(
                     new javax.swing.ImageIcon(getClass().getResource("/com3101_project_group6/images/dice_six.png")));
         } else {
@@ -147,48 +155,60 @@ public class Board extends javax.swing.JFrame {
         }
     }
 
-    public void moveToken(int player_no, int move) {
-        if (player_no == 1 && !controller.checkBankrupt(player_no)) {
-            int oriPos = controller.getPlayerPos(player_no);
+    public void moveToken(int playerNo, int move) {
+        if (playerNo == 1 && !controller.checkBankrupt(playerNo)) {
+            int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
+            // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
             }
-            showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 2 && !controller.checkBankrupt(player_no)) {
-            int oriPos = controller.getPlayerPos(player_no);
+            showHideIcon(playerNo, oriPos, newPos);
+            // Pay rent/fee
+            controller.playerBalanceDeduction(playerNo, newPos);
+        } else if (playerNo == 2 && !controller.checkBankrupt(playerNo)) {
+            int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
+            // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
             }
-            showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 3 && !controller.checkBankrupt(player_no)) {
-            int oriPos = controller.getPlayerPos(player_no);
+            showHideIcon(playerNo, oriPos, newPos);
+            // Pay rent/fee
+            controller.playerBalanceDeduction(playerNo, newPos);
+        } else if (playerNo == 3 && !controller.checkBankrupt(playerNo)) {
+            int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
+            // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
             }
-            showHideIcon(player_no, oriPos, newPos);
-        } else if (player_no == 4 && !controller.checkBankrupt(player_no)) {
-            int oriPos = controller.getPlayerPos(player_no);
+            showHideIcon(playerNo, oriPos, newPos);
+            // Pay rent/fee
+            controller.playerBalanceDeduction(playerNo, newPos);
+        } else if (playerNo == 4 && !controller.checkBankrupt(playerNo)) {
+            int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
+            // Collect new go money
             if (newPos > 40) {
                 newPos = newPos - 40;
-                controller.modifyPlayerBalance(player_no, controller.getPlayerBalance(player_no) + 100);
+                controller.modifyPlayerBalance(playerNo, controller.getPlayerBalance(playerNo) + 100);
             }
-            showHideIcon(player_no, oriPos, newPos);
+            showHideIcon(playerNo, oriPos, newPos);
+            // Pay rent/fee
+            controller.playerBalanceDeduction(playerNo, newPos);
         }
         changeBalance();
         changePos();
     }
 
-    private void showHideIcon(int player_no, int oriPos, int newPos) {
-        controller.setPlayerPos(player_no, newPos);
+    private void showHideIcon(int playerNo, int oriPos, int newPos) {
+        controller.setPlayerPos(playerNo, newPos);
 
-        if (player_no == 1) {
+        if (playerNo == 1) {
             if (newPos == 1) {
                 img_token_one1.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_one.png")));
@@ -514,7 +534,7 @@ public class Board extends javax.swing.JFrame {
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if (player_no == 2) {
+        if (playerNo == 2) {
             if (newPos == 1) {
                 img_token_two1.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_two.png")));
@@ -840,7 +860,7 @@ public class Board extends javax.swing.JFrame {
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if (player_no == 3) {
+        if (playerNo == 3) {
             if (newPos == 1) {
                 img_token_three1.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_three.png")));
@@ -1166,7 +1186,7 @@ public class Board extends javax.swing.JFrame {
                         getClass().getResource("/com3101_project_group6/images/token_none_small.png")));
             }
         }
-        if (player_no == 4) {
+        if (playerNo == 4) {
             if (newPos == 1) {
                 img_token_four1.setIcon(new javax.swing.ImageIcon(
                         getClass().getResource("/com3101_project_group6/images/token_four.png")));
@@ -1916,6 +1936,7 @@ public class Board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -1960,8 +1981,8 @@ public class Board extends javax.swing.JFrame {
         btn_enable_editor = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         btn_buy = new javax.swing.JButton();
-        tf_trade_property = new javax.swing.JTextField();
-        lb_avail_trade = new javax.swing.JLabel();
+        tf_property_price = new javax.swing.JTextField();
+        lb_property_name = new javax.swing.JLabel();
         btn_trade = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         img_token_one1 = new javax.swing.JLabel();
@@ -2767,12 +2788,12 @@ public class Board extends javax.swing.JFrame {
             }
         });
 
-        tf_trade_property.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        tf_trade_property.setEnabled(false);
+        tf_property_price.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        tf_property_price.setEnabled(false);
 
-        lb_avail_trade.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
-        lb_avail_trade.setForeground(new java.awt.Color(0, 204, 0));
-        lb_avail_trade.setText("Now Available:");
+        lb_property_name.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
+        lb_property_name.setForeground(new java.awt.Color(0, 204, 0));
+        lb_property_name.setText("Now Available:");
 
         btn_trade.setFont(new java.awt.Font("Helvetica Neue", 0, 8)); // NOI18N
         btn_trade.setText("Trade");
@@ -2797,9 +2818,9 @@ public class Board extends javax.swing.JFrame {
                                                 .addComponent(btn_trade, javax.swing.GroupLayout.PREFERRED_SIZE, 56,
                                                         javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGroup(jPanel5Layout.createSequentialGroup()
-                                                .addComponent(lb_avail_trade)
+                                                .addComponent(lb_property_name)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                .addComponent(tf_property_price, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                         82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap()));
         jPanel5Layout.setVerticalGroup(
@@ -2807,8 +2828,8 @@ public class Board extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addContainerGap()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lb_avail_trade)
-                                        .addComponent(tf_trade_property, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        .addComponent(lb_property_name)
+                                        .addComponent(tf_property_price, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -6702,11 +6723,11 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanel_setting;
     private javax.swing.JLabel label_bots;
-    private javax.swing.JLabel lb_avail_trade;
     private javax.swing.JLabel lb_bal;
     private javax.swing.JLabel lb_bal1;
     private javax.swing.JLabel lb_msg;
     private javax.swing.JLabel lb_players;
+    private javax.swing.JLabel lb_property_name;
     private javax.swing.JTextField tf_bal_four;
     private javax.swing.JTextField tf_bal_one;
     private javax.swing.JTextField tf_bal_three;
@@ -6717,6 +6738,7 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JTextField tf_pos_one;
     private javax.swing.JTextField tf_pos_three;
     private javax.swing.JTextField tf_pos_two;
+    private javax.swing.JTextField tf_property_price;
     private javax.swing.JTextField tf_token10;
     private javax.swing.JTextField tf_token12;
     private javax.swing.JTextField tf_token13;
@@ -6753,6 +6775,5 @@ public class Board extends javax.swing.JFrame {
     private javax.swing.JTextField tf_token7;
     private javax.swing.JTextField tf_token8;
     private javax.swing.JTextField tf_token9;
-    private javax.swing.JTextField tf_trade_property;
     // End of variables declaration//GEN-END:variables
 }

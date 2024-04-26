@@ -923,9 +923,9 @@
                                   <Component id="btn_trade" min="-2" pref="56" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="lb_avail_trade" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lb_property_name" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="tf_trade_property" min="-2" pref="82" max="-2" attributes="0"/>
+                                  <Component id="tf_property_price" min="-2" pref="82" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -937,8 +937,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lb_avail_trade" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tf_trade_property" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lb_property_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="tf_property_price" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -963,7 +963,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_buyActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="tf_trade_property">
+                <Component class="javax.swing.JTextField" name="tf_property_price">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Helvetica Neue" size="8" style="0"/>
@@ -971,7 +971,7 @@
                     <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lb_avail_trade">
+                <Component class="javax.swing.JLabel" name="lb_property_name">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Helvetica Neue" size="8" style="0"/>
