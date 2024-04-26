@@ -30,5 +30,4 @@ public class COM3101_Project_Group6 {
 
         view.showBoard();
     }
-
 }

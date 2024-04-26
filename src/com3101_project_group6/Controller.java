@@ -50,6 +50,7 @@ public class Controller {
 
     public void statGame() {
         model.resetGame();
+        board.changeDicePicture(model.getDice());
         model.setPlaying(true);
         for (int i = 1; i <= 4; i++) {
             model.modifyPlayerBalance(i, board.getPlayerBalance(i), false);
@@ -106,6 +107,10 @@ public class Controller {
 
     public boolean checkBankrupt(int player_no) {
         return model.checkBankrupt(player_no);
+    }
+
+    public void setMsg(String msg) {
+        board.setMsg(msg);
     }
 
 }
