@@ -6323,6 +6323,11 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_changeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_changeActionPerformed
         // TODO add your handling code here:
+        int position = Integer.valueOf(tf_change_pos.getText());
+        int price = Integer.valueOf(tf_change_price.getText());
+        int rent = Integer.valueOf(tf_change_rent.getText());
+
+        controller.changePropertyValue(position, price, rent);
     }// GEN-LAST:event_btn_changeActionPerformed
 
     private void btn_enable_editorActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_enable_editorActionPerformed

@@ -444,4 +444,11 @@ public class Model {
             }
         }
     }
+    
+    public void changePropertyValue(int position, int price, int rent) {
+        propertyList[position - 1][2] = String.valueOf(price);
+        propertyList[position - 1][3] = String.valueOf(rent);
+        controller.viewSetMsg(propertyList[position - 1][0] + " price and rent change success", false);
+    }
+
 }

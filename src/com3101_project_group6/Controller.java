@@ -149,4 +149,8 @@ public class Controller {
     public void setOwner(int playerNo, int thisTurnPos) {
         view.board().setOwner(playerNo, thisTurnPos);
     }
+
+    public void changePropertyValue(int position, int price, int rent) {
+        model.changePropertyValue(position, price, rent);
+    }
 }
