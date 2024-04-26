@@ -27,54 +27,55 @@ public class Model {
     }
 
     private int diceNum = 0;
-    private int turn_of_playerNo = 1;
-    private int player_one_pos = 1;
-    private int player_two_pos = 1;
-    private int player_three_pos = 1;
-    private int player_four_pos = 1;
-    private int player_one_balance = 0;
-    private int player_two_balance = 0;
-    private int player_three_balance = 0;
-    private int player_four_balance = 0;
-    private boolean player_one_bankrupt = false;
-    private boolean player_two_bankrupt = false;
-    private boolean player_three_bankrupt = false;
-    private boolean player_four_bankrupt = false;
+    private int nextTurnPlayerNo = 1;
+    private int playerOnePo = 1;
+    private int playerTwoPos = 1;
+    private int playerThreePos = 1;
+    private int playerFourPos = 1;
+    private int playerOneBal = 0;
+    private int playerTwoBal = 0;
+    private int playerThreeBal = 0;
+    private int playerFourBal = 0;
+    private boolean playerOneBankrupt = false;
+    private boolean playerTwoBankrupt = false;
+    private boolean playerThreeBankrupt = false;
+    private boolean playerFourBankrupt = false;
+    private int thisTurnPos = 0;
 
     public void bankrupt() {
-        if (player_one_balance < 0) {
-            player_one_bankrupt = true;
+        if (playerOneBal < 0) {
+            playerOneBankrupt = true;
             // System.out.println("Player 1 is bankrupt");
         }
-        if (player_two_balance < 0) {
-            player_two_bankrupt = true;
+        if (playerTwoBal < 0) {
+            playerTwoBankrupt = true;
             // System.out.println("Player 2 is bankrupt");
         }
-        if (player_three_balance < 0) {
-            player_three_bankrupt = true;
+        if (playerThreeBal < 0) {
+            playerThreeBankrupt = true;
             // System.out.println("Player 3 is bankrupt");
         }
-        if (player_four_balance < 0) {
-            player_four_bankrupt = true;
+        if (playerFourBal < 0) {
+            playerFourBankrupt = true;
             // System.out.println("Player 4 is bankrupt");
         }
     }
 
     public boolean checkBankrupt(int playerNo) {
         if (playerNo == 1) {
-            if (player_one_bankrupt) {
+            if (playerOneBankrupt) {
                 return true;
             }
         } else if (playerNo == 2) {
-            if (player_two_bankrupt) {
+            if (playerTwoBankrupt) {
                 return true;
             }
         } else if (playerNo == 3) {
-            if (player_three_bankrupt) {
+            if (playerThreeBankrupt) {
                 return true;
             }
         } else if (playerNo == 4) {
-            if (player_four_bankrupt) {
+            if (playerFourBankrupt) {
                 return true;
             }
         }
@@ -87,45 +88,45 @@ public class Model {
 
     private String[][] propertyList = {
             { "Go", "0", "9999", "0" },
-            { "D Building", "0", "200", "10" },
-            { "M704", "0", "50", "5" },
+            { "D Building", "0", "200", "1" },
+            { "M704", "0", "50", "1" },
             { "KL to HSU", "0", "9999", "15" },
-            { "Tuition Fees", "5", "9999", "50" },
-            { "M705", "0", "50", "5" },
+            { "Tuition Fees", "5", "9999", "30" },
+            { "M705", "0", "50", "1" },
             { "To KL", "0", "9999", "15" },
-            { "A Building", "0", "200", "10" },
-            { "B Building", "0", "150", "5" },
-            { "N Building", "0", "100", "5" },
+            { "A Building", "0", "200", "1" },
+            { "B Building", "0", "150", "1" },
+            { "N Building", "0", "100", "1" },
             { "Jail", "0", "9999", "0" },
             { "ST to HSU", "0", "9999", "15" },
-            { "A Cafe", "0", "100", "30" },
-            { "College Hall", "0", "150", "10" },
+            { "A Cafe", "0", "100", "20" },
+            { "College Hall", "0", "150", "1" },
             { "To ST", "0", "9999", "15" },
-            { "M703", "0", "50", "5" },
-            { "M702", "0", "50", "5" },
-            { "M Can", "0", "200", "35" },
-            { "CR", "0", "200", "5" },
-            { "RC", "0", "400", "5" },
+            { "M703", "0", "50", "1" },
+            { "M702", "0", "50", "1" },
+            { "M Can", "0", "200", "20" },
+            { "CR", "0", "200", "1" },
+            { "RC", "0", "400", "1" },
             { "Free Parking", "0", "9999", "0" },
-            { "Old Hall", "0", "100", "10" },
-            { "D Can", "0", "100", "35" },
-            { "Staff Quarters", "0", "250", "50" },
-            { "Clock Tower", "0", "50", "5" },
-            { "The Way", "0", "50", "5" },
-            { "Wei Lun Square", "0", "50", "5" },
+            { "Old Hall", "0", "100", "1" },
+            { "D Can", "0", "100", "15" },
+            { "Staff Quarters", "0", "250", "1" },
+            { "Clock Tower", "0", "50", "1" },
+            { "The Way", "0", "50", "1" },
+            { "Wei Lun Square", "0", "50", "1" },
             { "Outdoor pool", "0", "50", "5" },
-            { "Kwong Yuen", "0", "9999", "20" },
-            { "B. Court", "0", "50", "5" },
-            { "Go To Jail", "0", "9999", "50" },
+            { "Kwong Yuen", "0", "9999", "10" },
+            { "B. Court", "0", "50", "1" },
+            { "Go To Jail", "0", "9999", "10" },
             { "Indoor pool", "0", "100", "10" },
-            { "B Build Hall", "0", "100", "10" },
-            { "Materials", "0", "9999", "50" },
-            { "Music Room", "0", "50", "10" },
-            { "Multi-purpose", "0", "50", "10" },
-            { "RC Fees", "0", "9999", "50" },
-            { "G/F Libra.", "0", "150", "5" },
+            { "B Build Hall", "0", "100", "5" },
+            { "Materials", "0", "9999", "10" },
+            { "Music Room", "0", "50", "5" },
+            { "Multi-purpose", "0", "50", "5" },
+            { "RC Fees", "0", "9999", "30" },
+            { "G/F Libra.", "0", "150", "1" },
             { "SU Fee", "0", "9999", "10" },
-            { "1/F Libra.", "0", "150", "5" },
+            { "1/F Libra.", "0", "150", "1" },
     };// Property name, owner no., price, and rent
 
     private Model() {
@@ -145,13 +146,13 @@ public class Model {
 
     public int getPlayerPos(int playerNo) {
         if (playerNo == 2) {
-            return player_two_pos;
+            return playerTwoPos;
         } else if (playerNo == 3) {
-            return player_three_pos;
+            return playerThreePos;
         } else if (playerNo == 4) {
-            return player_four_pos;
+            return playerFourPos;
         }
-        return player_one_pos;
+        return playerOnePo;
     }
 
     public int rollDice() {
@@ -164,155 +165,155 @@ public class Model {
     public void resetGame() {
         playing = false;
         diceNum = 0;
-        turn_of_playerNo = 1;
+        nextTurnPlayerNo = 1;
 
-        player_one_pos = 1;
-        player_two_pos = 1;
-        player_three_pos = 1;
-        player_four_pos = 1;
+        playerOnePo = 1;
+        playerTwoPos = 1;
+        playerThreePos = 1;
+        playerFourPos = 1;
 
-        player_one_balance = 100;
-        player_two_balance = 100;
-        player_three_balance = 100;
-        player_four_balance = 100;
+        playerOneBal = 100;
+        playerTwoBal = 100;
+        playerThreeBal = 100;
+        playerFourBal = 100;
 
-        player_one_bankrupt = false;
-        player_two_bankrupt = false;
-        player_three_bankrupt = false;
-        player_four_bankrupt = false;
+        playerOneBankrupt = false;
+        playerTwoBankrupt = false;
+        playerThreeBankrupt = false;
+        playerFourBankrupt = false;
 
         controller.enableRollDice();
     }
 
     public void move() {
         int diceNum = controller.rollDice();
-        if (turn_of_playerNo == 1) {
-            controller.viewMoveToken(turn_of_playerNo, diceNum);
-            if (player_two_bankrupt) {
-                turn_of_playerNo++;
-                if (player_three_bankrupt) {
-                    turn_of_playerNo++;
-                    if (player_four_bankrupt) {
+        if (nextTurnPlayerNo == 1) {
+            controller.viewMoveToken(nextTurnPlayerNo, diceNum);
+            if (playerTwoBankrupt) {
+                nextTurnPlayerNo++;
+                if (playerThreeBankrupt) {
+                    nextTurnPlayerNo++;
+                    if (playerFourBankrupt) {
                         playing = false;
                         controller.disableRollDice();
-                        controller.viewSetMsg("Player one win!");
+                        controller.viewSetMsg("Player one win!", false);
                         return;
                     }
                 }
             }
-            turn_of_playerNo++;
-            if (turn_of_playerNo > 4) {
-                turn_of_playerNo -= 4;
+            nextTurnPlayerNo++;
+            if (nextTurnPlayerNo > 4) {
+                nextTurnPlayerNo -= 4;
             }
-        } else if (turn_of_playerNo == 2) {
-            controller.viewMoveToken(turn_of_playerNo, diceNum);
-            if (player_three_bankrupt) {
-                turn_of_playerNo++;
-                if (player_four_bankrupt) {
-                    turn_of_playerNo++;
-                    if (player_one_bankrupt) {
+        } else if (nextTurnPlayerNo == 2) {
+            controller.viewMoveToken(nextTurnPlayerNo, diceNum);
+            if (playerThreeBankrupt) {
+                nextTurnPlayerNo++;
+                if (playerFourBankrupt) {
+                    nextTurnPlayerNo++;
+                    if (playerOneBankrupt) {
                         playing = false;
-                        controller.viewSetMsg("Player two win!");
+                        controller.viewSetMsg("Player two win!", false);
                         controller.disableRollDice();
                         return;
                     }
                 }
             }
-            turn_of_playerNo++;
-            if (turn_of_playerNo > 4) {
-                turn_of_playerNo -= 4;
+            nextTurnPlayerNo++;
+            if (nextTurnPlayerNo > 4) {
+                nextTurnPlayerNo -= 4;
             }
-        } else if (turn_of_playerNo == 3) {
-            controller.viewMoveToken(turn_of_playerNo, diceNum);
-            if (player_four_bankrupt) {
-                turn_of_playerNo++;
-                if (player_one_bankrupt) {
-                    turn_of_playerNo++;
-                    if (player_two_bankrupt) {
+        } else if (nextTurnPlayerNo == 3) {
+            controller.viewMoveToken(nextTurnPlayerNo, diceNum);
+            if (playerFourBankrupt) {
+                nextTurnPlayerNo++;
+                if (playerOneBankrupt) {
+                    nextTurnPlayerNo++;
+                    if (playerTwoBankrupt) {
                         playing = false;
                         controller.disableRollDice();
-                        controller.viewSetMsg("Player three win!");
+                        controller.viewSetMsg("Player three win!", false);
                         return;
                     }
                 }
             }
-            turn_of_playerNo++;
-            if (turn_of_playerNo > 4) {
-                turn_of_playerNo -= 4;
+            nextTurnPlayerNo++;
+            if (nextTurnPlayerNo > 4) {
+                nextTurnPlayerNo -= 4;
             }
-        } else if (turn_of_playerNo == 4) {
-            controller.viewMoveToken(turn_of_playerNo, diceNum);
-            if (player_one_bankrupt) {
-                turn_of_playerNo++;
-                if (player_two_bankrupt) {
-                    turn_of_playerNo++;
-                    if (player_three_bankrupt) {
+        } else if (nextTurnPlayerNo == 4) {
+            controller.viewMoveToken(nextTurnPlayerNo, diceNum);
+            if (playerOneBankrupt) {
+                nextTurnPlayerNo++;
+                if (playerTwoBankrupt) {
+                    nextTurnPlayerNo++;
+                    if (playerThreeBankrupt) {
                         playing = false;
                         controller.disableRollDice();
-                        controller.viewSetMsg("Player four win!");
+                        controller.viewSetMsg("Player four win!", false);
                         return;
                     }
                 }
             }
-            turn_of_playerNo++;
-            if (turn_of_playerNo > 4) {
-                turn_of_playerNo -= 4;
+            nextTurnPlayerNo++;
+            if (nextTurnPlayerNo > 4) {
+                nextTurnPlayerNo -= 4;
             }
         }
     }
 
     public void modifyPlayerBalance(int playerNo, int amount) {
         if (playerNo == 1) {
-            player_one_balance = amount;
+            playerOneBal = amount;
         } else if (playerNo == 2) {
-            player_two_balance = amount;
+            playerTwoBal = amount;
         } else if (playerNo == 3) {
-            player_three_balance = amount;
+            playerThreeBal = amount;
         } else {
-            player_four_balance = amount;
+            playerFourBal = amount;
         }
-        controller.viewSetBalance();
+        controller.viewSetBalance(true);
     }
 
     public void modifyPlayerTurn(int playerNo) {
         if (playerNo == 1) {
-            turn_of_playerNo = 1;
+            nextTurnPlayerNo = 1;
         } else if (playerNo == 2) {
-            turn_of_playerNo = 2;
+            nextTurnPlayerNo = 2;
         } else if (playerNo == 3) {
-            turn_of_playerNo = 3;
+            nextTurnPlayerNo = 3;
         } else {
-            turn_of_playerNo = 4;
+            nextTurnPlayerNo = 4;
         }
     }
 
     public int getPlayerBalance(int playerNo) {
         bankrupt();
         if (playerNo == 1) {
-            return player_one_balance;
+            return playerOneBal;
         } else if (playerNo == 2) {
-            return player_two_balance;
+            return playerTwoBal;
         } else if (playerNo == 3) {
-            return player_three_balance;
+            return playerThreeBal;
         } else {
-            return player_four_balance;
+            return playerFourBal;
         }
     }
 
     public void setPlayerPos(int playerNo, int pos) {
         if (playerNo == 1) {
-            player_one_pos = pos;
+            playerOnePo = pos;
         } else if (playerNo == 2) {
-            player_two_pos = pos;
+            playerTwoPos = pos;
         } else if (playerNo == 3) {
-            player_three_pos = pos;
+            playerThreePos = pos;
         } else if (playerNo == 4) {
-            player_four_pos = pos;
+            playerFourPos = pos;
         }
     }
 
     public int getPlayerTurn() {
-        return turn_of_playerNo;
+        return nextTurnPlayerNo;
     }
 
     public int getDice() {
@@ -320,15 +321,125 @@ public class Model {
     }
 
     public void playerBalanceDeduction(int playerNo, int newPos) {
-        int deduction = Integer.valueOf(propertyList[newPos - 1][3]);
-        if (playerNo == 1) {
-            player_one_balance -= deduction;
-        } else if (playerNo == 2) {
-            player_two_balance -= deduction;
-        } else if (playerNo == 3) {
-            player_three_balance -= deduction;
-        } else if (playerNo == 4) {
-            player_four_balance -= deduction;
+        int deduction = 0;
+        int ownerNo = Integer.valueOf(propertyList[newPos - 1][1]);
+        if (ownerNo != playerNo) { // If not owner
+            deduction = Integer.valueOf(propertyList[newPos - 1][3]); // Rent
+            if (playerNo == 1) {
+                playerOneBal -= deduction;
+                if (ownerNo == 1) {
+                    playerOneBal += deduction;
+                } else if (ownerNo == 2) {
+                    playerTwoBal += deduction;
+                } else if (ownerNo == 3) {
+                    playerThreeBal += deduction;
+                } else if (ownerNo == 4) {
+                    playerFourBal += deduction;
+                }
+            } else if (playerNo == 2) {
+                playerTwoBal -= deduction;
+                if (ownerNo == 1) {
+                    playerOneBal += deduction;
+                } else if (ownerNo == 2) {
+                    playerTwoBal += deduction;
+                } else if (ownerNo == 3) {
+                    playerThreeBal += deduction;
+                } else if (ownerNo == 4) {
+                    playerFourBal += deduction;
+                }
+            } else if (playerNo == 3) {
+                playerThreeBal -= deduction;
+                if (ownerNo == 1) {
+                    playerOneBal += deduction;
+                } else if (ownerNo == 2) {
+                    playerTwoBal += deduction;
+                } else if (ownerNo == 3) {
+                    playerThreeBal += deduction;
+                } else if (ownerNo == 4) {
+                    playerFourBal += deduction;
+                }
+            } else if (playerNo == 4) {
+                playerFourBal -= deduction;
+                if (ownerNo == 1) {
+                    playerOneBal += deduction;
+                } else if (ownerNo == 2) {
+                    playerTwoBal += deduction;
+                } else if (ownerNo == 3) {
+                    playerThreeBal += deduction;
+                } else if (ownerNo == 4) {
+                    playerFourBal += deduction;
+                }
+            }
+        }
+    }
+
+    public void provideBuy(int playerNo, int newPos) {
+        thisTurnPos = newPos;
+        // System.out.println(playerNo);
+        if (Integer.valueOf(propertyList[newPos - 1][1]) != playerNo) { // If not owner
+            int propertyVal = Integer.valueOf(propertyList[newPos - 1][2]); // Property value
+            controller.showPropertyVal(propertyVal);
+            String propertyName = propertyList[newPos - 1][0]; // Property value
+            controller.showPropertyName(propertyName);
+            controller.setBuyEnable();
+        } else {
+            controller.setBuyDisable();
+        }
+    }
+
+    public void buyProperty() {
+        if (nextTurnPlayerNo == 1) {
+            int playerNo = 4;
+            int propertyVal = controller.getPropertyVal();
+            if (playerFourBal >= propertyVal) {
+                playerFourBal -= propertyVal;
+                propertyList[thisTurnPos - 1][1] = String.valueOf(playerNo);
+                controller.setOwner(playerNo, thisTurnPos);
+                String propertyName = propertyList[thisTurnPos - 1][0];
+                controller.viewSetMsg(propertyName + " is now player 4", false);
+                controller.viewSetBalance(false);
+            } else {
+                controller.viewSetMsg("Insufficient balance", true);
+            }
+        } else if (nextTurnPlayerNo == 2) {
+            int playerNo = 1;
+            int propertyVal = controller.getPropertyVal();
+            if (playerOneBal >= propertyVal) {
+                playerOneBal -= propertyVal;
+                propertyList[thisTurnPos - 1][1] = String.valueOf(playerNo);
+                controller.setOwner(playerNo, thisTurnPos);
+                String propertyName = propertyList[thisTurnPos - 1][0];
+                controller.viewSetMsg(propertyName + " is now player 1", false);
+                controller.viewSetBalance(false);
+            } else {
+                controller.viewSetMsg("Insufficient balance", true);
+            }
+        } else if (nextTurnPlayerNo == 3) {
+            int playerNo = 2;
+            int propertyVal = controller.getPropertyVal();
+            if (playerTwoBal >= propertyVal) {
+                playerTwoBal -= propertyVal;
+                propertyList[thisTurnPos - 1][1] = String.valueOf(playerNo);
+                controller.setOwner(playerNo, thisTurnPos);
+                String propertyName = propertyList[thisTurnPos - 1][0];
+                controller.viewSetMsg(propertyName + " is now player 2", false);
+                controller.viewSetBalance(false);
+            } else {
+                controller.viewSetMsg("Insufficient balance", true);
+            }
+        } else if (nextTurnPlayerNo == 4) {
+            int playerNo = 3;
+            int propertyVal = controller.getPropertyVal();
+            if (playerThreeBal >= propertyVal) {
+                playerThreeBal -= propertyVal;
+                propertyList[thisTurnPos - 1][1] = String.valueOf(playerNo);
+                controller.setOwner(playerNo, thisTurnPos);
+                String propertyName = propertyList[thisTurnPos - 1][0];
+                controller.viewSetMsg(propertyName + " is now player 3", false);
+                controller.viewSetBalance(false);
+            } else {
+                controller.viewSetMsg("Insufficient balance", true);
+            }
         }
     }
 }

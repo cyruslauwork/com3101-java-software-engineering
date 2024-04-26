@@ -62,12 +62,14 @@ public class Board extends javax.swing.JFrame {
         }
     }
 
-    public void changeBalance() {
+    public void changeBalance(boolean changeStatus) {
         tf_bal_one.setText(String.valueOf(controller.getPlayerBalance(1)));
         tf_bal_two.setText(String.valueOf(controller.getPlayerBalance(2)));
         tf_bal_three.setText(String.valueOf(controller.getPlayerBalance(3)));
         tf_bal_four.setText(String.valueOf(controller.getPlayerBalance(4)));
-        changeStatus();
+        if (changeStatus) {
+            changeStatus();
+        }
     }
 
     public void changeStatus() {
@@ -111,8 +113,14 @@ public class Board extends javax.swing.JFrame {
         }
     }
 
-    public void setMsg(String msg) {
-        lb_msg.setText(msg);
+    public void setMsg(String msg, boolean alert) {
+        if (alert) {
+            lb_msg.setText(msg);
+            lb_msg.setForeground(Color.RED);
+        } else {
+            lb_msg.setText(msg);
+            lb_msg.setForeground(Color.GREEN);
+        }
     }
 
     public void disableRollDice() {
@@ -167,6 +175,7 @@ public class Board extends javax.swing.JFrame {
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
             controller.playerBalanceDeduction(playerNo, newPos);
+            controller.provideBuy(playerNo, newPos);
         } else if (playerNo == 2 && !controller.checkBankrupt(playerNo)) {
             int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
@@ -178,6 +187,7 @@ public class Board extends javax.swing.JFrame {
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
             controller.playerBalanceDeduction(playerNo, newPos);
+            controller.provideBuy(playerNo, newPos);
         } else if (playerNo == 3 && !controller.checkBankrupt(playerNo)) {
             int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
@@ -189,6 +199,7 @@ public class Board extends javax.swing.JFrame {
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
             controller.playerBalanceDeduction(playerNo, newPos);
+            controller.provideBuy(playerNo, newPos);
         } else if (playerNo == 4 && !controller.checkBankrupt(playerNo)) {
             int oriPos = controller.getPlayerPos(playerNo);
             int newPos = oriPos + move;
@@ -200,9 +211,106 @@ public class Board extends javax.swing.JFrame {
             showHideIcon(playerNo, oriPos, newPos);
             // Pay rent/fee
             controller.playerBalanceDeduction(playerNo, newPos);
+            controller.provideBuy(playerNo, newPos);
         }
-        changeBalance();
+        changeBalance(true);
         changePos();
+    }
+
+    public void showPropertyName(String propertyName) {
+        lb_property_name.setText(propertyName);
+    }
+
+    public void showPropertyVal(int showPropertyVal) {
+        tf_property_price.setText(String.valueOf(showPropertyVal));
+    }
+
+    public void setBuyEnable() {
+        btn_buy.setEnabled(true);
+    }
+
+    public void setBuyDisable() {
+        btn_buy.setEnabled(false);
+    }
+
+    public int getPropertyVal() {
+        return Integer.parseInt(tf_property_price.getText());
+    }
+
+    public void setOwner(int playerNo, int thisTurnPos) {
+        if (thisTurnPos == 2) {
+            tf_token2.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 3) {
+            tf_token3.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 4) {
+            tf_token4.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 5) {
+            tf_token5.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 6) {
+            tf_token6.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 7) {
+            tf_token7.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 8) {
+            tf_token8.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 9) {
+            tf_token9.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 10) {
+            tf_token10.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 12) {
+            tf_token12.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 13) {
+            tf_token13.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 14) {
+            tf_token14.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 15) {
+            tf_token15.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 16) {
+            tf_token16.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 17) {
+            tf_token17.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 18) {
+            tf_token18.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 19) {
+            tf_token19.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 20) {
+            tf_token20.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 22) {
+            tf_token22.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 23) {
+            tf_token23.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 24) {
+            tf_token24.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 25) {
+            tf_token25.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 26) {
+            tf_token26.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 27) {
+            tf_token27.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 28) {
+            tf_token28.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 29) {
+            tf_token29.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 30) {
+            tf_token30.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 32) {
+            tf_token32.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 33) {
+            tf_token33.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 34) {
+            tf_token34.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 35) {
+            tf_token35.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 36) {
+            tf_token36.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 37) {
+            tf_token37.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 38) {
+            tf_token38.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 39) {
+            tf_token39.setText(String.valueOf(playerNo));
+        } else if (thisTurnPos == 40) {
+            tf_token40.setText(String.valueOf(playerNo));
+        }
     }
 
     private void showHideIcon(int playerNo, int oriPos, int newPos) {
@@ -1937,6 +2045,8 @@ public class Board extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -2993,75 +3103,51 @@ public class Board extends javax.swing.JFrame {
         jPanel9Layout.setHorizontalGroup(
                 jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addComponent(img_token_two11)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addGroup(jPanel9Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                                                .addGap(26, 26, 26)
-                                                                .addComponent(img_token_three11)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(img_token_four11)
-                                                                .addGap(0, 30, Short.MAX_VALUE))
-                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                                                                jPanel9Layout.createSequentialGroup()
-                                                                        .addComponent(img_token_one11,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                20,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                Short.MAX_VALUE)
-                                                                        .addGroup(jPanel9Layout.createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.LEADING)
-                                                                                .addGroup(jPanel9Layout
-                                                                                        .createSequentialGroup()
-                                                                                        .addComponent(
-                                                                                                img_token_one11_jailed)
-                                                                                        .addPreferredGap(
-                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                        .addComponent(
-                                                                                                img_token_two11_jailed))
-                                                                                .addGroup(jPanel9Layout
-                                                                                        .createSequentialGroup()
-                                                                                        .addComponent(
-                                                                                                img_token_three11_jailed)
-                                                                                        .addPreferredGap(
-                                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                                        .addComponent(
-                                                                                                img_token_four11_jailed)))))
-                                                .addContainerGap()))));
-        jPanel9Layout.setVerticalGroup(
-                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel9Layout.createSequentialGroup()
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout
-                                                .createSequentialGroup()
-                                                .addGroup(jPanel9Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(img_token_one11_jailed)
-                                                        .addComponent(img_token_two11_jailed))
+                                        .addComponent(img_token_two11)
+                                        .addComponent(img_token_one11, javax.swing.GroupLayout.PREFERRED_SIZE, 20,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(img_token_three11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addComponent(img_token_one11_jailed)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two11_jailed))
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addGroup(jPanel9Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addComponent(img_token_four11)
+                                                        .addComponent(img_token_three11_jailed))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_four11_jailed)))
+                                .addContainerGap()));
+        jPanel9Layout.setVerticalGroup(
+                jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(img_token_one11_jailed)
+                                        .addComponent(img_token_two11_jailed))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
+                                                .addComponent(img_token_one11)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(img_token_two11))
+                                        .addGroup(jPanel9Layout.createSequentialGroup()
                                                 .addGroup(jPanel9Layout
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(img_token_three11_jailed)
                                                         .addComponent(img_token_four11_jailed))
-                                                .addGap(38, 38, 38)
-                                                .addComponent(img_token_four11))
-                                        .addComponent(img_token_three11, javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPanel9Layout.createSequentialGroup()
-                                                .addGap(38, 38, 38)
-                                                .addComponent(img_token_one11)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(img_token_two11)))
-                                .addContainerGap()));
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addGroup(jPanel9Layout
+                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(img_token_four11)
+                                                        .addComponent(img_token_three11))))
+                                .addGap(32, 32, 32)));
 
         jPanel11.setOpaque(false);
 
@@ -5974,6 +6060,41 @@ public class Board extends javax.swing.JFrame {
                                                 .addGroup(jPanel_settingLayout
                                                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(jPanel_settingLayout.createSequentialGroup()
+                                                                .addGap(1, 1, 1)
+                                                                .addComponent(jPanel43,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(7, 7, 7)
+                                                                .addComponent(jPanel44,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jPanel45,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                                .addComponent(jPanel46,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel47,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addPreferredGap(
+                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(jPanel48,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
                                                                 .addGroup(jPanel_settingLayout.createParallelGroup(
                                                                         javax.swing.GroupLayout.Alignment.TRAILING)
                                                                         .addGroup(jPanel_settingLayout
@@ -6035,45 +6156,9 @@ public class Board extends javax.swing.JFrame {
                                                                 .addPreferredGap(
                                                                         javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                                 .addComponent(jPanel9,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addGroup(jPanel_settingLayout.createSequentialGroup()
-                                                                .addGap(1, 1, 1)
-                                                                .addComponent(jPanel43,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addGap(7, 7, 7)
-                                                                .addComponent(jPanel44,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jPanel45,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                .addComponent(jPanel46,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jPanel47,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                .addPreferredGap(
-                                                                        javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                .addComponent(jPanel48,
-                                                                        javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                                        javax.swing.GroupLayout.PREFERRED_SIZE, 101,
                                                                         javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                                .addContainerGap()));
+                                .addGap(27, 27, 27)));
 
         jPanel1.setMaximumSize(new java.awt.Dimension(850, 850));
         jPanel1.setMinimumSize(new java.awt.Dimension(850, 850));
@@ -6261,6 +6346,9 @@ public class Board extends javax.swing.JFrame {
 
     private void btn_buyActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_buyActionPerformed
         // TODO add your handling code here:
+        if (controller.getPlaying()) {
+            controller.buyProperty();
+        }
     }// GEN-LAST:event_btn_buyActionPerformed
 
     private void btn_tradeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btn_tradeActionPerformed

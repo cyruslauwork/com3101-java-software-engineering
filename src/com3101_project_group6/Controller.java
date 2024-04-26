@@ -45,7 +45,7 @@ public class Controller {
 
     public void startGame() {
         model.resetGame();
-        view.board().changeBalance();
+        view.board().changeBalance(true);
         view.board().changePos();
         view.board().changeDicePicture(model.getDice());
         model.setPlaying(true);
@@ -67,8 +67,8 @@ public class Controller {
         return model.getPlayerBalance(playerNo);
     }
 
-    public void viewSetBalance() {
-        view.board().changeBalance();
+    public void viewSetBalance(boolean changeStatus) {
+        view.board().changeBalance(changeStatus);
     }
 
     public void endTurn() {
@@ -102,8 +102,8 @@ public class Controller {
         return model.checkBankrupt(playerNo);
     }
 
-    public void viewSetMsg(String msg) {
-        view.board().setMsg(msg);
+    public void viewSetMsg(String msg, boolean alert) {
+        view.board().setMsg(msg, alert);
     }
 
     public void playerBalanceDeduction(int playerNo, int newPos) {
@@ -118,4 +118,35 @@ public class Controller {
         view.board().enableRollDice();
     }
 
+    public void provideBuy(int playerNo, int newPos) {
+        model.provideBuy(playerNo, newPos);
+    }
+
+    public void showPropertyName(String propertyName) {
+        view.board().showPropertyName(propertyName);
+    }
+
+    public void showPropertyVal(int propertyVal) {
+        view.board().showPropertyVal(propertyVal);
+    }
+
+    public void setBuyEnable() {
+        view.board().setBuyEnable();
+    }
+
+    public void setBuyDisable() {
+        view.board().setBuyDisable();
+    }
+
+    public void buyProperty() {
+        model.buyProperty();
+    }
+
+    public int getPropertyVal() {
+        return view.board().getPropertyVal();
+    }
+
+    public void setOwner(int playerNo, int thisTurnPos) {
+        view.board().setOwner(playerNo, thisTurnPos);
+    }
 }
