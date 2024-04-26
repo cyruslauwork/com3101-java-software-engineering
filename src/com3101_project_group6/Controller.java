@@ -48,13 +48,12 @@ public class Controller {
         }
     }
 
-    public void statGame() {
+    public void startGame() {
         model.resetGame();
+        board.changeBalance();
+        board.changePos();
         board.changeDicePicture(model.getDice());
         model.setPlaying(true);
-        for (int i = 1; i <= 4; i++) {
-            model.modifyPlayerBalance(i, board.getPlayerBalance(i), false);
-        }
     }
 
     public boolean getPlaying() {
@@ -66,7 +65,7 @@ public class Controller {
 
     }
 
-    public void moveToken(int player_no, int move) {
+    public void viewMoveToken(int player_no, int move) {
         board.moveToken(player_no, move);
     }
 
@@ -97,8 +96,8 @@ public class Controller {
         model.setPlayerPos(player_no, pos);
     }
 
-    public void modifyPlayerBalance(int player_no, int amount, boolean editor) {
-        model.modifyPlayerBalance(player_no, amount, editor);
+    public void modifyPlayerBalance(int player_no, int amount) {
+        model.modifyPlayerBalance(player_no, amount);
     }
 
     public int getPlayerTurn() {
@@ -109,7 +108,7 @@ public class Controller {
         return model.checkBankrupt(player_no);
     }
 
-    public void setMsg(String msg) {
+    public void viewSetMsg(String msg) {
         board.setMsg(msg);
     }
 

@@ -26,16 +26,16 @@ public class Model {
         return playing;
     }
 
-    private int dice_num = 1;
+    private int dice_num = 0;
     private int turn_of_player_no = 1;
     private int player_one_pos = 1;
     private int player_two_pos = 1;
     private int player_three_pos = 1;
     private int player_four_pos = 1;
-    private int player_one_balance = 1;
-    private int player_two_balance = 1;
-    private int player_three_balance = 1;
-    private int player_four_balance = 1;
+    private int player_one_balance = 0;
+    private int player_two_balance = 0;
+    private int player_three_balance = 0;
+    private int player_four_balance = 0;
     private boolean player_one_bankrupt = false;
     private boolean player_two_bankrupt = false;
     private boolean player_three_bankrupt = false;
@@ -124,13 +124,13 @@ public class Model {
     public int rollDice() {
         Random random = new Random();
         int diceRoll = random.nextInt(6) + 1;
-        System.out.println(diceRoll);
+        // System.out.println(diceRoll);
         return diceRoll;
     }
 
     public void resetGame() {
         playing = false;
-        dice_num = 1;
+        dice_num = 0;
         turn_of_player_no = 1;
 
         player_one_pos = 1;
@@ -138,10 +138,10 @@ public class Model {
         player_three_pos = 1;
         player_four_pos = 1;
 
-        player_one_balance = 1;
-        player_two_balance = 1;
-        player_three_balance = 1;
-        player_four_balance = 1;
+        player_one_balance = 100;
+        player_two_balance = 100;
+        player_three_balance = 100;
+        player_four_balance = 100;
 
         player_one_bankrupt = false;
         player_two_bankrupt = false;
@@ -152,14 +152,14 @@ public class Model {
     public void move() {
         int dice_num = controller.rollDice();
         if (turn_of_player_no == 1) {
-            controller.moveToken(turn_of_player_no, dice_num);
+            controller.viewMoveToken(turn_of_player_no, dice_num);
             if (player_two_bankrupt) {
                 turn_of_player_no++;
                 if (player_three_bankrupt) {
                     turn_of_player_no++;
                     if (player_four_bankrupt) {
                         playing = false;
-                        controller.setMsg("Player one win!");
+                        controller.viewSetMsg("Player one win!");
                         return;
                     }
                 }
@@ -169,14 +169,14 @@ public class Model {
                 turn_of_player_no -= 4;
             }
         } else if (turn_of_player_no == 2) {
-            controller.moveToken(turn_of_player_no, dice_num);
+            controller.viewMoveToken(turn_of_player_no, dice_num);
             if (player_three_bankrupt) {
                 turn_of_player_no++;
                 if (player_four_bankrupt) {
                     turn_of_player_no++;
                     if (player_one_bankrupt) {
                         playing = false;
-                        controller.setMsg("Player two win!");
+                        controller.viewSetMsg("Player two win!");
                         return;
                     }
                 }
@@ -186,14 +186,14 @@ public class Model {
                 turn_of_player_no -= 4;
             }
         } else if (turn_of_player_no == 3) {
-            controller.moveToken(turn_of_player_no, dice_num);
+            controller.viewMoveToken(turn_of_player_no, dice_num);
             if (player_four_bankrupt) {
                 turn_of_player_no++;
                 if (player_one_bankrupt) {
                     turn_of_player_no++;
                     if (player_two_bankrupt) {
                         playing = false;
-                        controller.setMsg("Player two win!");
+                        controller.viewSetMsg("Player two win!");
                         return;
                     }
                 }
@@ -203,14 +203,14 @@ public class Model {
                 turn_of_player_no -= 4;
             }
         } else if (turn_of_player_no == 4) {
-            controller.moveToken(turn_of_player_no, dice_num);
+            controller.viewMoveToken(turn_of_player_no, dice_num);
             if (player_one_bankrupt) {
                 turn_of_player_no++;
                 if (player_two_bankrupt) {
                     turn_of_player_no++;
                     if (player_three_bankrupt) {
                         playing = false;
-                        controller.setMsg("Player two win!");
+                        controller.viewSetMsg("Player two win!");
                         return;
                     }
                 }
@@ -222,7 +222,7 @@ public class Model {
         }
     }
 
-    public void modifyPlayerBalance(int player_no, int amount, boolean editor) {
+    public void modifyPlayerBalance(int player_no, int amount) {
         if (player_no == 1) {
             player_one_balance = amount;
         } else if (player_no == 2) {
@@ -232,9 +232,7 @@ public class Model {
         } else {
             player_four_balance = amount;
         }
-        if (!editor) {
-            controller.viewSetBalance();
-        }
+        controller.viewSetBalance();
     }
 
     public void modifyPlayerTurn(int player_no) {
